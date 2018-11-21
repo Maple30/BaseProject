@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import datetime
 # Create your views here.
-
+from .models import Works
 
 # View(views.py)
 def index(request):
@@ -21,4 +21,5 @@ def about(request):
 	return render(request, 'omniscient/about.html')
 	
 def hand_made(request):
-	return render(request, 'omniscient/hand_made.html')
+	works = Works.objects.all()
+	return render(request, 'omniscient/hand_made.html', {'works': works})
