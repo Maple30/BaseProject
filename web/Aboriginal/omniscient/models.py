@@ -7,7 +7,7 @@ class Works(models.Model):							#儲存手工藝品資料
 	Title = models.CharField(max_length = 25)		#標題
 	Introduction = models.TextField(blank = False)	#簡介
 	Contact = models.TextField(blank = False)		#聯絡資訊
-	Photo = models.ImageField(blank = False)		#照片
+	Photo = models.ImageField(upload_to = './', blank = False)		#照片
 	Add_time = models.DateTimeField(auto_now_add = False)#新增的時間
 	Edit_time = models.DateTimeField(auto_now = False)#編輯的時間
 	User = models.ForeignKey(User, on_delete=models.CASCADE,default="")

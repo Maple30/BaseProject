@@ -41,16 +41,14 @@
 
 
 {%block content%}
+<div class="row">
 {% for work in works %}
-<ul>
-        <li>{{ work.Title}}
-          <ul>
-            <li>{{ work.Introduction}}</li>
-            <li>{{ work.Contact}}</li>
-          </ul>
-        </li>
-      </ul>
 
+    <div class="col-lg-2  col-md-2 col-2">
+        <img src="{{ work.Photo.url}}" class="img-fluid" >
+    </div>
 {% endfor %}
+</div>
+
 <p>手工藝網站</p>
 {%endblock%}
