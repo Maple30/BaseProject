@@ -1,0 +1,17 @@
+{% extends 'omniscient/basic.html' %}
+
+{%block content%}
+<div class=" text-center" >
+    <h1>{{ work.Title }}</h1>
+    <img src="{{ work.Photo.url}}" class="rounded mx-auto d-block img-fluid">
+    {{ work.Introduction }}
+    <br>
+    {{ work.Contact }}
+    <br>
+    {{ work.Add_time }}
+    <br>
+    {{ work.Edit_time }}
+</div>
+
+
+{%endblock%}

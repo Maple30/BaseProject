@@ -16,7 +16,7 @@ class Works(models.Model):							#儲存手工藝品資料
 class Issue(models.Model):						#儲存議題資料
 	Title = models.CharField(max_length = 25)	
 	Context = models.TextField(blank = False)
-	User_name = models.CharField(max_length = 25)
+	User = models.ForeignKey(User, on_delete=models.CASCADE,default="")
 	Add_time = models.DateTimeField(auto_now_add = False)
 	Edit_time = models.DateTimeField(auto_now = False)
 	

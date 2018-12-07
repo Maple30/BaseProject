@@ -1,0 +1,814 @@
+    1  cd /mnt/c/Users/st096/mystore/
+    2  pyenv
+    3  pyenv install 3.7.0
+    4  pipenv install
+    5  pipenv shell
+    6  exit
+    7  pipenv shell
+    8  python manage.py migrate
+    9  exit
+   10  python manage.py migrate
+   11  sudo python manage.py migrate
+   12  sudo python3 manage.py migrate
+   13  sudo python2 manage.py migrate
+   14  sudo python3 manage.py migrate
+   15  ls
+   16  pip install django
+   17  rm python 2.7
+   18  rm python2.7
+   19  rm python2
+   20  python2 --version
+   21  sudo rm python2
+   22  --user
+   23  sudo pip install django
+   24  python -c "import django; print(django.get_version())"
+   25  python manage.py migrate
+   26  python3 manage.py migrate
+   27  ls
+   28  vim manage.py 
+   29  whereis django
+   30  django
+   31  cd mystore/
+   32  ls
+   33  cd ..
+   34  cd mystore/mystore/
+   35  ls
+   36  vim settings.py 
+   37  python manage.py migrate
+   38  cd .
+   39  cd ..
+   40  python manage.py migrate
+   41  python3 --version
+   42  python
+   43  python3
+   44  cd ../../mnt/c/Users/st096/myblog/myblog/
+   45  ls
+   46  vim myblog/urls.py 
+   47  vim blog/urls.py
+   48  vim blog/views.py 
+   49  cd blog/
+   50  mkdir templates/ blog/post_list.html
+   51  mkdir templates
+   52  ls
+   53  cd templates/
+   54  ls
+   55  mkdir blog
+   56  cd blog/
+   57  mkdir post_create.html
+   58  ls
+   59  rm post_create.html/
+   60  rm post_create.html
+   61  vim post_create.html/
+   62  rm -r post_create.html/
+   63  ls
+   64  vim post_list.html
+   65  vim pos_list.html
+   66  cd /../..
+   67  ls
+   68  cd mnt/c/Users/st096/myblog/myblog/
+   69  ls
+   70  python3 manage.py runserver
+   71  ls
+   72  cd blog/templates/blog/
+   73  ls
+   74  cd ../../..
+   75  ls
+   76  python3 manage.py runserver
+   77  cd blog/templates/blog/
+   78  vim post_list.html 
+   79  vim post_create.html
+   80  cd ../../..
+   81  python3 manage.py runserver
+   82  cd ../../mnt/c/Users/st096/myblog/myblog/
+   83  python3 manage.py runserver
+   84  pip install dj-database-url gunicorn psycopg2 whitenoise
+   85  python
+   86  pip3 install dj-database-url gunicorn psycopg2 whitenoise
+   87  pip freeze > requirements.txt
+   88  cd ..
+   89  mkdir test
+   90  cd test
+   91  git clone https://github.com/Faple007/Django_pro.git
+   92  ls
+   93  git checkout heroku
+   94  cd Django_pro/
+   95  git checkout heroku
+   96  ls
+   97  cd blog/
+   98  ld
+   99  ls
+  100  cd ..
+  101  cd myblog/
+  102  ls
+  103  cd ..
+  104  ls
+  105  git clone 
+  106  git add .
+  107  git commit -m "update"
+  108  git config --global user.email "st0963105799@gmail.com"
+  109  git config --global user.name "Faple007"
+  110  git add .
+  111  git commit -m "update"
+  112  git push
+  113  git add .
+  114  git commit -m "update"
+  115  git push
+  116  git add .
+  117  git commit -m "update"
+  118  git push
+  119  python3
+  120  django --version
+  121  python3
+  122  git add .
+  123  git commit -m "update"
+  124  git push
+  125  git add .
+  126  git commit -m "update"
+  127  git push
+  128  pip3 install dj-database-url gunicorn psycopg2 whitenoise
+  129  pip freeze > requirements.txt
+  130  pip3 freeze > requirements.txt
+  131  git add .
+  132  git commit -m "update"
+  133  git push
+  134  git add .
+  135  git commit -m "update"
+  136  git push
+  137  git add .
+  138  git commit -m "update"
+  139  git push
+  140  git add .
+  141  git commit -m "update"
+  142  git push
+  143  git add .
+  144  git commit -m "update"
+  145  git push
+  146  git add .
+  147  git commit -m "update"
+  148  git push
+  149  heroku config:set DISABLE_COLLECTSTATIC=1
+  150  git add .
+  151  git commit -m "update"
+  152  git push
+  153  nc -v 210.65.10.170:9487
+  154  nc -v 210.65.10.170 9487
+  155  1
+  156  nc -v 210.65.10.170 9487
+  157  pip install uncompyle6
+  158  pip3 install uncompyle6
+  159  cd ../../mnt/c
+  160  cd Users/st096/
+  161  ls
+  162  cd Desktop/
+  163  ls
+  164  uncompyle6 -h
+  165  uncompyle6 
+  166  ls
+  167  cd QAQ/
+  168  ls
+  169  cd QAQ/
+  170  ls
+  171  uncompyle6 main.pyc 
+  172  python3 main.py
+  173  uncompy
+  174  python3 main.py
+  175  python3 run.py 
+  176  pip3 apt install pygame
+  177  pip3 apt-get install pygame
+  178  pip3 install 
+  179  python3 run.py 
+  180  python3 main.py
+  181  cd __pycache__/
+  182  uncompyle6 running.cpython-36.pyc 
+  183  python3 running.cpython-36.py
+  184  nc -v 210.65.10.170 9487
+  185  python3
+  186  cd ..
+  187  python3 main.py 
+  188  python3 main.py
+  189  uncompyle6 main.pyc 
+  190  uncompyle6 running.pyc 
+  191  python main.py
+  192  pip install pygame
+  193  python3 main.py
+  194  python3
+  195  python3 main.py
+  196  python3 running.py
+  197  python3 test.py 
+  198  python3 tes
+  199  python3 test.py 
+  200  [A
+  201  python3 test.py 
+  202  python3 running.py
+  203  cd ../../mnt/c/
+  204  ls
+  205  cd ../../mnt/c/Users/st096/mystore/
+  206  ls
+  207  python3 manage.py runserver
+  208  django --version
+  209  django
+  210  python3 manage.py runserver
+  211  python3 manage.py createsuperuser
+  212  python3 manage.py runserver
+  213  mysql
+  214  sudo apt install mysql
+  215  sudo apt install mysqlsudo apt-get update
+  216  sudo apt-get update
+  217  sudo apt-get install mysql-server
+  218  mysqlserver -r root -p 0000
+  219  mysqlserver
+  220  mysql -u root -p
+  221  mysql -u root -p 0000
+  222  sudo mysql -u root -p 0000
+  223  whereis mysql
+  224  mysql
+  225  sudo mysql
+  226  sudo mysqlserver
+  227  mysql --help
+  228  mysql
+  229  sudo service mysql restart 
+  230  mysql
+  231  mysql -u root -p
+  232  mysql -u maple -p
+  233  mysql -u root password
+  234  mysqladmin -u root password
+  235  mysqladmin -u root password 0000
+  236  mysqladmin -u root password '0000'
+  237  sudo apt-get remove --purge texlive-full mysql-server
+  238  sudo apt update
+  239  sudo apt install mysql-server
+  240  mysql -u root -p
+  241  mysql -u root password
+  242  sudo mysql
+  243  mysql -u root -p
+  244  sudo mysql
+  245  sudo apt-get remove --purge texlive-full mysql-server
+  246  sudo apt update
+  247  apt list --upgradable
+  248  sudo apt install mysql-server
+  249  sudo mysql
+  250  mysql -u root -p
+  251  cd ../../mnt/c
+  252  cd Users/st096/mystore/
+  253  ls
+  254  python3 manage.py runserver
+  255  .
+  256  pipenv install django-bootstrap4
+  257  pipenv3 install django-bootstrap4
+  258  pip3 install django-bootstrap4
+  259  cd ../../mnt/c/Users/st096/myblog/
+  260  cd ..
+  261  cd mystore/
+  262  cd ../../mnt/c/Users/st096/mystore/
+  263  python3 manage.py runserver
+  264  ks
+  265  ls
+  266  cd ../../mnt/c/Users/st096/mystore/
+  267  ls
+  268  python manage.py runserver
+  269  vim manage.py 
+  270  python3 manage.py runserver
+  271  cd ../../mnt/c/Users/st096/mystore/
+  272  python3 manage.py runserver
+  273  cd ../../mnt/c/Users/st096/mystore/
+  274  django -*v
+  275  django -v
+  276  django --v
+  277  django -h
+  278  Django -h
+  279  Django
+  280  Django --h
+  281  django -version
+  282  version
+  283  python3
+  284  python -m django --version
+  285  python3 -m django --version
+  286  python3 manage.py runserver
+  287  python
+  288  python3
+  289  cd ../../mnt/c/Users/st096/mystore/
+  290  python3 manage.py runserver
+  291  cd ../myblog/
+  292  cd ../mystore/
+  293  python3 manage.py runserver
+  294  A
+  295  python3 manage.py runserver
+  296  {% block navbar %}
+  297  {% endblock %}{% block navbar %}
+  298  {% endblock %}
+  299  {% block navbar %}
+  300  cd ../../mnt/c/Users/st096/mystore/
+  301  ls
+  302  dir
+  303  pillow -v
+  304  Pillow -v
+  305  pipenv install Pillow
+  306  python3 -v
+  307  python -version
+  308  python3 -version
+  309  python3 --version
+  310  pip3 install Pillow
+  311  - f(n) = 5n + 3, 求c1、c2與n0
+  312  python manage.py makemigrations estore
+  313  - f(n) = 5n + 3, 求c1、c2與n0
+  314  python manage.py makemigrations estore
+  315  python3 manage.py makemigrations estore
+  316  python3 manage.py migrate estore
+  317  python3 manage.py runserver
+  318  string
+  319  strings
+  320  cd ../../mnt/c/Users/st096/
+  321  ls
+  322  cd Desktop/
+  323  ls
+  324  cd 安全程式設計/
+  325  strings bigfile | grep "{"
+  326  ws
+  327  cd .cd 
+  328  cd ../../mnt/c/Users/st096/Desktop/
+  329  cd 安全程式設計/
+  330  strings bigfile | grep {
+  331  cd ../../mnt/c/Users/st096/
+  332  ls
+  333  cd ..
+  334  cd 桌面
+  335  ls
+  336  cd ..
+  337  ls
+  338  D
+  339  cd Users/
+  340  ls
+  341  cd st096/
+  342  cd Desktop/
+  343  ls
+  344  cd 安全程式設計
+  345  ls
+  346  grep "CTF" bigfile
+  347  cat bigfile | grep "CTF"
+  348  strings bigfile | grep "CTF"
+  349  nc 2018shell3.picoctf.com 6903
+  350  strings mal_victim.pcapng | grep flag
+  351  nc 140.134.25.138:10000
+  352  nc -p 140.134.25.138:10000
+  353  nc -p 140.134.25.138
+  354  nc -p 140.134.25.138 10000
+  355  nc 140.134.25.138 -p 10000
+  356  nc 140.134.25.138 10000
+  357  nc 140.134.25.138 10001
+  358  curl
+  359  curl http://140.134.25.138:10002
+  360  curl "http://140.134.25.138:10002"
+  361  curl http://140.134.25.138:10002 | grep "{"
+  362  nc 140.134.25.138 10005
+  363  nc sudo apt install git
+  364  sudo apt install git
+  365  git clone https://github.com/denny0223/scrabble
+  366  cd scrabble/
+  367  ls
+  368  ./scrabble http://140.134.25.138:10005/
+  369  cat index.php 
+  370  cd 
+  371  git clone http://www.example.com/.DS_Store
+  372  git clone https://github.com/lijiejie/ds_store_exp
+  373  cd ds_store_exp/
+  374  ls
+  375  ds_store_exp.py http://140.134.25.138:10006/
+  376  /s_store_exp.py http://140.134.25.138:10006/
+  377  ./ds_store_exp.py http://140.134.25.138:10006/
+  378  sudo ./ds_store_exp.py http://140.134.25.138:10006/
+  379  sudo python3 ds_store_exp.py http://140.134.25.138:10006/
+  380  sudo python3 ds_store_exp.py
+  381  python3 ds_store_exp.py
+  382  vim ds_store_exp.py
+  383  ./ds_store_exp.py http://140.134.25.138:10006/.DS_Store/
+  384  sudo ./ds_store_exp.py http://140.134.25.138:10006/.DS_Store/
+  385  sudo python ds_store_exp.py http://140.134.25.138:10006/.DS_Store/
+  386  ls
+  387  cd 140.134.25.138_10006/
+  388  ls
+  389  cd ..
+  390  cat lib/
+  391  cd lib/
+  392  ls
+  393  cd ds_store/
+  394  ls
+  395  cd ..
+  396  cd .
+  397  cd  .cd ..
+  398  cd ..
+  399  ls
+  400  cd 140.134.25.138_10006/
+  401  ls
+  402  ls -a
+  403  cd .DS_Store/
+  404  ls
+  405  ls -a
+  406  cd ../..
+  407  sudo python ds_store_exp.py http://140.134.25.138:10006/DS_Store/
+  408  ls
+  409  sudo python ds_store_exp.py http://140.134.25.138:10006/DS_Store
+  410  ls
+  411  ls -a
+  412  cd 140.134.25.138_10006/
+  413  ls -a
+  414  cd .DS_Store/
+  415  ls -a
+  416  cd ..
+  417  ls
+  418  cd 140.134.25.138_10006/
+  419  ls
+  420  ls -a
+  421  cat .DS_Store
+  422  cd ..
+  423  sudo python ds_store_exp.py http://140.134.25.138:10006/.DS_Store
+  424  ls
+  425  rm 140.134.25.138_10006/
+  426  rm -rf 140.134.25.138_10006/
+  427  sudo rm -rf 140.134.25.138_10006/
+  428  sudo python ds_store_exp.py http://140.134.25.138:10006/.DS_Store
+  429  cd 140.134.25.138_10006/
+  430  cat /f/l/a/g/i/s/inside/.DS_Store
+  431  cat f/l/a/g/i/s/inside/.DS_Store
+  432  vim test.c
+  433  gcc test.c
+  434  ls
+  435  ./a.out
+  436  rm a.out
+  437  vim test.c
+  438  gcc test.c
+  439  ncat -kl -vc "./a.out" -p 10000
+  440  vim test.c
+  441  gcc test.c
+  442  ls
+  443  ncat -kl -vc "./a.out" -p 10000
+  444  sudo apt install nmap
+  445  ncat 127.0.0.1 10000
+  446  ncat -h
+  447  ncat -kl
+  448  ncat -h
+  449  ls
+  450  vim test.c 
+  451  gcc test.c
+  452  ncat -kl -vc "./a.out" -p 10000
+  453  sudo curl http://140.134.25.138:10002/next.html
+  454  sudo curl http://140.134.25.138:10002/next.html | gerp {
+  455  sudo curl http://140.134.25.138:10002/next.html | grep {
+  456  sudo curl http://140.134.25.138:10002/ | grep {
+  457  git clone
+  458  git clone http://140.134.25.138:10005/
+  459  git clone http://140.134.25.138:10005/.git
+  460  git clone https://github.com/BugScanTeam/GitHack.git
+  461  ls
+  462  cd GitHack/
+  463  ls
+  464  python GitHack.py http://140.134.25.138:10005/.git/
+  465  ls
+  466  cd dist/140.134.25.138_10005/
+  467  ls
+  468  cat index.php | grep {
+  469  cd ../.
+  470  cd ..
+  471  ls
+  472  cd ds_store_exp/
+  473  s
+  474  ls
+  475  cd 140.134.25.138_10006/
+  476  ls
+  477  cd f
+  478  ls
+  479  cd 1
+  480  cd l
+  481  ls
+  482  cd a
+  483  ls
+  484  cd g
+  485  ls
+  486  i
+  487  ls -a
+  488  cd i
+  489  ls
+  490  cd s/inside/
+  491  ls
+  492  cd ../../
+  493  ls
+  494  cd ..
+  495  ls
+  496  cd ..
+  497  ls
+  498  cd g/i/s
+  499  ls
+  500  cd inside/
+  501  ls
+  502  cd ..
+  503  ls
+  504  cd ..
+  505  ls
+  506  cd ..
+  507  ls
+  508  ls -a
+  509  cat .DS_Store 
+  510  cd ../../..
+  511  cd ..
+  512  cat -a
+  513  ls -a
+  514  cat .DS_Store | grep {
+  515  cat .DS_Store | grep C
+  516  cat .DS_Store
+  517  cd f/l/a/g/i/s/inside/
+  518  ls -a
+  519  cd ../../../..
+  520  cd 
+  521  cd ../../..
+  522  ls
+  523  cd home/
+  524  ls
+  525  cd ..
+  526  cd m
+  527  cd home/
+  528  cd maple/
+  529  ls
+  530  cd ds_store_exp/
+  531  ls
+  532  mv -rf 140.134.25.138_10006/
+  533  rm -rf 140.134.25.138_10006/
+  534  sudo rm -rf 140.134.25.138_10006/
+  535  python ds_store_exp.py s_store_exp.py  lib
+  536  maple@DESKTOP-02P7CED:~/ds_store_exp$ mv -rf 140.134.25.138_10006/
+  537  mv: invalid option -- 'r'
+  538  Try 'mv --help' for more information.
+  539  maple@DESKTOP-02P7CED:~/ds_store_exp$ rm -rf 140.134.25.138_10006/
+  540  rm: cannot remove '140.134.25.138_10006/.DS_Store': Permission denied
+  541  rm: cannot remove '140.134.25.138_10006/f/.DS_Store': Permission denied
+  542  rm: cannot remove '140.134.25.138_10006/f/l/.DS_Store': Permission denied
+  543  rm: cannot remove '140.134.25.138_10006/f/l/a/.DS_Store': 
+  544  s_store_exp.py  lib
+  545  maple@DESKTOP-02P7CED:~/ds_store_exp$ mv -rf 140.134.25.138_10006/
+  546  mv: invalid option -- 'r'
+  547  python ds_store_exp.py http://140.134.25.138:10006/.DS_Store
+  548  cat /f/l/a/g/i/s/inside/.DS_Store
+  549  cd /f/l/a/g/i/s/inside/
+  550  cd /f/l/a/g/i/s/inside
+  551  cd f/l/a/g/i/s/inside
+  552  cd 140.134.25.138:10006/f/l/a/g/i/s/inside/.DS_Store
+  553  cd 140.134.25.138:10006/f/l/a/g/i/s/inside
+  554  cd 140.134.25.138_10006/f/l/a/g/i/s/inside/
+  555  ls
+  556  ls -a
+  557  cat .
+  558  cat .DS_Store 
+  559  3~;SSSSSSSSSSSSSR
+  560  cd  ~
+  561  ls
+  562  cd ds_store_exp/
+  563  ls
+  564  rm -rf 140.134.25.138_10006/
+  565  ls
+  566  cd ..
+  567  ls
+  568  cd maple/
+  569  cd ~
+  570  ls
+  571  cd ..
+  572  ls
+  573  cd mnt/c/Users/st096/mystore/
+  574  ls
+  575  python3 manage.py runserver
+  576  django --v
+  577  django -v
+  578  django
+  579  django-admin
+  580  django -h
+  581  django --help
+  582  django --h
+  583  django -help
+  584  django test
+  585  clr
+  586  python3 -m django -v
+  587  python3 -m django --v
+  588  python3 -m django --version
+  589  cd 
+  590  ls
+  591  cd ../../mnt/c/Users/st096/myblog/
+  592  ls
+  593  cd myblog/
+  594  python3 manage.py runserver
+  595  cd ..
+  596  rm -rf myblog
+  597  ls
+  598  cd mystore/
+  599  ls
+  600  cd ..
+  601  cd mystore/
+  602  ls
+  603  cat manage.py 
+  604  python3 manage.py runserver
+  605  ld
+  606  ls
+  607  ld
+  608  cd ~
+  609  ls
+  610  cd 
+  611  ..cd ..
+  612  cd ..
+  613  ls
+  614  cd ..
+  615  cd mnt/c/Users/st096/
+  616  ls
+  617  cd ..
+  618  ls
+  619  cd st096/
+  620  ls
+  621  cd Desktop/
+  622  ls
+  623  cd WEB/
+  624  ls
+  625  python3 dango -v
+  626  python3 dango --v
+  627  python -c "import django;print(django.get_version())"
+  628  django-admin.py startproject Aboriginal
+  629  cd Aboriginal/
+  630  ls
+  631  history
+  632  history > ../../testt.txt
+  633  python manage.py 
+  634  python3 manage.py 
+  635  python3 manage.py startapp login
+  636  ls
+  637  rm -rf login/
+  638  python3 manage.py startapp Omniscient
+  639  ls
+  640  rm -rf Omniscient/
+  641  python3 manage.py startapp omniscient
+  642  pythonh3 manage.py runserver
+  643  python3 manage.py runserver
+  644  python3 -c "import django;print(django.get_version())"
+  645  history > ../../testt.txt
+  646  cd ..
+  647  ls
+  648  rm -rf Aboriginal
+  649  pip3 uninstall django
+  650  pip3 install "django==1.11"
+  651  sudo pip3 install "django==1.11"
+  652  python3 -c "import django;print(django.get_version())"
+  653  pip3 install "django==1.11.15"
+  654  pip3 install "django==1.11.15" --user
+  655  python3 -c "import django;print(django.get_version())"
+  656  django-admin.py startproject Aboriginal
+  657  cd Aboriginal/
+  658  python3 manage.py startapp omniscient
+  659  pythonh3 manage.py runserver
+  660  python3 manage.py runserver
+  661  python3 manage.py  makemigrations
+  662  python3 manage.py  makemigrations Migrations for 'omniscient'
+  663  python3 manage.py  makemigrations Migrations for 'omniscient':
+  664  python3 manage.py  makemigrations
+  665  python3 manage.py migrate
+  666  python3 manage.py runserver
+  667  python3 manage.py 
+  668  python3 manage.py  createsuperuser
+  669  python3 manage.py runserver
+  670  python3 manage.py makemigration
+  671  python3 manage.py 
+  672  python3 manage.py makemigrations
+  673  python3 manage.py makemigration
+  674  python3 manage.py makemigrations
+  675  python3 manage.py migrate
+  676  ls
+  677  rm db.sqlite3 
+  678  python3 manage.py makemigrations
+  679  python3 manage.py migrate
+  680  python3 manage.py makemigrations
+  681  python3 manage.py migrate
+  682  python3 manage.py makemigrations
+  683  python3 manage.py migrate
+  684  python3 manage.py createsuperuser
+  685  python3 manage.py runserver
+  686  ls
+  687  cd ..
+  688  ls
+  689  cd ..
+  690  cd mnt/c/Users/st096/
+  691  ls
+  692  cd Desktop/
+  693  ls
+  694  cd WEB/
+  695  ls
+  696  cd Aboriginal/
+  697  ls
+  698  python3 manage.py runserver
+  699  pip3 install ipython
+  700  pip3 install ipython --user
+  701  python3 manage.py shell
+  702  python3 manage.py runserver
+  703  ls
+  704  cd Aboriginal/
+  705  ls
+  706  python3 urls.py shell
+  707  history
+  708  cd ..
+  709  python3 manage.py shell
+  710  vim
+  711  vim ur
+  712  cd Aboriginal/
+  713  vim urls.py 
+  714  ls
+  715  cd ..
+  716  cd mo
+  717  cdls
+  718  ls
+  719  cd omniscient/
+  720  ls
+  721  vim views.py 
+  722  cd ..
+  723  python3 manage.py runserver
+  724  cd ../../mnt/c/Users/st096/Desktop/zzz/WEB/Aboriginal/
+  725  ls
+  726  python3 manage.py runserver
+  727  cd ..
+  728  cd maple/
+  729  ls
+  730  cd ..
+  731  ls
+  732  cd mnt/c/Users/st096/
+  733  ls
+  734  cd Desktop/
+  735  ls
+  736  cd zzz/
+  737  ls
+  738  cd 軟工
+  739  ls
+  740  cd BaseProject-Cpp/
+  741  ls
+  742  cd web/Aboriginal/
+  743  python3 manage.py runserver
+  744  ls
+  745  cd ../../mnt/c/Users/st096/Desktop/zzz/軟工/BaseProject-Cpp/
+  746  cd web/Aboriginal/
+  747  sudo python3 manage.py runserver
+  748  0000
+  749  ls
+  750  cd ../../mnt/c/Users/st096/Desktop/zzz/軟工/BaseProject-Cpp/
+  751  cd web/Aboriginal/
+  752  ls
+  753  python3 manage.py runserver
+  754  django-admin makemigrations
+  755  python3 manage.py 
+  756  python3 manage.py makemigrations
+  757  python3 manage.py migrate
+  758  python3 manage.py runserver
+  759  history
+  760  ls
+  761  netstat -nao
+  762  ps axjf
+  763  exit
+  764  cd ..
+  765  cd mnt/c/Users/st096/Desktop/zzz/
+  766  cd 軟工
+  767  cd BaseProject-Cpp/
+  768  cd web/Aboriginal/
+  769  python3 manage.py runserver
+  770  python3 manage.py -h
+  771  python3 manage.py changepassword
+  772  python3 manage.py runserver
+  773  python3 manage.py runserver 127.0.0.1:65530
+  774  cd ../../mnt/c/Users/st096/Desktop/zzz/軟工/BaseProject-Cpp/web/Aboriginal/
+  775  ls
+  776  python3 manage.py runserver
+  777  cd ../../mnt/c/Users/st096/Desktop/zzz/軟工/BaseProject-Cpp/web/Aboriginal/
+  778  python3 manage.py runserver
+  779  python3 manage.py -h
+  780  python3 manage.py -h migrate
+  781  python3 manage.py -migrate
+  782  python3 manage.py migrate
+  783  python3 manage.py makemigrations
+  784  python3 manage.py migrate
+  785  python3 manage.py runserver
+  786  cd ../../mnt/c/Users/st096/Desktop/zzz/軟工/BaseProject-Cpp/web/Aboriginal/
+  787  python3 manage.py  runserver
+  788  cat templates/omniscient/basic.html 
+  789  python3 manage.py  runserver
+  790  gcc
+  791  cd ../../mnt/c/Users/st096/Desktop/zzz/資料結構實習/2018_11/28
+  792  cd ../../mnt/c/Users/st096/Desktop/zzz/資料結構實習/
+  793  ls
+  794  cd 2018_11_28
+  795  gcc D0641771_莊鎮維.c
+  796  gcc D0641771_莊鎮維.c a.out
+  797  ls
+  798  gcc D0641771_莊鎮維.c
+  799  gcc D0641771_莊鎮維.c -o a.out
+  800  ls
+  801  ./a.out 
+  802  vim c
+  803  cd ../../mnt/c/Users/st096/Desktop/zzz/軟工/BaseProject-Cpp/web/Aboriginal/
+  804  python3 manage.py runserver
+  805  wget
+  806  wget https://blog.csdn.net/qq_25077833/article/details/53455158
+  807  ls
+  808  cat 53455158 
+  809  sudo mv 53455158 ../../mnt/c/Users/st096/Desktop/
+  810  cd ../../mnt/c/Users/st096/Desktop/zzz/軟工/BaseProject-Cpp/web/Aboriginal/
+  811  histroy
+  812  history
+  813* his
+  814  history >> zzz.txt
