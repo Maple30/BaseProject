@@ -41,21 +41,27 @@
 
 
 {%block content%}
+<h2>原住民手工藝列表</h2>
+{% if user.is_authenticated %}
+<a class="nav-link" href="{% url 'hand_made_add' %}">
+    <button type="button" class="btn btn-info">
+        新增手工藝
+    </button>
+</a>
+{% endif %}
 <div class="">
     {% for work in works %}
-        {% if forloop.counter0|divisibleby:"4" %}
-            <div class="row">
+    {% if forloop.counter0|divisibleby:"4" %}
+    <div class="row">
         {% endif %}
-                <div class="col-3 col-6-md col-12-sm">
-                    <section>{{ forloop.counter}}</section>
-                    <a href="{% url  'hand_made_detail' work.id %}"><img src="{{ work.Photo.url}}" class="img-fluid"></a>
-                </div>
-        {% if forloop.counter0|divisibleby:"3"  and forloop.counter0 != 0 %}
-            </div>
-        {% elif forloop.last and not forloop.counter0|divisibleby:"3" %}
-            </div>
-        {% endif %}
-
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <a href="{% url  'hand_made_detail' work.id %}"><img src="{{ work.Photo.url}}" class="img-fluid"></a>
+        </div>
+        {% if forloop.counter|divisibleby:"4" and forloop.counter0 != 0 %}
+    </div>
+    {% elif forloop.last and not forloop.counter|divisibleby:"4" %}
+    </div>
+    {% endif %}
     {% endfor %}
 </div>
 

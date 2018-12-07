@@ -11,6 +11,6 @@ urlpatterns = [
 	url(r'^$', views.index, name = 'index'),
 	url(r'^hand_made/$', views.hand_made, name = 'hand_made'),
 	url(r'^(?P<work_id>[0-9]+)/$', views.hand_made_detail, name='hand_made_detail'),
-
+    url(r'^hand_made_add/$', views.hand_made_add, name = 'hand_made_add'),
 	#url(r'^admin/', admin.site.urls),
 ]
