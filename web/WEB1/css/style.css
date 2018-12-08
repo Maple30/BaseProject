@@ -1,0 +1,371 @@
+@charset "utf-8";
+/* @import url("https://www.taiwan.net.tw/cm/css/zh-TW/style_FRA.css"); */
+/*中文版基本設定*/
+
+body {
+    font-family:"微軟正黑體", Arial, Verdana, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	position: relative;
+	color: #000;
+	font-size: 100%;
+    line-height: 1.8em;
+	background-color: #f0ede5;
+}
+
+h1 {
+	font-size: 210%;
+	padding: 25px 0px 25px 0px;
+}
+
+#section {
+	background-color: #58b3aa;
+	color: #ffffff;
+}
+
+/*觀光景點背景圖設定 */
+.nsaContent {
+	position: relative;
+	display: block;
+	width: 980px;
+	margin: 0px auto;
+	overflow: hidden;
+	padding: 130px 0px 0px 30px;
+}
+.nsaLeft {
+	box-sizing: border-box;
+	display: block;
+	width: 380px;
+	padding: 10px 25px 22px 30px;
+	height: auto;
+	float: left;
+	background-color: rgba(0,0,0,0.8);
+	font-size:16px;
+}
+
+.nsaLeft h1 {
+	color: #F60;
+	padding: 15px 0px 14px 0px;
+}
+
+/* map */
+.map{
+    right: -185px;
+	position:relative;
+	height: auto;
+	float: right;
+	width: 56%;
+}
+/* HS */
+.HSmap_dis{
+ 	visibility: hidden;	
+ 	opacity: 0;
+}
+
+.NFRA{
+	background-image: url("../image/map/map0.png");
+	background-size: 58%;
+	background-repeat: no-repeat;
+}
+.map_content .HSmap_dis1{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 75px;
+    height: 66px;
+    top: 16px;
+    left: 198px;
+    background-image: url("../image/map/1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis2{
+	display: block; 
+	position: absolute;
+	z-index: -1; 
+    width: 82px;
+    height: 35px;
+    top: 11px;
+    left: 269px;
+  	background-image: url("../image/map/2.png");
+   	background-size: contain;
+   	background-repeat: no-repeat;
+}
+.map_content .HSmap_dis3{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 240px;
+    height: 67px;
+    top: 6px;
+    left: 162.5px;
+    background-image: url("../image/map/3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis4{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 252px;
+    height: 62px;
+    top: 17px;
+    left: 152.5px;
+    background-image: url("../image/map/4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis5{
+	display: block;
+    position: absolute;
+    z-index: -1;
+    width: 159px;
+    height: 67px;
+    top: 27px;
+    left: 119.5px;
+    background-image: url("../image/map/5.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis6{
+	display: block;
+    position: absolute;
+    z-index: -1;
+    width: 81px;
+    height: 32px;
+    top: 31px;
+    left: 122px;
+    background-image: url("../image/map/6.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis7{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 164.5px;
+    height: 54px;
+    top: 47px;
+    left: 89.5px;
+    background-image: url("../image/map/7.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis8{
+	display: block;
+    position: absolute;
+    z-index: -1;
+    width: 191.5px;
+    height: 58px;
+    top: 67.5px;
+    left: 75.5px;
+    background-image: url("../image/map/8.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis9{
+    display: block;
+    position: absolute;
+    z-index: -1;
+   width: 149px;
+    height: 55.5px;
+    top: 93px;
+    left: 18.5px;
+    background-image: url("../image/map/9.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis10{
+       display: block;
+    position: absolute;
+    z-index: -1;
+      width: 140px;
+    height: 83px;
+    top: 128px;
+    left: 13.5px;
+    background-image: url("../image/map/10.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis11{
+	display: block; 
+	position: absolute; 
+    z-index: -1;
+    width: 175px;
+    height: 84px;
+    top: 112px;
+    left: 59.5px;
+    background-image: url("../image/map/11.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis12{
+    display: block;
+    position: absolute;
+    z-index: -2;
+    width: 167px;
+    height: 56px;
+    top: 155px;
+    left: 7px;
+    background-image: url("../image/map/12.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis13{
+	display: block;
+    position: absolute;
+    z-index: -1;
+    width: 153px;
+    height: 57px;
+    top: 177px;
+    left: 8px;
+    background-image: url("../image/map/13.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis14{
+	display: block; 
+	position: absolute; 
+    z-index: -1;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 75px;
+    height: 30px;
+    top: 170.5px;
+    left: 64px;
+    background-image: url("../image/map/14.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis15{
+	display: block;
+    position: absolute;
+    z-index: -1;
+    width: 265px;
+    height: 94.5px;
+    top: 188.5px;
+    left: -1px;
+    background-image: url("../image/map/15.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis16{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 154px;
+    height: 114.5px;
+    top: 242.5px;
+    left: 34px;
+    background-image: url("../image/map/16.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis17{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 140px;
+    height: 71px;
+    top: 51px;
+    left: 224px;
+    background-image: url("../image/map/17.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis18{
+	display: block; 
+	position: absolute; 
+    z-index: -1;
+    width: 165px;
+    height: 134px;
+    top: 105.5px;
+    left: 174px;
+    background-image: url("../image/map/18.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis19{
+	display: block; 
+	position: absolute; 
+    z-index: -1;
+     width: 148px;
+    height: 132px;
+    top: 206.5px;
+    left: 133.5px;
+    background-image: url("../image/map/19.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis20{
+    display: block; 
+    position: absolute; 
+    z-index: -1;
+    width: 138px;
+    height: 26px;
+    top: -2.5px;
+    left: 17.5px;
+    background-image: url("../image/map/20.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis21{
+    display: block; 
+    position: absolute; 
+    z-index: -1;
+    width: 76px;
+    height: 83px;
+    top: 27.5px;
+    left: -0.5px;
+    background-image: url("../image/map/21.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content .HSmap_dis22{
+    display: block; 
+    position: absolute; 
+    z-index: -1;
+    width: 78px;
+    height: 87px;
+    top: 124.5px;
+    left: -39px;
+    background-image: url("../image/map/22.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.map_content {
+	position: relative; 
+	z-index: 1;
+}
+
+/* 偏差修正 */
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.slideshow{
+    width: 250px;
+    height:auto;
+}
+
+/* 手機裝置修正 */
+@media screen and (max-width: 1000px) {
+    .map{
+        display:none;
+    }
+    .nsaContent {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 47% 0px 0px 0px;
+    }
+    .nsaLeft {
+        display:none;
+        width: 100%;
+        padding: 20px 25px 0px 25px;
+        float: left;
+        background-color: rgba(88,179,170,1);
+    }
+}
