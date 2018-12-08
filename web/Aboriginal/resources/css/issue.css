@@ -4,12 +4,17 @@
             body {font-family: Verdana, sans-serif;
                   margin:0;
                   background-color: lightblue}
-            .mySlides {display: none}
+            .mySlides {display: none;
+                      margin-top: 15px;
+                      margin-bottom: 15px;
+                      margin-right: 25px;
+                      margin-left: 25px;}
             img {vertical-align: middle;}
             
             /* Slideshow container */
             .slideshow-container {
               border-style: solid;
+              border-color: #717171;
               border-radius: 8px;
               background-color: goldenrod;
               max-width: 1100px;
