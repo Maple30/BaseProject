@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import permission_required, login_required
 # Create your views here.
 from .models import Works
 from .forms import WorksForm
+from django.contrib.messages import constants as messages
 
 # View(views.py)
 
@@ -15,9 +16,8 @@ def introduction(request):
 	return render(request, 'omniscient/introduction.html')
 
 
-def dog(request):
-	return render(request, 'omniscient/dog.html')
-
+def issue(request):
+	return render(request, 'omniscient/issue.html')
 
 def index(request):
 	return render(request, 'omniscient/index.html')
@@ -46,3 +46,11 @@ def hand_made_add(request):
 	else:
 		form = WorksForm()
 	return render(request, 'omniscient/forms.html', {'form': form})
+
+@login_required
+@permission_required('omniscient.delete_works')
+def hand_made_delete(request, work_id):
+    works = get_object_or_404(Works, pk=work_id)
+    works.delete()
+    messages.success(request, '手工藝品已刪除')
+    return redirect('hand_made')

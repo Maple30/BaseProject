@@ -1,5 +1,12 @@
 {% extends 'omniscient/basic.html' %}
 
+{% block del%}
+    {% if user.is_authenticated %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'hand_made_delete' %}">刪除</a>
+        </li>
+    {% endif %}
+{% endblock %}
 {%block content%}
 <div class=" text-center" >
     <h1>{{ work.Title }}</h1>
