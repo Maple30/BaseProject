@@ -189,6 +189,7 @@ $(document).ready(function () {
 	//HS觀光景點
 	$('.HS1').mouseover(function () {
 		$backgroundImage.stop().css('background', 'url(image/map/bg40.jpg) center center');
+		$backgroundImage.stop().css('background', 'url(photo/index/map/bg40.jpg) center center');
 		$backgroundImage.stop().css('background-size');
 		$title.stop().text('臺北市');
 		$p1.stop().text('臺北市是臺灣最大的都市。也是政治、經濟、文化的中心。臺北的整體發展相當活潑多元，充滿朝氣。建築形式相當豐富，現代的、古代的都有。因此，喜歡古蹟的，不可錯過大稻埕的迪化街、艋舺的龍山寺，可以欣賞老師傅們的精雕細鑿，匠心美塑。喜歡古物的，不可錯過五千年文化珍藏的寶庫--故宮博物院、歷史博物館。');
