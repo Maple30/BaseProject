@@ -1,5 +1,14 @@
 {% extends 'omniscient/basic.html' %}
 
+{% block css %}
+    <style>
+        * {
+            font-family: Microsoft JhengHei;
+            font-weight: bold;
+        }
+    </style>
+{% endblock %}
+
 {% block del%}
     {% if user.is_authenticated %}
         <li class="nav-item">
@@ -7,6 +16,7 @@
         </li>
     {% endif %}
 {% endblock %}
+
 {%block content%}
 <div class=" text-center" >
     <h1>{{ work.Title }}</h1>

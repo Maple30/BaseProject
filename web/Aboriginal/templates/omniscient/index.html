@@ -1,6 +1,223 @@
 {% extends 'omniscient/basic.html' %}
+{% load staticfiles%}
+
+{% block css %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>首頁</title>
+
+    <!-- css -->
+    <link id="linkCnt" href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/jquery.cycle2.min.js' %}"></script>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/ImgMap.js' %}" type="text/javascript"></script>
+{% endblock %}
+
 {% block content %}
-
-這是首頁
-
+<div>
+    <section id="section" style="font-size: 100%;">
+        <div class="hs_bg" style="background: url(&quot;./image/map/bg40.jpg&quot;) center center / cover;">
+            <div class="nsaContent">
+                <div class="map map_city">
+                    <div id="NFRA" class="NFRA map_content map_content">
+                        <i class="HSmap_dis HSmap_dis1 "></i>
+                        <i class="HSmap_dis HSmap_dis2 "></i>
+                        <i class="HSmap_dis HSmap_dis3 "></i>
+                        <i class="HSmap_dis HSmap_dis4 "></i>
+                        <i class="HSmap_dis HSmap_dis5 "></i>
+                        <i class="HSmap_dis HSmap_dis6 "></i>
+                        <i class="HSmap_dis HSmap_dis7 "></i>
+                        <i class="HSmap_dis HSmap_dis8 "></i>
+                        <i class="HSmap_dis HSmap_dis9 "></i>
+                        <i class="HSmap_dis HSmap_dis10"></i>
+                        <i class="HSmap_dis HSmap_dis11"></i>
+                        <i class="HSmap_dis HSmap_dis12"></i>
+                        <i class="HSmap_dis HSmap_dis13"></i>
+                        <i class="HSmap_dis HSmap_dis14"></i>
+                        <i class="HSmap_dis HSmap_dis15"></i>
+                        <i class="HSmap_dis HSmap_dis16"></i>
+                        <i class="HSmap_dis HSmap_dis17"></i>
+                        <i class="HSmap_dis HSmap_dis18"></i>
+                        <i class="HSmap_dis HSmap_dis19"></i>
+                        <i class="HSmap_dis HSmap_dis20"></i>
+                        <i class="HSmap_dis HSmap_dis21"></i>
+                        <i class="HSmap_dis HSmap_dis22"></i>
+                        <div>
+                            <img id="TaiwanMap" src="{% static 'photo/index/map/mapL-Mask.png'%}" usemap="#Map" alt="台灣地圖">
+                            <map id="Map" name="Map">
+                                <area class="HS1 " shape="poly" href="#" alt="臺北市" title="臺北市" coords="255,18,250,24,257,31,253,33,256,41,266,44,266,39,273,38,268,31,267,25,262,16">
+                                <area class="HS2 " shape="poly" href="#" alt="基隆市" title="基隆市" coords="278,24,270,25,278,38,287,38,285,33,289,29,282,27">
+                                <area class="HS3 " shape="poly" href="#" alt="新北市" title="新北市" coords="249,15,242,19,231,17,242,28,241,35,236,36,239,41,237,49,244,56,242,64,248,72,261,69,260,61,272,62,282,59,289,57,292,51,307,50,300,45,299,35,275,20,269,9,253,8">
+                                <area class="HS4 " shape="poly" href="#" alt="桃園市" title="桃園市" coords="230,19,223,20,215,20,205,21,200,27,206,34,214,40,216,45,220,51,229,55,227,68,233,79,246,72,243,56,236,50,237,40,232,34,241,32,237,23">
+                                <area class="HS5 " shape="poly" href="#" alt="新竹縣" title="新竹縣" coords="199,28,208,38,214,40,215,45,227,55,227,65,233,78,235,84,229,90,220,93,217,86,211,82,201,79,201,70,199,61,190,52,197,48,201,52,202,43,196,37,191,35">
+                                <area class="HS6 " shape="poly" href="#" alt="新竹市" title="新竹市" coords="189,35,201,43,200,50,195,47,190,50,185,47">
+                                <area class="HS7 " shape="poly" href="#" alt="苗栗縣" title="苗栗縣" coords="184,48,170,52,164,57,159,66,151,72,164,91,171,95,178,96,182,92,191,95,197,100,212,97,221,93,215,85,203,80,200,67,194,56">
+                                <area class="HS8 " shape="poly" href="#" alt="臺中市" title="臺中市" coords="152,74,169,97,183,99,182,92,193,101,208,100,222,95,228,99,239,105,234,111,224,116,213,114,203,114,194,115,186,118,179,116,175,117,170,115,164,120,160,125,150,119,143,109,133,94">
+                                <area class="HS9 " shape="poly" href="#" alt="彰化縣" title="彰化縣" coords="132,96,141,110,148,116,144,118,146,125,142,137,148,146,140,145,106,129,105,123">
+                                <area class="HS10" shape="poly" href="#" alt="雲林縣" title="雲林縣" coords="105,130,96,135,94,140,90,146,87,158,95,162,100,158,105,157,114,157,125,158,132,165,140,167,149,173,150,167,145,162,141,156,145,148">
+                                <area class="HS11" shape="poly" href="#" alt="南投縣" title="南投縣" coords="223,117,203,115,187,120,180,117,172,116,162,125,143,116,148,126,143,136,149,145,142,156,150,167,159,171,164,176,161,183,171,187,182,193,186,189,192,189,197,183,203,180,208,171,206,163,210,158,216,145,213,142,224,133,219,125">
+                                <area class="HS14" shape="poly" href="#" alt="嘉義市" title="嘉義市" coords="123,177,123,182,127,185,132,183,126,176">
+                                <area class="HS12" shape="poly" href="#" alt="嘉義縣" title="嘉義縣" coords="88,158,95,164,108,158,120,158,134,166,145,171,151,168,161,172,162,177,157,181,172,189,162,193,148,198,139,202,135,201,134,205,127,204,121,201,124,192,117,182,110,179,99,181,91,185,80,179">
+                                <area class="HS13" shape="poly" href="#" alt="臺南市" title="臺南市" coords="81,180,91,186,103,180,113,180,122,189,122,198,121,203,135,206,129,215,114,226,101,232,94,230,83,227,82,224,78,216,69,201">
+                                <area class="HS15" shape="poly" href="#" alt="高雄市" title="高雄市" coords="176,188,136,203,126,217,109,230,104,233,80,226,86,249,86,259,97,280,111,245,119,245,130,243,134,247,143,251,152,251,151,240,157,234,158,222,168,212,179,210,174,199,179,195">
+                                <area class="HS16" shape="poly" href="#" alt="屏東縣" title="屏東縣" coords="152,253,145,252,139,248,131,247,128,245,119,247,111,245,99,279,110,289,122,311,126,327,124,338,124,349,130,350,137,356,141,345,144,338,142,331,146,324,137,311,134,301,137,296,136,286,136,278,142,270,154,267,156,260">
+                                <area class="HS17" shape="poly" href="#" alt="宜蘭縣" title="宜蘭縣" coords="302,51,284,60,270,62,260,62,262,69,246,73,235,79,227,92,227,98,238,104,256,115,260,111,272,121,273,112,283,105,284,98,286,93,286,80,284,68,293,57">
+                                <area class="HS18" shape="poly" href="#" alt="花蓮縣" title="花蓮縣" coords="271,123,260,113,255,116,240,107,226,117,222,124,224,131,215,142,218,148,212,158,207,164,209,169,206,180,199,183,194,191,187,191,181,193,176,198,180,209,184,221,192,228,195,225,203,242,225,206,231,210,237,186,242,173,253,151,254,141,262,128">
+                                <area class="HS19" shape="poly" href="#" alt="臺東縣" title="臺東縣" coords="177,212,166,215,163,220,152,241,154,255,156,262,153,268,141,272,137,280,135,304,142,315,146,319,160,291,169,279,175,276,229,292,230,304,234,296,239,292,232,281,183,273,191,264,201,253,212,243,218,233,226,219,226,207,216,223,204,238">
+                                <area class="HS20" shape="poly" href="#" alt="連江縣" title="連江縣" coords="119,3,115,7,114,13,113,21,107,21,109,15,110,7,114,3">
+                                <area class="HS21" shape="poly" href="#" alt="金門縣" title="金門縣" coords="44,33,40,32,31,36,30,40,42,43,47,39,53,39,59,40,58,32,51,27">
+                                <area class="HS22" shape="poly" href="#" alt="澎湖縣" title="澎湖縣" coords="18,126,4,140,3,166,15,168,24,169,24,137,21,132">
+                            </map>
+                        </div>
+                    </div>
+                </div>
+                <div class="nsaLeft">
+                    <h1 class="title_name">臺北市</h1>
+                    <p class="p1">臺北市是臺灣最大的都市。也是政治、經濟、文化的中心。臺北的整體發展相當活潑多元，充滿朝氣。建築形式相當豐富，現代的、古代的都有。因此，喜歡古蹟的，不可錯過大稻埕的迪化街、艋舺的龍山寺，可以欣賞老師傅們的精雕細鑿，匠心美塑。喜歡古物的，不可錯過五千年文化珍藏的寶庫--故宮博物院、歷史博物館。</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 30px">
+            <div class="row">
+                <div class="col-12">
+                    <h2>原住民簡介</h2>
+                    <p>
+                        臺灣原住民族是指原居於臺灣的民族，在17世紀漢裔移民移入前，即已定居在此的部族。<br>
+                        其中臺灣本島的所有部族為臺灣南島語群，蘭嶼上的達悟族則屬於馬來-玻里尼西亞語族的巴丹語群。<br>
+                        目前僅16個部族為官方所承認，根據《原住民族身分法》登記之戶口統計至少約56萬多人口，佔臺灣人口的2.38%。<br>
+                        <br>
+                        臺灣原住民族各族曾是臺灣的主體族群，但受外來移民數量的擴張以致居住範圍受到排擠，治權領域逐漸縮小。<br>
+                        這些區域現今主要位於臺灣本島東部、西部山區以及蘭嶼，並由官方劃定為原住民族地區，簡稱原鄉，原住民族則享有自治權。<br>
+                        此外，原住民族長期以來因都市化而流入各大都會區，現今已有四成六人口設籍於都會區，部分區域之族人甚至認同其現居地為原鄉而形成部落。<br>
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">阿美族</h3>
+                    <a href="#">
+                        <img src="{% static 'photo/index/原住民 ICON/阿美族 Amis.jpeg'%}" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">排灣族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/排灣族 Paiwan.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">泰雅族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/泰雅族 Atayal.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">布農族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/布農族 Bunon.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">卑南族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/卑南族 Pinuyumayan.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">魯凱族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/魯凱族 Rukai.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">鄒族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/鄒族 Tsou.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">賽夏族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/賽夏族 Saisiyat.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">達悟族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/雅美族(達悟族) Yami.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">邵族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/邵族 Thao.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">噶瑪蘭族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/噶瑪蘭族 Kavalan.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">太魯閣族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/太魯閣族 Truku.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">撒奇萊雅族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/撒奇萊雅族 Sakizaya.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">賽德克族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/賽德克族Sediq.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">拉阿魯哇族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/拉阿魯哇族 Hla’alua.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" style="background-color:goldenrod">
+                    <h3 class="container" style="margin-top: 20px">卡那卡那富族</h3>
+                    <a href="#">
+                        <img src="./image/原住民 ICON/卡那卡那富族 Kanakanavu.jpeg" class="img-fluid" alt="charmander" width="100%">
+                    </a>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </section>
+</div>
 {% endblock %}

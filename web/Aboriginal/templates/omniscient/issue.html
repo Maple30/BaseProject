@@ -1,8 +1,17 @@
 {% extends 'omniscient/basic.html' %}
 {% load static %}
+
 {% block css %}
+    <style>
+        * {
+            font-family: Microsoft JhengHei;
+            font-weight: bold;
+        }
+    </style>
+
     <link rel="stylesheet" href="{% static 'css/issue.css' %}">
 {% endblock %}
+
 {% block content %}
     <!-- Slideshow container -->
     <div class="slideshow-container">
