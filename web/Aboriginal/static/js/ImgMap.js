@@ -318,8 +318,6 @@ $(document).ready(function () {
 		$p2.stop().append("<p class='morelink'>更多內容<a href='m1.aspx?sNo=0001122'> </a></p>");
 	});
 	$('.HS17').mouseover(function () {
-
-
 		$backgroundImage.stop().css('background', 'url(/static/photo/index/map/bg55.jpg) center center');
 		$backgroundImage.stop().css('background-size');
 		$title.stop().text('宜蘭縣 ');
