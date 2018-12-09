@@ -179,8 +179,7 @@ $(document).ready(function () {
 	);
 
 	//初始直設定
-
-	var $backgroundImage = $('.hs_bg');/*觀光景點背景圖*/
+	
 	var $title = $('.title_name');/*標題*/
 	var $p1 = $('.p1');/*內文第1段*/
 	var $p2 = $('.p2');/*內文第2段*/
