@@ -2,11 +2,6 @@
 /* @import url("https://www.taiwan.net.tw/cm/css/zh-TW/style_FRA.css"); */
 /*中文版基本設定*/
 
-* {
-    font-family: Microsoft JhengHei;
-    font-weight: bold;
-}
-
 body {
 	letter-spacing: 1px;
 	position: relative;
