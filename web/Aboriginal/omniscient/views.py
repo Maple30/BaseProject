@@ -33,6 +33,18 @@ def hand_made_detail(request, work_id):
     work = get_object_or_404(Works, pk=work_id)
     return render(request, 'omniscient/hand_made_detail.html', {'work': work})
 
+def Add_Account(request):
+	if request.method == "POST":
+		form = WorksForm(request.POST,request.FILES)
+		if form.is_valid():
+			work = form.save(commit=False)
+			work.User = request.user
+			work.save()
+			messages.success(request, '帳戶以新增')
+			return redirect('hand_made')
+	else:
+		form = WorksForm()
+	return render(request, 'omniscient/forms.html', {'form': form})
 
 @login_required
 @permission_required('omniscient.add_works')
