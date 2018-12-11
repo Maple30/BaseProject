@@ -2,7 +2,7 @@
 {% load bootstrap4 %}
 <!--引入bootstrap的css-->
 {% bootstrap_css %}
-{% bootstrap_javascript jquery='full' %}
+{% bootstrap_javascript jquery=True %}
 
 <!DOCTYPE html>
 <html >
@@ -49,8 +49,10 @@
             </ul>
         </div>
     </nav>
-
-    
+<div class="container">
+<br>
+{% bootstrap_messages %}
+</div>
 {% block content %}
 {% endblock %}
     
