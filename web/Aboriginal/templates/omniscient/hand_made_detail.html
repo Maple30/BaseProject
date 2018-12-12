@@ -11,9 +11,9 @@
 {% endblock %}
 
 {% block del%}
-    {% if user.is_authenticated %}
+    {% if user == work.User %}
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'hand_made_delete' %}">刪除</a>
+            <a class="nav-link" href="{% url 'hand_made_delete' work.id %}">刪除</a>
         </li>
     {% endif %}
 {% endblock %}
