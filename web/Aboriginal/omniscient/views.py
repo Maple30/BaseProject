@@ -40,7 +40,7 @@ def Add_Account(request):
 			work = form.save(commit=False)
 			work.User = request.user
 			work.save()
-			messages.success(request, '帳戶以新增')
+			messages.success(request, '帳戶已新增')
 			return redirect('hand_made')
 	else:
 		form = WorksForm()
@@ -55,7 +55,7 @@ def hand_made_add(request):
 			work = form.save(commit=False)
 			work.User = request.user
 			work.save()
-			messages.success(request, '手工藝品以新增')
+			messages.success(request, '手工藝品已新增')
 			return redirect('hand_made')
 	else:
 		form = WorksForm()

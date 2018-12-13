@@ -1,5 +1,5 @@
 {% extends 'omniscient/basic.html' %}
-
+{% load bootstrap4 %}
 {% block css %}
 <style>
     * {
@@ -18,6 +18,11 @@
 {% endblock %}
 
 {%block content%}
+<div class="container">
+    <br>
+    {% bootstrap_messages %}
+    
+</div>
 <div>
     {% for work in works %}
     {% if forloop.counter0|divisibleby:"4" %}
