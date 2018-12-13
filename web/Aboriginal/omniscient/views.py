@@ -37,7 +37,9 @@ def Add_Account(request):
 	if request.method == "POST":
 		form = UserForm(request.POST)
 		if form.is_valid():
-			form.save()
+			user = form.save(commit=False)
+			user.set_password(user.password)
+			user.save()
 			messages.success(request, '帳戶已新增')
 			return redirect('index')
 	else:

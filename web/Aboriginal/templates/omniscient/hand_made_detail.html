@@ -21,14 +21,15 @@
 {%block content%}
 <div class=" text-center" >
     <h1>{{ work.Title }}</h1>
-    <img src="{{ work.Photo.url}}" class="rounded mx-auto d-block img-fluid">
-    {{ work.Introduction }}
     <br>
-    {{ work.Contact }}
+    <img src="{{ work.Photo.url}}" class="rounded mx-auto d-block img-fluid img-thumbnail">
+    <p>手工藝品介紹{{ work.Introduction }}</p>
     <br>
-    {{ work.Add_time }}
+    <p>連絡電話:{{ work.Contact }}</p>
     <br>
-    {{ work.Edit_time }}
+    <p>商品刊登時間:{{ work.Add_time }}</p>
+    <br>
+    <p>商品最後編輯時間:{{ work.Edit_time }}</p>
 </div>
 
 {%endblock%}

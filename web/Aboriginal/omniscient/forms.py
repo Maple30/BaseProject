@@ -11,5 +11,17 @@ class WorksForm(forms.ModelForm):
 
 class UserForm(forms.ModelForm):
     class Meta:
+        password = forms.CharField(widget=forms.PasswordInput)
         model = User
+        widgets = {
+            'password': forms.PasswordInput(),
+        }
         fields = ('username', 'password')
+
+# class UserForm(ModelForm):
+#     class Meta:
+#         password = forms.CharField(widget=forms.PasswordInput)
+#         model = User
+#         widgets = {
+#             'password': forms.PasswordInput(),
+#         }
