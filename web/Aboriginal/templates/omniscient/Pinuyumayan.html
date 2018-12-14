@@ -18,7 +18,7 @@
             document.getElementById('trad').style.color = "gray";
             document.getElementById('good').style.backgroundColor = "white";
             document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "../../resources/photo/Introduction/5_1.jpg";
+            document.getElementById('shy').src = "{% static 'photo/Introduction/5_1.jpg' %}";
             document.getElementById('title').innerHTML = "卑南族介紹";
             document.getElementById('contain').innerHTML = "<p>傳統社會組織以長女承家以及男性年齡階段組織為主，屬於母系社會，特質如下 \
                         <ol> \
@@ -50,7 +50,7 @@
             document.getElementById('trad').style.color = "gray";
             document.getElementById('good').style.backgroundColor = "white";
             document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "../../resources/photo/Introduction/1_2.jpg";
+            document.getElementById('shy').src = "{% static 'photo/Introduction/1_2.jpg' %}";
             document.getElementById('title').innerHTML = "卑南族分佈";
             document.getElementById('contain').innerHTML = "<p>卑南族主要分布於台東縱谷南部，全族分居八個部落有「八社番」之名。</p>"
         }
@@ -63,7 +63,7 @@
             document.getElementById('trad').style.color = "white";
             document.getElementById('good').style.backgroundColor = "white";
             document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "../../resources/photo/Introduction/5_3.jpg";
+            document.getElementById('shy').src = "{% static 'photo/Introduction/5_3.jpg' %}";
             document.getElementById('title').innerHTML = "卑南族節慶";
             document.getElementById('contain').innerHTML = "<h2>卑南族年祭</h2> \
             <div class='container'><p>「年祭」是卑南八社從十二月二十四日起至隔年元月二日為止，舉行之「猴祭」、「大獵祭」、「聯合年祭」等一系列活動的總稱。<br> \
@@ -86,7 +86,7 @@
             document.getElementById('trad').style.color = "gray";
             document.getElementById('good').style.backgroundColor = "blue";
             document.getElementById('good').style.color = "white";
-            document.getElementById('shy').src = "../../resources/photo/Introduction/5_4.jpg";
+            document.getElementById('shy').src = "{% static 'photo/Introduction/5_4.jpg' %}";
             document.getElementById('title').innerHTML = "卑南族特色";
             document.getElementById('contain').innerHTML = "<h2>戴花環的普遍性</h2><div class='container'><p>雖然不是只有卑南族才戴花環，但形制的一致性及花環所代表的男子成年意義是其他族群所沒有的。</p></div> \
             <h2>精湛的刺繡手藝</h2><div class='container'><p>以十字繡法最普遍，人形舞蹈紋是卑南族特有的圖案。</p></div> \
@@ -114,7 +114,7 @@
     </div>
     <div style="border-style:groove">
         <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-            <img src="../../resources/photo/Introduction/5_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
+            <img src="{% static 'photo/Introduction/5_1.jpg' %}g" id="shy" class="img-fluid" alt="Responsive image"
                 width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
         </div>
 
