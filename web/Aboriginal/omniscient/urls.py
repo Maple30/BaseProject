@@ -14,5 +14,7 @@ urlpatterns = [
     url(r'^hand_made_add/$', views.hand_made_add, name = 'hand_made_add'),
 	url(r'^hand_made_delete/(?P<work_id>[0-9]+)/$', views.hand_made_delete, name = 'hand_made_delete'),
 	url(r'^Add_Account/$', views.Add_Account, name = 'Add_Account'),
+	url(r'^Add_Issue/$', views.Add_Issue, name = 'Add_Issue'),
+	url(r'Amis^/$', views.Amis, name = 'Amis'),
 	#url(r'^admin/', admin.site.urls),
 ]

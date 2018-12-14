@@ -4,6 +4,11 @@ from django.utils import timezone
 # Create your models here.
 
 class Works(models.Model):							#儲存手工藝品資料
+	# class Meta:
+	# 	permissions = (
+	# 		("add_add_works", "add_add_works"),  # 只有一個權限時，千萬不要忘了逗號！
+
+	# 	)
 	Title = models.CharField(max_length = 25)		#標題
 	Introduction = models.TextField(blank = False)	#簡介
 	Contact = models.TextField(blank = False)		#聯絡資訊
@@ -14,11 +19,16 @@ class Works(models.Model):							#儲存手工藝品資料
 
 	
 class Issue(models.Model):						#儲存議題資料
+	# class Meta:
+	# 	permissions = (
+	# 		("add_issue", "add_issue"),  # 只有一個權限時，千萬不要忘了逗號！
+
+	# 	)
 	Title = models.CharField(max_length = 25)	
 	Context = models.TextField(blank = False)
 	User = models.ForeignKey(User, on_delete=models.CASCADE,default="")
-	Add_time = models.DateTimeField(auto_now_add = False)
-	Edit_time = models.DateTimeField(auto_now = False)
+	Add_time = models.DateTimeField(auto_now_add = True)
+	Edit_time = models.DateTimeField(auto_now = True)
 	
 # class Board(models.Model):						#儲存留言板資料
 # 	Context = models.TextField(blank = False)

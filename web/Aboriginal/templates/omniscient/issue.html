@@ -17,6 +17,13 @@
 <link rel="stylesheet" href="{% static 'css/issue.css' %}">
 {% endblock %}
 
+{% block add %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'Add_Issue' %}">新增議題</a>
+    </li>
+{% endblock %}
+
+
 {% block content %}
 <!-- Slideshow container -->
 <div id="demo" class="carousel slide" data-ride="carousel">

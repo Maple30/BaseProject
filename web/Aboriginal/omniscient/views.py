@@ -4,7 +4,7 @@ import datetime
 from django.contrib.auth.decorators import permission_required, login_required
 # Create your views here.
 from .models import Works
-from .forms import WorksForm, UserForm
+from .forms import WorksForm, UserForm, IssueForm
 # from django.contrib.messages import constants as messages
 from django.contrib import messages
 
@@ -46,6 +46,7 @@ def Add_Account(request):
 		form = UserForm()
 	return render(request, 'omniscient/forms.html', {'form': form})
 
+
 @login_required
 @permission_required('omniscient.add_works')
 def hand_made_add(request):
@@ -70,3 +71,18 @@ def hand_made_delete(request, work_id):
     works.delete()
     messages.success(request, '手工藝品已刪除')
     return redirect('hand_made')
+
+@login_required
+@permission_required('omniscient.add_issue')
+def Add_Issue(request):
+	if request.method == "POST":
+		form = IssueForm(request.POST)
+		if form.is_valid():
+			issue = form.save(commit=False)
+			issue.User = request.user
+			issue.save()
+			messages.success(request, '議題已新增')
+			return redirect('issue')
+	else:
+		form = IssueForm()
+	return render(request, 'omniscient/forms.html', {'form': form})

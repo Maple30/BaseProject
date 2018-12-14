@@ -18,6 +18,10 @@ class UserForm(forms.ModelForm):
         }
         fields = ('username', 'password')
 
+class IssueForm(forms.ModelForm):
+    class Meta:
+        model = Issue
+        fields = ('Title', 'Context')
 # class UserForm(ModelForm):
 #     class Meta:
 #         password = forms.CharField(widget=forms.PasswordInput)
