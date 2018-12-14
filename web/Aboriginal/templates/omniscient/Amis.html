@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8" />
+{% extends 'omniscient/basic.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+{% block css %}
+<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>原住民介紹</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,49 +80,46 @@
             陶器是生活中很重要的工具，雖然籐條可以裝物品，但是無法用來作為液體的物品裝置。傳統上的製陶工作都是由女人來擔任，雖然大部分都是素陶，沒有再經過外表上的加工，美觀上不足卻提升了生活上的方便跟實用性。</p></div>";
         }
     </script>
-</head>
+{% endblock %}
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group col-lg" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
-                        id="Intro" onclick="checkTro()">介紹</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="where" onclick="checkwhere()">分佈</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="trad" onclick="checktrad()">節慶</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="good" onclick="checkgood()">特色</button>
-                </div>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group col-lg" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
+                    id="Intro" onclick="checkTro()">介紹</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="where" onclick="checkwhere()">分佈</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="trad" onclick="checktrad()">節慶</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="good" onclick="checkgood()">特色</button>
             </div>
-
         </div>
-        <div style="border-style:groove">
-            <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-                <img src="../../resources/photo/Introduction/2_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
-                    width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
-            </div>
 
-            <div>
-                <br>
-                <h1 id="title">
-                    阿美族介紹
-                </h1>
-                <div class="container" id="contain">
-                    <p>
-                        阿美族所處環境造就了阿美族人相當獨特的飲食文化。阿美族人的飲食文化中的特色有三大點︰海鮮水產食物的喜好、擁有豐富的野菜文化、以及風味特殊的醃生肉(silao)。這三種飲食的特色，至今仍然深深地影響當代的阿美族人。 
-                        傳統社會制度以母系氏族組織為主，男性被招贅後共居於女家，有關家庭親族事務與財產由女性戶長做主，惟重要事務，如婚姻、分產則必由出贅之母舅返家共同決策；然而，部落性之政治、司法、戰爭、宗教等公共事務，則由男性組織之男子年齡階級組織處理。但今日阿美人的社會也日漸受到漢人的影響，入贅婚比較少見。家裡的經濟權也漸漸轉移到男子身上，母系社會的特質已漸漸淡化。<br>
-                        傳統祭儀以部落之豐年祭為主，其中過程以表達部落男子年齡階級新成員之加入意義為最重要。<br>
-                        目前人口約有21萬人左右(107年3月)，是台灣原住民族中人數最多者。<br>
-                        阿美族社會的另一個特徵是嚴密的年齡階級組織，男子在十三、四歲時，必須進入集會所接受成為一個男人的訓練。以二至五歲為一個階級，同一階級的男孩一起學習、生活，並住宿於集會所。在集會所裡，同一個階級的同伴一起工作，遇有獎勵或處罰也是以一個階級為單位。無形中更緊扣了同年齡階級的每一個男子，而這樣的關係是一生一世，直到離開人世為止。
-                    </p>
-                </div>
+    </div>
+    <div style="border-style:groove">
+        <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
+            <img src="../../resources/photo/Introduction/2_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
+                width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div>
+            <br>
+            <h1 id="title">
+                阿美族介紹
+            </h1>
+            <div class="container" id="contain">
+                <p>
+                    阿美族所處環境造就了阿美族人相當獨特的飲食文化。阿美族人的飲食文化中的特色有三大點︰海鮮水產食物的喜好、擁有豐富的野菜文化、以及風味特殊的醃生肉(silao)。這三種飲食的特色，至今仍然深深地影響當代的阿美族人。 
+                    傳統社會制度以母系氏族組織為主，男性被招贅後共居於女家，有關家庭親族事務與財產由女性戶長做主，惟重要事務，如婚姻、分產則必由出贅之母舅返家共同決策；然而，部落性之政治、司法、戰爭、宗教等公共事務，則由男性組織之男子年齡階級組織處理。但今日阿美人的社會也日漸受到漢人的影響，入贅婚比較少見。家裡的經濟權也漸漸轉移到男子身上，母系社會的特質已漸漸淡化。<br>
+                    傳統祭儀以部落之豐年祭為主，其中過程以表達部落男子年齡階級新成員之加入意義為最重要。<br>
+                    目前人口約有21萬人左右(107年3月)，是台灣原住民族中人數最多者。<br>
+                    阿美族社會的另一個特徵是嚴密的年齡階級組織，男子在十三、四歲時，必須進入集會所接受成為一個男人的訓練。以二至五歲為一個階級，同一階級的男孩一起學習、生活，並住宿於集會所。在集會所裡，同一個階級的同伴一起工作，遇有獎勵或處罰也是以一個階級為單位。無形中更緊扣了同年齡階級的每一個男子，而這樣的關係是一生一世，直到離開人世為止。
+                </p>
             </div>
         </div>
     </div>
-
-</body>
-
-</html>
+</div>
+{% endblock %}

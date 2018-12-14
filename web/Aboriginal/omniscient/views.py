@@ -86,3 +86,54 @@ def Add_Issue(request):
 	else:
 		form = IssueForm()
 	return render(request, 'omniscient/forms.html', {'form': form})
+
+
+# 洧彥的頁面
+#1
+def Amis(request):
+	return render(request, 'omniscient/Amis.html')
+#2	
+def Bunun(request):
+	return render(request, 'omniscient/Bunun.html')
+#3
+def Paiwan(request):
+	return render(request, 'omniscient/Paiwan.html')
+#4
+def Pinuyumayan(request):
+	return render(request, 'omniscient/Pinuyumayan.html')
+#5
+def Rukai(request):
+	return render(request, 'omniscient/Rukai.html')
+#6	
+def Tayal(request):
+	return render(request, 'omniscient/Tayal.html')
+#7
+def Tsou(request):
+	return render(request, 'omniscient/Tsou.html')
+#8
+# def index(request):
+# 	return render(request, 'omniscient/index.html')
+# #9
+# def index(request):
+# 	return render(request, 'omniscient/index.html')
+# #10	
+# def index(request):
+# 	return render(request, 'omniscient/index.html')
+# #11
+# def index(request):
+# 	return render(request, 'omniscient/index.html')
+# #12
+# def index(request):
+# 	return render(request, 'omniscient/index.html')
+# #13
+# def index(request):
+# 	return render(request, 'omniscient/index.html')
+# #14
+# def index(request):
+# 	return render(request, 'omniscient/index.html')
+# #15
+# def index(request):
+# 	return render(request, 'omniscient/index.html')
+# #16
+# def index(request):
+# 	return render(request, 'omniscient/index.html')

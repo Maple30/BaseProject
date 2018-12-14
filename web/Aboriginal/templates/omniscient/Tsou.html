@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html>
+{% extends 'omniscient/basic.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
 
-<head>
-    <meta charset="utf-8" />
+{% block css %}
+<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>原住民介紹</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,48 +82,46 @@
             不管是婚姻或是祭祀行為，都以家族制度嚴密地運作。</p></div>"
         }
     </script>
-</head>
+{% endblock %}
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group col-lg" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
-                        id="Intro" onclick="checkTro()">介紹</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="where" onclick="checkwhere()">分佈</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="trad" onclick="checktrad()">節慶</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="good" onclick="checkgood()">特色</button>
-                </div>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group col-lg" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
+                    id="Intro" onclick="checkTro()">介紹</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="where" onclick="checkwhere()">分佈</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="trad" onclick="checktrad()">節慶</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="good" onclick="checkgood()">特色</button>
             </div>
-
         </div>
-        <div style="border-style:groove">
-            <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-                <img src="../../resources/photo/Introduction/7_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
-                    width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
-            </div>
 
-            <div>
-                <br>
-                <h1 id="title">
-                    鄒族介紹
-                </h1>
-                <div class="container" id="contain">
-                    <p>
-                        鄒族又稱曹族，鳥居龍藏之分類稱其為新高族，鄒族有「特富野」、「達邦」、「伊姆諸」與「魯富都」社。<br>
-                        在邵族被承認以前是台灣山區原住民人口僅次於賽夏族第二少的族群，為台灣原住民族的一支，主要居住於嘉義縣阿里山鄉樂野村、特富野村、達邦村、來吉、山美等地區，亦分布於南投縣信義鄉。<br>
-                        社會組織以嚴格的父系氏族組織及大、小社分脈聯合之政治性組織為主，部落事務及祭儀都以男子會所為中心，稱為「庫巴」，結婚前的青少年必須居住於此，同時接受訓練，非該部落者及女性皆不得進入。<br>
-                        鄒族並沒有階級制度，卻有幾個特殊地位的人物，分別為頭目、征帥及勇士，其中頭目由其一家族固定承襲，征帥為爭戰、獵首的指揮官，有時可能是頭目，勇士為在戰場上有特殊功勳的族人。
-                    </p>
-                </div>
+    </div>
+    <div style="border-style:groove">
+        <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
+            <img src="../../resources/photo/Introduction/7_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
+                width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div>
+            <br>
+            <h1 id="title">
+                鄒族介紹
+            </h1>
+            <div class="container" id="contain">
+                <p>
+                    鄒族又稱曹族，鳥居龍藏之分類稱其為新高族，鄒族有「特富野」、「達邦」、「伊姆諸」與「魯富都」社。<br>
+                    在邵族被承認以前是台灣山區原住民人口僅次於賽夏族第二少的族群，為台灣原住民族的一支，主要居住於嘉義縣阿里山鄉樂野村、特富野村、達邦村、來吉、山美等地區，亦分布於南投縣信義鄉。<br>
+                    社會組織以嚴格的父系氏族組織及大、小社分脈聯合之政治性組織為主，部落事務及祭儀都以男子會所為中心，稱為「庫巴」，結婚前的青少年必須居住於此，同時接受訓練，非該部落者及女性皆不得進入。<br>
+                    鄒族並沒有階級制度，卻有幾個特殊地位的人物，分別為頭目、征帥及勇士，其中頭目由其一家族固定承襲，征帥為爭戰、獵首的指揮官，有時可能是頭目，勇士為在戰場上有特殊功勳的族人。
+                </p>
             </div>
         </div>
     </div>
+</div>
 
-</body>
-
-</html>
+{% endblock %}

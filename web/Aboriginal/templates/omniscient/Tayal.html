@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8" />
+{% extends 'omniscient/basic.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+{% block css %}
+<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>原住民介紹</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,51 +84,48 @@
             <h2>貝珠衣</h2>以白色貝類穿孔磨成細小如綠豆之貝珠，將它穿綴於整件衣服上，是泰雅族獨特的衣飾文化。貝珠衣有多種形式，最尊貴的一種是部落領袖或獵首英雄於凱旋歸來參加盛會時所穿，也是結婚時重要的聘禮，除了貝珠衣以外，珠裙、珠帽、綁腿亦以貝珠串成。珠裙常使用於訂婚或女子生產後男方送給女方家長的答謝禮。珠帽則為頭目所佩戴。</h2>";
         }
     </script>
-</head>
+{% endblock %}
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group col-lg" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
-                        id="Intro" onclick="checkTro()">介紹</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="where" onclick="checkwhere()">分佈</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="trad" onclick="checktrad()">節慶</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="good" onclick="checkgood()">特色</button>
-                </div>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group col-lg" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
+                    id="Intro" onclick="checkTro()">介紹</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="where" onclick="checkwhere()">分佈</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="trad" onclick="checktrad()">節慶</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="good" onclick="checkgood()">特色</button>
             </div>
-
         </div>
-        <div style="border-style:groove">
-            <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-                <img src="../../resources/photo/Introduction/1_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
-                    width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
-            </div>
 
-            <div>
-                <br>
-                <h1 id="title">
-                    泰雅族介紹
-                </h1>
-                <div class="container" id="contain">
-                    <p>
-                        泰雅族以山田燒墾和狩獵採集為生，聚落以集居式的村落為主。<br>
-                        大體而言，社會組織分成：部落組織、祭祀團體、共負罪責團體、狩獵團體，這四個團體的成員有互相重疊的特質，在不同部落，祭祀團體可能大於狩獵團體，其他的部落可能狩獵團體大於任何一個團體。各地的差異性頗大，無法一概而論。<br>
-                        其總人口數約七萬九千餘人僅次於阿美族，為台灣原住民族的第三大族。<br>
-                        在泰雅族的世界裡，有二個迴異於其他族群的觀念：gaga的觀念及rutux的信仰理念。<br>
-                        gaga是一種社會規範，是泰雅人日常生活，風習俗慣的誡律，觸犯了gaga表示觸犯了禁忌，可能受到神靈的懲罰。遵守同一gaga的人共同舉行祭儀、共勞共享。<br>
-                        rutux是一種超自然的神靈信仰。一個人觸犯了gaga可能會受到rutux的處罰;被rutux嚇到可能會生病;在戶外吃飯、喝酒時要彈一點食物在地上給rutux吃。<br>
-                        泰雅族是一個平權的社會，由領導能力強的人出任部落領袖，狩獵、出草也由英勇的族人擔任領袖。但遇到部落有重大事情時，則由長老會議決策。<br>
-                    </p>
-                </div>
+    </div>
+    <div style="border-style:groove">
+        <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
+            <img src="../../resources/photo/Introduction/1_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
+                width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div>
+            <br>
+            <h1 id="title">
+                泰雅族介紹
+            </h1>
+            <div class="container" id="contain">
+                <p>
+                    泰雅族以山田燒墾和狩獵採集為生，聚落以集居式的村落為主。<br>
+                    大體而言，社會組織分成：部落組織、祭祀團體、共負罪責團體、狩獵團體，這四個團體的成員有互相重疊的特質，在不同部落，祭祀團體可能大於狩獵團體，其他的部落可能狩獵團體大於任何一個團體。各地的差異性頗大，無法一概而論。<br>
+                    其總人口數約七萬九千餘人僅次於阿美族，為台灣原住民族的第三大族。<br>
+                    在泰雅族的世界裡，有二個迴異於其他族群的觀念：gaga的觀念及rutux的信仰理念。<br>
+                    gaga是一種社會規範，是泰雅人日常生活，風習俗慣的誡律，觸犯了gaga表示觸犯了禁忌，可能受到神靈的懲罰。遵守同一gaga的人共同舉行祭儀、共勞共享。<br>
+                    rutux是一種超自然的神靈信仰。一個人觸犯了gaga可能會受到rutux的處罰;被rutux嚇到可能會生病;在戶外吃飯、喝酒時要彈一點食物在地上給rutux吃。<br>
+                    泰雅族是一個平權的社會，由領導能力強的人出任部落領袖，狩獵、出草也由英勇的族人擔任領袖。但遇到部落有重大事情時，則由長老會議決策。<br>
+                </p>
             </div>
         </div>
     </div>
-
-</body>
-
-</html>
+</div>
+{% endblock %}

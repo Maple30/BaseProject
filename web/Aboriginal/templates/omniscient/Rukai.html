@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8" />
+{% extends 'omniscient/basic.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+{% block css %}
+<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>原住民介紹</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -75,51 +75,49 @@
             <h2>百合花</h2><div class='container'><p>象徵女子的純潔與男子的狩獵豐碩。</p></div>"
         }
     </script>
-</head>
+{% endblock %}
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group col-lg" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
-                        id="Intro" onclick="checkTro()">介紹</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="where" onclick="checkwhere()">分佈</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="trad" onclick="checktrad()">節慶</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="good" onclick="checkgood()">特色</button>
-                </div>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group col-lg" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
+                    id="Intro" onclick="checkTro()">介紹</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="where" onclick="checkwhere()">分佈</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="trad" onclick="checktrad()">節慶</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="good" onclick="checkgood()">特色</button>
             </div>
-
         </div>
-        <div style="border-style:groove">
-            <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-                <img src="../../resources/photo/Introduction/6_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
-                    width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
-            </div>
 
-            <div>
-                <br>
-                <h1 id="title">
-                    魯凱族介紹
-                </h1>
-                <div class="container" id="contain">
-                    <p>
-                        魯凱族將社會群體區分成貴族、世家和平民各級，貴族與世家階級兩者之間，不只有隸屬關係，甚至有敵對的態度。<br>
-                        在貴族制度中，私有財產制非常發達：除了少數的公有財產，如道路、休憩所、集會場所、敵首棚架、泉水、公墓等屬於全體公有外，一切在部落以內的自然財產，例如：山林、河流、獵場、土地、家屋基地等，原則上都是歸頭目家系所有，皆可算是頭目的私有財。<br>
-                        平民則以發展個人領導能力，農產豐儲以及通婚等方法來提昇地位。<br>
-                        魯凱族為父系社會重男輕女，繼承方式以長男為主。<br>
-                        百合花象徵女子的純潔與男子的狩獵豐碩。敬重百步蛇與雲豹。<br>
-                        木雕是魯凱族男子擅長的工藝藝術 在部落民族中, 會所是分布頗廣的一個文化特質。<br>
-                        貴族擁有土地、獵區與河川，平民須將日常所得的部份納貢於貴族，貴族再回送一部份給需要救濟的平民或宴請所屬的平民、勇士一起來分享當季的收穫。
-                    </p>
-                </div>
+    </div>
+    <div style="border-style:groove">
+        <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
+            <img src="../../resources/photo/Introduction/6_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
+                width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div>
+            <br>
+            <h1 id="title">
+                魯凱族介紹
+            </h1>
+            <div class="container" id="contain">
+                <p>
+                    魯凱族將社會群體區分成貴族、世家和平民各級，貴族與世家階級兩者之間，不只有隸屬關係，甚至有敵對的態度。<br>
+                    在貴族制度中，私有財產制非常發達：除了少數的公有財產，如道路、休憩所、集會場所、敵首棚架、泉水、公墓等屬於全體公有外，一切在部落以內的自然財產，例如：山林、河流、獵場、土地、家屋基地等，原則上都是歸頭目家系所有，皆可算是頭目的私有財。<br>
+                    平民則以發展個人領導能力，農產豐儲以及通婚等方法來提昇地位。<br>
+                    魯凱族為父系社會重男輕女，繼承方式以長男為主。<br>
+                    百合花象徵女子的純潔與男子的狩獵豐碩。敬重百步蛇與雲豹。<br>
+                    木雕是魯凱族男子擅長的工藝藝術 在部落民族中, 會所是分布頗廣的一個文化特質。<br>
+                    貴族擁有土地、獵區與河川，平民須將日常所得的部份納貢於貴族，貴族再回送一部份給需要救濟的平民或宴請所屬的平民、勇士一起來分享當季的收穫。
+                </p>
             </div>
         </div>
     </div>
+</div>
 
-</body>
-
-</html>
+{% endblock %}

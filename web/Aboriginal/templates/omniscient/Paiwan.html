@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8" />
+{% extends 'omniscient/basic.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+{% block css %}
+<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>原住民介紹</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -85,49 +85,46 @@
             這種刀器著重在刀柄的雕刻，鐵製的刀身並不重要，多半呈生鏽狀態。會因刀身鏽蝕得太嚴重而再重新配製刀身，所以刀身並無固定型制。";
         }
     </script>
-</head>
+{% endblock %}
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group col-lg" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
-                        id="Intro" onclick="checkTro()">介紹</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="where" onclick="checkwhere()">分佈</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="trad" onclick="checktrad()">節慶</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="good" onclick="checkgood()">特色</button>
-                </div>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group col-lg" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
+                    id="Intro" onclick="checkTro()">介紹</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="where" onclick="checkwhere()">分佈</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="trad" onclick="checktrad()">節慶</button>
+                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
+                    id="good" onclick="checkgood()">特色</button>
             </div>
-
         </div>
-        <div style="border-style:groove">
-            <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-                <img src="../../resources/photo/Introduction/3_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
-                    width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
-            </div>
 
-            <div>
-                <br>
-                <h1 id="title">
-                    排灣族介紹
-                </h1>
-                <div class="container" id="contain">
-                    <p>
-                        排灣族屬於階序制度，大致上分為部落領袖、貴族、勇士、平民四個階級，但各傳統社會制度依各部落仍有些微不同地方。<br>
-                        貴族階級有特殊裝飾的專利權，王族與貴族也享有裝飾上的特權，例如:酷似百步蛇紋的熊鷹（赫氏角鷹）羽毛、高貴的琉璃珠、特殊的圖案（人頭紋、百步蛇紋）。<br>
-                        藉著婚姻關係可以擴展自我的領地，因此階級低的族人希望能與比自己階級高的人結婚，藉以提升自己的階級，因而在婚生子女中會有階級升降的有趣現象。<br>
-                        部落領袖、頭目及守護神是地主階級，擁有土地、河流與獵場，是一個部落的統治者，也是精神支柱的象徵。
-                        王族及貴族其屬下的子民為其耕作，並將收穫所得納稅予部落領袖及守護神，部落領袖則主持部落重大事務如爭戰、或與外村的外交工作，但舉行各項重大事務之前，得先經過祭司占卜以辨行事之吉凶。
-                    </p>
-                </div>
+    </div>
+    <div style="border-style:groove">
+        <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
+            <img src="../../resources/photo/Introduction/3_1.jpg" id="shy" class="img-fluid" alt="Responsive image"
+                width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div>
+            <br>
+            <h1 id="title">
+                排灣族介紹
+            </h1>
+            <div class="container" id="contain">
+                <p>
+                    排灣族屬於階序制度，大致上分為部落領袖、貴族、勇士、平民四個階級，但各傳統社會制度依各部落仍有些微不同地方。<br>
+                    貴族階級有特殊裝飾的專利權，王族與貴族也享有裝飾上的特權，例如:酷似百步蛇紋的熊鷹（赫氏角鷹）羽毛、高貴的琉璃珠、特殊的圖案（人頭紋、百步蛇紋）。<br>
+                    藉著婚姻關係可以擴展自我的領地，因此階級低的族人希望能與比自己階級高的人結婚，藉以提升自己的階級，因而在婚生子女中會有階級升降的有趣現象。<br>
+                    部落領袖、頭目及守護神是地主階級，擁有土地、河流與獵場，是一個部落的統治者，也是精神支柱的象徵。
+                    王族及貴族其屬下的子民為其耕作，並將收穫所得納稅予部落領袖及守護神，部落領袖則主持部落重大事務如爭戰、或與外村的外交工作，但舉行各項重大事務之前，得先經過祭司占卜以辨行事之吉凶。
+                </p>
             </div>
         </div>
     </div>
-
-</body>
-
-</html>
+</div>
+{% endblock %}
