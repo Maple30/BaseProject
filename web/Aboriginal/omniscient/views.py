@@ -4,7 +4,7 @@ import datetime
 from django.contrib.auth.decorators import permission_required, login_required
 # Create your views here.
 from .models import Works
-from .forms import WorksForm
+from .forms import WorksForm, UserForm
 # from django.contrib.messages import constants as messages
 from django.contrib import messages
 
@@ -35,15 +35,15 @@ def hand_made_detail(request, work_id):
 
 def Add_Account(request):
 	if request.method == "POST":
-		form = WorksForm(request.POST,request.FILES)
+		form = UserForm(request.POST)
 		if form.is_valid():
-			work = form.save(commit=False)
-			work.User = request.user
-			work.save()
+			user = form.save(commit=False)
+			user.set_password(user.password)
+			user.save()
 			messages.success(request, '帳戶已新增')
-			return redirect('hand_made')
+			return redirect('index')
 	else:
-		form = WorksForm()
+		form = UserForm()
 	return render(request, 'omniscient/forms.html', {'form': form})
 
 @login_required
