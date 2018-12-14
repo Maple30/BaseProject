@@ -4,11 +4,11 @@ from django.utils import timezone
 # Create your models here.
 
 class Works(models.Model):							#儲存手工藝品資料
-	# class Meta:
-	# 	permissions = (
-	# 		("add_add_works", "add_add_works"),  # 只有一個權限時，千萬不要忘了逗號！
+	class Meta:
+		permissions = (
+			("add_add_works", "add_add_works"),  # 只有一個權限時，千萬不要忘了逗號！
 
-	# 	)
+		)
 	Title = models.CharField(max_length = 25)		#標題
 	Introduction = models.TextField(blank = False)	#簡介
 	Contact = models.TextField(blank = False)		#聯絡資訊
