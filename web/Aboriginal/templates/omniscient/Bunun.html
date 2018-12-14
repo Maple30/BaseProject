@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8" />
+{% extends 'omniscient/basic.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+{% block css %}
+<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>原住民介紹</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,10 +79,10 @@
             這首歌是以多聲部和音唱法，由低漸漸上升，一直唱到最高音域的和諧音，以美妙的和聲娛悅天神，族人相信，歌聲越好天神越高興，當年的小米就會結實累累。因此，每一個人都以虔敬的心情唱著，同時也依此判斷當年小米之收成。</p></div>"
         }
     </script>
-</head>
+{% endblock %}
 
-<body>
-    <div class="container">
+{% block content %}
+<div class="container">
         <div class="row">
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group col-lg" role="group" aria-label="First group">
@@ -121,6 +121,4 @@
         </div>
     </div>
 
-</body>
-
-</html>
+{% endblock %}
