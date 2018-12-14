@@ -35,6 +35,9 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
                     <a href="{% url 'hand_made_detail' work.id %}"><img src="{{ work.Photo.url}}" class=" img-fluid img-thumbnail rounded mx-auto d-block"></a>
                 </div>
+                <!-- {% if user == work.User %}
+                <a href="{% url 'hand_made_delete' work.id %}">刪除</a>
+                {% endif %} -->
                 {% if forloop.counter|divisibleby:"4" and forloop.counter0 != 0 %}
             </div>
             {% elif forloop.last and not forloop.counter|divisibleby:"4" %}

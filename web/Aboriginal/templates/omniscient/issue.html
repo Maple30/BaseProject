@@ -88,6 +88,7 @@
             </div>
 
         </div>
+ 
     </div>
     <a class="carousel-control-prev" href="#demo" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
@@ -97,7 +98,11 @@
     </a>
 </div>
 
-<br>
+        <div class="container">
+            <br>
+            {% bootstrap_messages %}
+            
+        </div>
 <div class="col-xs-12" id="collapse">
     <div id="accordion">
         <div class="card">
@@ -166,6 +171,29 @@
                 </div>
             </div>
         </div>
+        {% for issue in issues %}
+        <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapse{{ forloop.counter }}">
+                            {{ issue.Title }}
+                    </a>
+                </div>
+                <div id="collapse{{ forloop.counter }}" class="collapse">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-4">
+                                <img src="{% static 'photo/issue/原住民自然資源.jpg' %}" class="img-thumbnail" alt="No Image">
+                            </div>
+                            <div class="col-sm-8 col-xs-8">
+                                <h2>{{ issue.Title }}</h2>
+                                {{ issue.Context }}
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        {% endfor%}
     </div>
 </div>
 <br>

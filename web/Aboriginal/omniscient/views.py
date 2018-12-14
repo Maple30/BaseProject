@@ -3,10 +3,11 @@ from django.http import HttpResponse
 import datetime
 from django.contrib.auth.decorators import permission_required, login_required
 # Create your views here.
-from .models import Works
+from .models import Works,Issue
 from .forms import WorksForm, UserForm, IssueForm
 # from django.contrib.messages import constants as messages
 from django.contrib import messages
+from django.contrib.auth.models import Permission
 
 # View(views.py)
 
@@ -18,7 +19,8 @@ def introduction(request):
 
 
 def issue(request):
-	return render(request, 'omniscient/issue.html')
+	issues = Issue.objects.all()
+	return render(request, 'omniscient/issue.html', {'issues': issues})
 
 def index(request):
 	return render(request, 'omniscient/index.html')
@@ -39,6 +41,12 @@ def Add_Account(request):
 		if form.is_valid():
 			user = form.save(commit=False)
 			user.set_password(user.password)
+			user.save()
+			per_add_issue = Permission.objects.get(codename='add_issue')
+			per_del_issue = Permission.objects.get(codename='delete_issue')
+			per_add_works = Permission.objects.get(codename='add_works')
+			per_del_works = Permission.objects.get(codename='delete_works')
+			user.user_permissions.add(per_add_issue,per_del_issue,per_add_works,per_del_works)
 			user.save()
 			messages.success(request, '帳戶已新增')
 			return redirect('index')
