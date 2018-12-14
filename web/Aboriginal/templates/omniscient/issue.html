@@ -8,6 +8,10 @@
         font-weight: bold;
         letter-spacing: 1px;
     }
+
+    #carousel-element{
+        background-color: #ffc107
+    }
 </style>
 
 <link rel="stylesheet" href="{% static 'css/issue.css' %}">
@@ -15,63 +19,80 @@
 
 {% block content %}
 <!-- Slideshow container -->
-<div class="slideshow-container">
-    <div class="mySlides">
-        <div class="row">
-            <div class="col-sm-4">
-                <img src="{% static 'photo/issue/原住民教育自主權.jpg' %}" class="img-thumbnail" alt="No Image">
-            </div>
-            <div class="col-sm-8">
-                <h2>原住民教育自主權</h2>
-                過去長期以來主流社會的同化政策，使得原住民無法有教育自主權，也導致原住民語言文化的大量流失，族群濱臨崩解，90年代以來，各地原住民族均致力於教育權的爭取，以求能搶求瀕臨消失邊緣的族群文化與語言。
+<div id="demo" class="carousel slide" data-ride="carousel">
 
-                　　紐西蘭毛利社會具體的成果，在於廣設毛利小學與幼稚園體系，以毛利語及毛利內容為主教學，並積極爭取中學、大學的設立，以期能貫徹教育自主權。美國原住民族如納瓦裔族（Navajo）等，則已經開始保留區學校課程的修定，加入母語及傳統文化的課程內容。
-            </div>
-        </div>
-    </div>
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
 
-    <div class="mySlides">
-        <div class="row">
-            <div class="col-sm-4">
-                <img src="{% static 'photo/issue/還我土地運動.JPG' %}" class="img-thumbnail" alt="No Image" />
-            </div>
-            <div class="col-sm-8">
-                <h2>「還我土地」運動</h2>
-                誠如澳洲原住民領袖麥克．道森所言：「原住民的議題重心，從來不曾改變，那是：『土地』。」地就是原住民的生命與靈魂，也是原住民數百年來流離失所、處境悲慘的根源所在，因此取回原屬於原住民的土地，是原住民發展存活的一切基礎。
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="card" id="carousel-element">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-4">
+                            <img src="{% static 'photo/issue/原住民教育自主權.jpg' %}" class="img-thumbnail" alt="No Image">
+                        </div>
+                        <div class="col-sm-8 col-xs-8">
+                            <h2>原住民教育自主權</h2>
+                            過去長期以來主流社會的同化政策，使得原住民無法有教育自主權，也導致原住民語言文化的大量流失，族群濱臨崩解，90年代以來，各地原住民族均致力於教育權的爭取，以求能搶求瀕臨消失邊緣的族群文化與語言。
 
-                　　這樣的觀念證諸紐、美，以及世界所有原住民社會皆然。原住民爭取士地權與「還我土地」運動，近年來日益蓬勃，而各國政府也都無法再忽略漠視之，而此運動也是原住民運動中的最主要的核心議題，政府與媒體的處理得當與否，對於全體社會都有關鍵性的影響。
-            </div>
-        </div>
-    </div>
-
-    <div class="mySlides">
-        <div class="row">
-            <div class="col-sm-4">
-                <img src="{% static 'photo/issue/原住民自然資源.jpg' %}" class="img-thumbnail" alt="No Image">
-            </div>
-            <div class="col-sm-8">
-                <h2>自然資源權的爭取</h2>
-                繼土地權之後，原住民首要爭取的是原本屬於原住民的自然資源的權利，如漁權（漁場、漁區）、林權、水權（湖河溪海、海岸、海濱等）、礦權、狩獵權等。紐西蘭奧克蘭大學建築系教授希拉尼．馬屯加（Birini Matuoga）指出，自然資源權，爭取的不僅是擁有權，更包括了管理權。
-
+                            　　紐西蘭毛利社會具體的成果，在於廣設毛利小學與幼稚園體系，以毛利語及毛利內容為主教學，並積極爭取中學、大學的設立，以期能貫徹教育自主權。美國原住民族如納瓦裔族（Navajo）等，則已經開始保留區學校課程的修定，加入母語及傳統文化的課程內容。
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="carousel-item">
+            <div class="card" id="carousel-element">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-4">
+                            <img src="{% static 'photo/issue/還我土地運動.JPG' %}" class="img-thumbnail" alt="No Image">
+                        </div>
+                        <div class="col-sm-8 col-xs-8">
+                            <h2>「還我土地」運動</h2>
+                            誠如澳洲原住民領袖麥克．道森所言：「原住民的議題重心，從來不曾改變，那是：『土地』。」地就是原住民的生命與靈魂，也是原住民數百年來流離失所、處境悲慘的根源所在，因此取回原屬於原住民的土地，是原住民發展存活的一切基礎。
+
+                            　　這樣的觀念證諸紐、美，以及世界所有原住民社會皆然。原住民爭取士地權與「還我土地」運動，近年來日益蓬勃，而各國政府也都無法再忽略漠視之，而此運動也是原住民運動中的最主要的核心議題，政府與媒體的處理得當與否，對於全體社會都有關鍵性的影響。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card" id="carousel-element">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-4">
+                            <img src="{% static 'photo/issue/原住民自然資源.jpg' %}" class="img-thumbnail" alt="No Image">
+                        </div>
+                        <div class="col-sm-8 col-xs-8">
+                            <h2>自然資源權的爭取</h2>
+                            繼土地權之後，原住民首要爭取的是原本屬於原住民的自然資源的權利，如漁權（漁場、漁區）、林權、水權（湖河溪海、海岸、海濱等）、礦權、狩獵權等。紐西蘭奧克蘭大學建築系教授希拉尼．馬屯加（Birini
+                            Matuoga）指出，自然資源權，爭取的不僅是擁有權，更包括了管理權。
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
 </div>
-<br>
 
-<!-- The dots/circles -->
-<div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-</div>
 <br>
-<!-- </section class="col-xs-12"> -->
-<div class="container col-xs-12">
+<div class="col-xs-12" id="collapse">
     <div id="accordion">
         <div class="card">
             <div class="card-header">
@@ -114,14 +135,13 @@
                             　　紐西蘭毛利社會具體的成果，在於廣設毛利小學與幼稚園體系，以毛利語及毛利內容為主教學，並積極爭取中學、大學的設立，以期能貫徹教育自主權。美國原住民族如納瓦裔族（Navajo）等，則已經開始保留區學校課程的修定，加入母語及傳統文化的課程內容。
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
         <div class="card">
             <div class="card-header">
                 <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                    自然資源權的爭取 
+                    自然資源權的爭取
                 </a>
             </div>
             <div id="collapseThree" class="collapse">
@@ -132,7 +152,8 @@
                         </div>
                         <div class="col-sm-8 col-xs-8">
                             <h2>自然資源權的爭取</h2>
-                            繼土地權之後，原住民首要爭取的是原本屬於原住民的自然資源的權利，如漁權（漁場、漁區）、林權、水權（湖河溪海、海岸、海濱等）、礦權、狩獵權等。紐西蘭奧克蘭大學建築系教授希拉尼．馬屯加（Birini Matuoga）指出，自然資源權，爭取的不僅是擁有權，更包括了管理權。
+                            繼土地權之後，原住民首要爭取的是原本屬於原住民的自然資源的權利，如漁權（漁場、漁區）、林權、水權（湖河溪海、海岸、海濱等）、礦權、狩獵權等。紐西蘭奧克蘭大學建築系教授希拉尼．馬屯加（Birini
+                            Matuoga）指出，自然資源權，爭取的不僅是擁有權，更包括了管理權。
                         </div>
                     </div>
 
@@ -142,33 +163,5 @@
     </div>
 </div>
 
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-</script>
 
 {% endblock %}
