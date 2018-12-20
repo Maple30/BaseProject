@@ -3,33 +3,33 @@
 {% load staticfiles %}
 {% block css %}
 <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>原住民介紹</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <script>
-        function CheckIntro() {
-            document.getElementById('shy').src = "{% static 'photo/Introduction/2_1.jpg' %}";
-            document.getElementById('title').innerHTML = "阿美族介紹";
-            document.getElementById('contain').innerHTML = "<p>阿美族所處環境造就了阿美族人相當獨特的飲食文化。阿美族人的飲食文化中的特色有三大點︰海鮮水產食物的喜好、擁有豐富的野菜文化、以及風味特殊的醃生肉(silao)。這三種飲食的特色，至今仍然深深地影響當代的阿美族人。<br>  \
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>原住民介紹</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+<script>
+    function CheckIntro() {
+        document.getElementById('shy').src = "{% static 'photo/Introduction/2_1.jpg' %}";
+        document.getElementById('title').innerHTML = "阿美族介紹";
+        document.getElementById('contain').innerHTML = "<p>阿美族所處環境造就了阿美族人相當獨特的飲食文化。阿美族人的飲食文化中的特色有三大點︰海鮮水產食物的喜好、擁有豐富的野菜文化、以及風味特殊的醃生肉(silao)。這三種飲食的特色，至今仍然深深地影響當代的阿美族人。<br>  \
                     傳統社會制度以母系氏族組織為主，男性被招贅後共居於女家，有關家庭親族事務與財產由女性戶長做主，惟重要事務，如婚姻、分產則必由出贅之母舅返家共同決策；然而，部落性之政治、司法、戰爭、宗教等公共事務，則由男性組織之男子年齡階級組織處理。但今日阿美人的社會也日漸受到漢人的影響，入贅婚比較少見。家裡的經濟權也漸漸轉移到男子身上，母系社會的特質已漸漸淡化。<br> \
                     傳統祭儀以部落之豐年祭為主，其中過程以表達部落男子年齡階級新成員之加入意義為最重要。<br> \
                     目前人口約有21萬人左右(107年3月)，是台灣原住民族中人數最多者。<br> \
                     阿美族社會的另一個特徵是嚴密的年齡階級組織，男子在十三、四歲時，必須進入集會所接受成為一個男人的訓練，以二至五歲為一個階級，同一階級的男孩一起學習、生活，並住宿於集會所。在集會所裡，同一個階級的同伴一起工作，遇有獎勵或處罰也是以一個階級為單位。無形中更緊扣了同年齡階級的每一個男子，而這樣的關係是一生一世，直到離開人世為止。</p>";
-        }
-        function CheckWhere() {
-            document.getElementById('shy').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-            document.getElementById('title').innerHTML = "阿美族分佈";
-            document.getElementById('contain').innerHTML = "<p>阿美族分佈在中央山脈東側，立霧溪以南，太平洋沿岸的東台縱谷及東海岸平原，大部份居住於平地，只有極少數居於山谷中。<br> \
+    }
+    function CheckWhere() {
+        document.getElementById('shy').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+        document.getElementById('title').innerHTML = "阿美族分佈";
+        document.getElementById('contain').innerHTML = "<p>阿美族分佈在中央山脈東側，立霧溪以南，太平洋沿岸的東台縱谷及東海岸平原，大部份居住於平地，只有極少數居於山谷中。<br> \
             以行政區域來看，主要為花蓮、台東兩縣，台東市是阿美族人口分佈比例最高的地方，其次是花蓮光復鄉、吉安鄉、台東縣的東河鄉及成功鎮。<br> \
             此外，阿美族共分為北部群、中部群和南部群，北部群包括南勢阿美，中部群包括秀姑巒溪及海岸阿美，南部群包括卑南及恆春阿美。<br> \
             其範圍包括現行台東縣的東河、池上、關山、長濱、成功、卑南、台東市、花蓮縣新城、吉安、壽豐、鳳林、光復、豐濱、瑞穗、玉里、富里、屏東縣牡丹、滿州等十九個鄉鎮市。</p>"
-        }
-        function CheckTrad() {
-            document.getElementById('shy').src = "{% static 'photo/Introduction/2_3.jpg' %}";
-            document.getElementById('title').innerHTML = "阿美族節慶";
-            document.getElementById('contain').innerHTML = "<h2>捕魚祭</h2> \
+    }
+    function CheckTrad() {
+        document.getElementById('shy').src = "{% static 'photo/Introduction/2_3.jpg' %}";
+        document.getElementById('title').innerHTML = "阿美族節慶";
+        document.getElementById('contain').innerHTML = "<h2>捕魚祭</h2> \
             <div class='container'><p>對於海，阿美族又敬又畏，因此在每年五月間稻出穗時節，港口部落會舉行捕食祭，祭祀海神以祈求漁獲豐收。在先祖時代，每當農作收成之前，族人便會相邀在海邊或河濱捕魚，並舉行祭儀，祈求年年能有好收成。只是，隨著時代的改變，生活型態已不同，生態環境也遭受破壞，現今阿美族的捕魚祭在形式上已有所改變了。<br> \
             居住在海邊的阿美族人會下海捕魚，沿溪居住者則在河中捕抓，不過在下水捕魚之前，必須先舉行祭拜河神的儀式，即用酒、肉和麻糬到海邊祭神，祈求神明的佑助，能夠有好的收成。捕魚活動是由年長階級指揮，各年齡階層的少年們分頭在海中或河中捕魚，約在中央以前回到集合的地點。而捕魚的過程中，若有捕獲大魚者，還可高呼歡唱，一方面炫燿自己的成果，另一方面則與族人分享收穫的喜悅。<br> \
             近午之時，捕魚的少年們將捕獲的魚全部集中起來，一起下鍋烹煮。將一道佳餚排列整齊後，再依年齡階級由大至小分發共享，藉此告訴年輕的族人們，要懂得敬老尊賢，遵從長者的指導。而年長者也會將分剩的魚蝦，再分給年齡階層較低或表現優異的少年們，以表示鼓勵與嘉許。捕魚祭，不僅展現阿美族昔日生活的面貌，也讓族人在祭典活動中，一方面習得阿美族的信仰文化，一方面記取尊敬長者的美德，更體驗共同合作、團結一致的精神，是傳承阿美族文化的重要方式之一。</p></div> \
@@ -37,17 +37,17 @@
             <div class='container'><p>阿美族在每一年的七月中旬都會舉辦慶祝豐收的豐年祭，除了慶祝及感謝祖靈的庇祐，讓族人在過去的一年中衣食無虞，也請祖靈繼續庇祐族人在新的一年依然能逢凶化吉。</p></div> \
             <h2>海祭</h2> \
             <div class='container'><p>傳統阿美族與噶瑪蘭族特有的海祭，主要祈求海上作業漁獲豐收、作業平安所舉行之祭典。</p></div>"
-        }
-        function CheckFeature() {
-            document.getElementById('shy').src = "{% static 'photo/Introduction/2_4.jpg' %}";
-            document.getElementById('title').innerHTML = "阿美族特色";
-            document.getElementById('contain').innerHTML = "<h2>歌舞</h2> \
+    }
+    function CheckFeature() {
+        document.getElementById('shy').src = "{% static 'photo/Introduction/2_4.jpg' %}";
+        document.getElementById('title').innerHTML = "阿美族特色";
+        document.getElementById('contain').innerHTML = "<h2>歌舞</h2> \
             <div class='container'><p>阿美族的歌舞憑藉著驚人的創造力，創造出多樣化的歌舞形式，展現了充滿活力的美學觀，豐富又有極具變化。阿美族的歌謠中旋律的變化和音樂形式的多樣性都反映了阿美族熱情開朗的性格。也使得阿美族的歌舞也儼然變成台灣原住民歌舞的代名詞，成為許多以台灣原住民為觀光主題的景點，紛紛展演阿美族的歌舞。</p></div> \
             <h2>陶器</h2> \
             <div class='container'><p>主要製作工具為木拍、礫石扥子和竹形刀。主要製陶法為拍扥法，以露天的陶窯燒製。<br> \
             陶器是生活中很重要的工具，雖然籐條可以裝物品，但是無法用來作為液體的物品裝置。傳統上的製陶工作都是由女人來擔任，雖然大部分都是素陶，沒有再經過外表上的加工，美觀上不足卻提升了生活上的方便跟實用性。</p></div>";
-        }
-    </script>
+    }
+</script>
 {% endblock %}
 
 {% block content %}
