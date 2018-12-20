@@ -27,6 +27,7 @@ class Issue(models.Model):						#儲存議題資料
 	Title = models.CharField(max_length = 25,verbose_name="議題標題")	
 	Context = models.TextField(blank = False,verbose_name="議題內容")
 	User = models.ForeignKey(User, on_delete=models.CASCADE,default="")
+	Photo = models.ImageField(upload_to = './', blank = False,verbose_name="議題照片",default='')		#照片
 	Add_time = models.DateTimeField(auto_now_add = True)
 	Edit_time = models.DateTimeField(auto_now = True)
 	

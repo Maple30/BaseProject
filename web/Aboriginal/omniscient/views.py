@@ -84,7 +84,7 @@ def hand_made_delete(request, work_id):
 @permission_required('omniscient.add_issue')
 def Add_Issue(request):
 	if request.method == "POST":
-		form = IssueForm(request.POST)
+		form = IssueForm(request.POST,request.FILES)
 		if form.is_valid():
 			issue = form.save(commit=False)
 			issue.User = request.user
