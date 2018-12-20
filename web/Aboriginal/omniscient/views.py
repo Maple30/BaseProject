@@ -111,32 +111,33 @@ def issue_delete(request, issue_id):
 def Amis(request):
 	return render(request, 'omniscient/Amis.html')
 #2	
-def Bunun(request):
-	return render(request, 'omniscient/Bunun.html')
+def Tayal(request):
+	return render(request, 'omniscient/Tayal.html')
+
 #3
 def Paiwan(request):
 	return render(request, 'omniscient/Paiwan.html')
 #4
+def Bunun(request):
+	return render(request, 'omniscient/Bunun.html')
+#5
 def Pinuyumayan(request):
 	return render(request, 'omniscient/Pinuyumayan.html')
-#5
+#6	
 def Rukai(request):
 	return render(request, 'omniscient/Rukai.html')
-#6	
-def Tayal(request):
-	return render(request, 'omniscient/Tayal.html')
 #7
 def Tsou(request):
 	return render(request, 'omniscient/Tsou.html')
 #8
-# def index(request):
-# 	return render(request, 'omniscient/index.html')
-# #9
-# def index(request):
-# 	return render(request, 'omniscient/index.html')
-# #10	
-# def index(request):
-# 	return render(request, 'omniscient/index.html')
+def SaySiyat(request):
+ 	return render(request, 'omniscient/SaySiyat.html')
+#9
+def Yami(request):
+ 	return render(request, 'omniscient/Yami.html')
+#10	
+def Thao(request):
+ 	return render(request, 'omniscient/Thao.html')
 # #11
 # def index(request):
 # 	return render(request, 'omniscient/index.html')

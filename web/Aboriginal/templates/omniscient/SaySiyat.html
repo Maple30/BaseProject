@@ -9,16 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <script>
-        function checkTro() {
-            document.getElementById('Intro').style.backgroundColor = "blue";
-            document.getElementById('Intro').style.color = "white";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/8_1.jpg' %}";
+        function CheckIntro() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/non.png' %}";
             document.getElementById('title').innerHTML = "賽夏族介紹";
             document.getElementById('contain').innerHTML = "<p>賽夏族夾雜於泰雅族與客家人之間，所以賽夏人大部份會講泰雅語與客語，甚至以此兩種語言為日常用語。<br> \
                         提到賽夏族，大家會聯想到充滿神秘色彩，難以理解的矮靈祭，相傳過去賽夏族和矮人taai毗鄰而居，矮人傳授賽夏人農耕、醫術、及祭祀歌舞，賽夏人將其視為恩人，每當舉行祭典節慶時，都會請矮人前來飲酒作樂。但是矮人常常調戲賽夏族婦女，賽夏族隱忍許久後決定報復，設計殺害了許多矮人，存活下來的矮人詛咒賽夏人將會招逢連年災害、穀物歉收果然應驗成真。因此賽夏族人年年舉辦「矮靈祭」，祈求矮靈不再降禍於賽夏族人。賽夏族矮靈祭便在賽夏族人恩怨情仇的複雜心理下延續至今。不僅如此，日常生活中也多嚴格遵守許多與矮靈祭相關的禁忌和避諱。<br> \
@@ -27,29 +19,13 @@
                         賽夏族的社會以氏族為基礎，賽夏族屬於父系社會，以地域和圖騰氏族為社會組織的基本構成單位，各姓氏從清領時代開始就有不同漢姓，並遵守社會與婚姻規範。<br> \
                         賽夏族的住家多位在山腹坡地或小台地上，因為居住在樹木和竹林盛產地，因此建築材料多為竹、木為主樹藤為輔。</p>";
         }
-        function checkwhere() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "blue";
-            document.getElementById('where').style.color = "white";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+        function CheckWhere() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
             document.getElementById('title').innerHTML = "賽夏族分佈";
             document.getElementById('contain').innerHTML = "<p>賽夏族主要分佈在新竹縣和苗栗縣交界的山區，居住於海拔高度約五百公尺至一千五百公尺間。</p>"
         }
-        function checktrad() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "blue";
-            document.getElementById('trad').style.color = "white";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/8_3.jpg' %}";
+        function CheckTrad() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/8_3.jpeg' %}";
             document.getElementById('title').innerHTML = "賽夏族節慶";
             document.getElementById('contain').innerHTML = "<h2>矮靈祭</h2> \
             <div class='container'><p>又稱巴斯達隘，傳說賽夏族與達隘族（矮人）相鄰而居，向達隘學習農耕、醫學、歌舞、祭祀等文化，因此每當舉行豐收慶典時都會邀請達隘共同參與，以感謝達隘的恩惠，達隘卻常調戲賽夏婦女，觸怒賽夏族人，於是設計報復殺害達隘。<br> \
@@ -61,16 +37,8 @@
             目前祖靈祭改為用酒、肉當祭品祭祀祖靈，由長老代表向東方獻給祖先，家族成員中午時會餐，餐間菜餚以豬肉、炸魚、米糕等傳統食物為主，並以傳統手抓食物方式進餐。<br> \
             雖然祖靈祭在形式上雖由沾水祈福儀式改為祭祀與會餐，但沒有改變的是族人緬懷祖先的心意。<\p></div>"
         }
-        function checkgood() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "blue";
-            document.getElementById('good').style.color = "white";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/non.png' %}";
+        function CheckFeature() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/non.png' %}";
             document.getElementById('title').innerHTML = "賽夏族特色";
             document.getElementById('contain').innerHTML = "<h2>編織</h2><div class='container'><p>賽夏族的編織以白、黑、紅三色為主，由於是父系社會，男性的紋路較為華麗，女性服飾則是較素雅的平織。<br> \
             男性服飾長不過膝，紋路多在胸部以下，而且重點在背部，因為祭典時族人都是圍圈，而矮靈在後方看賽夏族人跳舞，包括臀鈴的鏡子也縫在矮靈看得到的高度。</p></div> \
@@ -84,21 +52,17 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
-                    id="Intro" onclick="checkTro()">介紹</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="where" onclick="checkwhere()">分佈</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="trad" onclick="checktrad()">節慶</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="good" onclick="checkgood()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckIntro()">原住民介紹</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckWhere()">原住民分佈</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckTrad()">原住民節慶</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckFeature()">原住民特色</button>
             </div>
         </div>
 
     </div>
     <div style="border-style:groove">
         <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-            <img src="{% static 'photo/Introduction/8_1.jpg' %}" id="shy" class="img-fluid" alt="Responsive image"
+            <img src="{% static 'photo/Introduction/non.png' %}" id="image" class="img-fluid" alt="Responsive image"
                 width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
         </div>
 

@@ -1,0 +1,82 @@
+{% extends 'omniscient/basic.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+{% block css %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>原住民介紹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script>
+        function CheckIntro() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/9_1.jpg' %}";
+            document.getElementById('title').innerHTML = "雅美族介紹";
+            document.getElementById('contain').innerHTML = "<p>雅美族，源於日本人類學家鳥居龍藏在1897年的調查報告，他在報告中將蘭嶼稱為雅美（Yami），是台灣南島語系唯一分布在台灣離島的一支民族。<br> \
+                    雅美族人居住於台東外海的蘭嶼島上，雅美人自稱「達悟」，是「人」的意思。<br> \
+                    雅美族為海洋民族，以捕魚為主要產業，並有飛魚祭等歲時祭儀，達悟族是中華民國原住民族中唯一以漁業為主的民族。<br> \
+                    在雅美族社會中沒有氏族或貴族制度，而是由各家族的長老為意見領袖的父系社會，這些家族也構成雅美族最重要的社會單位：漁團組織。<br> \
+                    特有的「飛魚文化」，每年三月，飛魚隨著黑潮迴游到蘭嶼的海域，雅美人舉行召請飛魚前來的招魚祭，祭典之後，雅美人開始捕飛魚，不同的月份用不同的方式，捕不同的魚類，不僅調節了海洋魚類的生態，而吃飛魚的季節限制，也遏止了人類濫捕、貪婪的情況發生。<br> \
+                    雅美人視飛魚為上蒼賜予的神聖物品，因此要以敬畏戒慎的心情對待，符合生態保育的觀念。</p>";
+        }
+        function CheckWhere() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+            document.getElementById('title').innerHTML = "雅美族分佈";
+            document.getElementById('contain').innerHTML = "<p>雅美族主要分佈於臺東縣的蘭嶼島上，有豐富的神話傳說與歲時祭儀，並具有明顯的海洋特質。</p>"
+        }
+        function CheckTrad() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/9_3.jpg' %}";
+            document.getElementById('title').innerHTML = "雅美族節慶";
+            document.getElementById('contain').innerHTML = "<h2>飛魚祭</h2> \
+            <div class='container'><p>飛魚季有關於飛魚各種慶典儀式的統稱，包括有：漁船結成祭、飛魚漁祭、船組招魚祭、大船初漁祭、船組解散祭、個人漁招魚祭、小船初魚祭、飛魚乾收藏祭及飛魚終食祭等,在飛魚季進行的這段期間因為擔心影響漁獲,因此在這段期間部落灘頭禁止從事任何水上活動。<br> \
+            飛魚不僅在神話上有崇高的地位，也在傳統歷法上中扮演關鍵的角色。雅美傳統歷法是以月亮的出落與朔望來制定日和月，但月亮周期無法反映時節變化，因此是以捕飛魚作為季節的區分。</p></div>"
+        }
+        function CheckFeature() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/9_4.jpg' %}";
+            document.getElementById('title').innerHTML = "雅美族特色";
+            document.getElementById('contain').innerHTML = "<h2>飛魚文化</h2> \
+            <div class='container'><p>捕飛魚是雅美人年中的盛事，整個生活重心環繞著飛魚捕撈活動，飛魚甚至是信仰與宇宙觀的表現。</p></div> \
+            <h2>大船文化</h2> \
+            <div class='container'><p>雅美拼板舟的製造及裝飾藝術獨步全球，漁團的組織成員多是家族內的成員，藉此鞏固家族組織並發揮共享、共食的精神。</p></div>";
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group col-lg" role="group" aria-label="First group">
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckIntro()">原住民介紹</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckWhere()">原住民分佈</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckTrad()">原住民節慶</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckFeature()">原住民特色</button>
+            </div>
+        </div>
+
+    </div>
+    <div style="border-style:groove">
+        <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
+            <img src="{% static 'photo/Introduction/9_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
+                width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div>
+            <br>
+            <h1 id="title">
+                雅美族介紹
+            </h1>
+            <div class="container" id="contain">
+                <p>
+                    雅美族，源於日本人類學家鳥居龍藏在1897年的調查報告，他在報告中將蘭嶼稱為雅美（Yami），是台灣南島語系唯一分布在台灣離島的一支民族。<br>
+                    雅美族人居住於台東外海的蘭嶼島上，雅美人自稱「達悟」，是「人」的意思。<br>
+                    雅美族為海洋民族，以捕魚為主要產業，並有飛魚祭等歲時祭儀，達悟族是中華民國原住民族中唯一以漁業為主的民族。<br>
+                    在雅美族社會中沒有氏族或貴族制度，而是由各家族的長老為意見領袖的父系社會，這些家族也構成雅美族最重要的社會單位：漁團組織。<br>
+                    特有的「飛魚文化」，每年三月，飛魚隨著黑潮迴游到蘭嶼的海域，雅美人舉行召請飛魚前來的招魚祭，祭典之後，雅美人開始捕飛魚，不同的月份用不同的方式，捕不同的魚類，不僅調節了海洋魚類的生態，而吃飛魚的季節限制，也遏止了人類濫捕、貪婪的情況發生。<br>
+                    雅美人視飛魚為上蒼賜予的神聖物品，因此要以敬畏戒慎的心情對待，符合生態保育的觀念。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

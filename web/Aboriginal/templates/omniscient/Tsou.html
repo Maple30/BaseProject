@@ -10,45 +10,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <script>
-        function checkTro() {
-            document.getElementById('Intro').style.backgroundColor = "blue";
-            document.getElementById('Intro').style.color = "white";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/7_1.jpg' %}";
+        function CheckIntro() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/7_1.jpg' %}";
             document.getElementById('title').innerHTML = "鄒族介紹";
             document.getElementById('contain').innerHTML = "<p>鄒族又稱曹族，鳥居龍藏之分類稱其為新高族，鄒族有「特富野」、「達邦」、「伊姆諸」與「魯富都」社。<br> \
                         在邵族被承認以前是台灣山區原住民人口僅次於賽夏族第二少的族群，為台灣原住民族的一支，主要居住於嘉義縣阿里山鄉樂野村、特富野村、達邦村、來吉、山美等地區，亦分布於南投縣信義鄉。<br> \
                         社會組織以嚴格的父系氏族組織及大、小社分脈聯合之政治性組織為主，部落事務及祭儀都以男子會所為中心，稱為「庫巴」，結婚前的青少年必須居住於此，同時接受訓練，非該部落者及女性皆不得進入。<br> \
                         鄒族並沒有階級制度，卻有幾個特殊地位的人物，分別為頭目、征帥及勇士，其中頭目由其一家族固定承襲，征帥為爭戰、獵首的指揮官，有時可能是頭目，勇士為在戰場上有特殊功勳的族人。</p>";
         }
-        function checkwhere() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "blue";
-            document.getElementById('where').style.color = "white";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+        function CheckWhere() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
             document.getElementById('title').innerHTML = "鄒族分佈";
             document.getElementById('contain').innerHTML = "<p>主要分布於嘉義縣阿里山鄉及南投縣信義鄉。</p>"
         }
-        function checktrad() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "blue";
-            document.getElementById('trad').style.color = "white";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/7_3.jpg' %}";
+        function CheckTrad() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/7_3.jpg' %}";
             document.getElementById('title').innerHTML = "鄒族節慶";
             document.getElementById('contain').innerHTML = "<h2>播種祭</h2> \
             <div class='container'><p>鄒族的生活祭儀中，排在一年之始的是播種祭，也就是說鄒族人以播種小米的祭儀來迎接一年的到來。<br> \
@@ -66,16 +42,8 @@
             在以前，戰祭舉行的時間並不固定，通常在勇士征戰榮歸，或者是男子集會所需重建或修建的情況下，由部落長老商議後才決定是否舉辦。但現在則演變為每年二月十五日舉行的固定祭典，並由達邦和特富野社輪流擔任祭典儀式。<br> \
             這個盛大的祭典中包含了kuba的修繕、迎神祭、戰祭（凱旋祭、部落團結祭）、男嬰初登會所、男子成年禮、送神祭以及路祭等各項儀式。</p></div>"
         }
-        function checkgood() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "blue";
-            document.getElementById('good').style.color = "white";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/7_4.jpg' %}";
+        function CheckFeature() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/7_4.jpg' %}";
             document.getElementById('title').innerHTML = "鄒族特色";
             document.getElementById('contain').innerHTML = "<h2>庫巴</h2><div class='container'><p>無壁面、茅草為頂的涼亭式建築，為鄒族舉行戰祭、團結祭和成年禮地點，也是天神降臨之地，神聖不可侵擾，具有凝聚族人情感作用，部落住宅層層環庫巴而建。</p></div> \
             <h2>嚴密的家族制度</h2><div class='container'><p>鄒族是父系氏族的社會，部落中的男子會所「庫巴」，是族人會商大事、舉行祭典、訓練男子的場所，禁止非該部落者與女性進入。<br> \
@@ -89,21 +57,17 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
-                    id="Intro" onclick="checkTro()">介紹</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="where" onclick="checkwhere()">分佈</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="trad" onclick="checktrad()">節慶</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="good" onclick="checkgood()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckIntro()">原住民介紹</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckWhere()">原住民分佈</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckTrad()">原住民節慶</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckFeature()">原住民特色</button>
             </div>
         </div>
 
     </div>
     <div style="border-style:groove">
         <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-            <img src="{% static 'photo/Introduction/7_1.jpg' %}" id="shy" class="img-fluid" alt="Responsive image"
+            <img src="{% static 'photo/Introduction/7_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
                 width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
         </div>
 

@@ -9,16 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <script>
-        function checkTro() {
-            document.getElementById('Intro').style.backgroundColor = "blue";
-            document.getElementById('Intro').style.color = "white";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/5_1.jpg' %}";
+        function CheckIntro() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/5_1.jpg' %}";
             document.getElementById('title').innerHTML = "卑南族介紹";
             document.getElementById('contain').innerHTML = "<p>傳統社會組織以長女承家以及男性年齡階段組織為主，屬於母系社會，特質如下 \
                         <ol> \
@@ -41,29 +33,13 @@
                         目前人口約有14,118人(107年2月數據)，全族分居八個部落，有「八社番」之名。 \
                     </p>";
         }
-        function checkwhere() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "blue";
-            document.getElementById('where').style.color = "white";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+        function CheckWhere() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
             document.getElementById('title').innerHTML = "卑南族分佈";
             document.getElementById('contain').innerHTML = "<p>卑南族主要分布於台東縱谷南部，全族分居八個部落有「八社番」之名。</p>"
         }
-        function checktrad() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "blue";
-            document.getElementById('trad').style.color = "white";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/5_3.jpg' %}";
+        function CheckTrad() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/5_3.jpg' %}";
             document.getElementById('title').innerHTML = "卑南族節慶";
             document.getElementById('contain').innerHTML = "<h2>卑南族年祭</h2> \
             <div class='container'><p>「年祭」是卑南八社從十二月二十四日起至隔年元月二日為止，舉行之「猴祭」、「大獵祭」、「聯合年祭」等一系列活動的總稱。<br> \
@@ -77,16 +53,8 @@
             <div class='container'><p>「大獵祭」是卑南族年度最重要的祭儀，參加者是接近成年的所有青年。<br> \
             「大獵祭」最初是為「復仇」而舉行的獵首活動，自從獵首習俗消失，就改為狩獵；「大獵祭」的活動不只是打獵，它還伴隨著其他重要的儀式，諸如除喪(慰問喪家)與成年禮儀式。</p></div>"
         }
-        function checkgood() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "blue";
-            document.getElementById('good').style.color = "white";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/5_4.jpg' %}";
+        function CheckFeature() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/5_4.jpg' %}";
             document.getElementById('title').innerHTML = "卑南族特色";
             document.getElementById('contain').innerHTML = "<h2>戴花環的普遍性</h2><div class='container'><p>雖然不是只有卑南族才戴花環，但形制的一致性及花環所代表的男子成年意義是其他族群所沒有的。</p></div> \
             <h2>精湛的刺繡手藝</h2><div class='container'><p>以十字繡法最普遍，人形舞蹈紋是卑南族特有的圖案。</p></div> \
@@ -100,21 +68,17 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
-                    id="Intro" onclick="checkTro()">介紹</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="where" onclick="checkwhere()">分佈</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="trad" onclick="checktrad()">節慶</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="good" onclick="checkgood()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckIntro()">原住民介紹</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckWhere()">原住民分佈</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckTrad()">原住民節慶</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckFeature()">原住民特色</button>
             </div>
         </div>
 
     </div>
     <div style="border-style:groove">
         <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-            <img src="{% static 'photo/Introduction/5_1.jpg' %}g" id="shy" class="img-fluid" alt="Responsive image"
+            <img src="{% static 'photo/Introduction/5_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
                 width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
         </div>
 

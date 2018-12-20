@@ -9,16 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <script>
-        function checkTro() {
-            document.getElementById('Intro').style.backgroundColor = "blue";
-            document.getElementById('Intro').style.color = "white";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/3_1.jpg' %}";
+        function CheckIntro() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/3_1.jpg' %}";
             document.getElementById('title').innerHTML = "排灣族介紹";
             document.getElementById('contain').innerHTML = "<p>排灣族屬於階序制度，大致上分為部落領袖、貴族、勇士、平民四個階級，但各傳統社會制度依各部落仍有些微不同地方。<br> \
                         貴族階級有特殊裝飾的專利權，王族與貴族也享有裝飾上的特權，例如:酷似百步蛇紋的熊鷹（赫氏角鷹）羽毛、高貴的琉璃珠、特殊的圖案（人頭紋、百步蛇紋）。<br> \
@@ -26,30 +18,14 @@
                         部落領袖、頭目及守護神是地主階級，擁有土地、河流與獵場，是一個部落的統治者，也是精神支柱的象徵。<br> \
                         王族及貴族其屬下的子民為其耕作，並將收穫所得納稅予部落領袖及守護神，部落領袖則主持部落重大事務如爭戰、或與外村的外交工作，但舉行各項重大事務之前，得先經過祭司占卜以辨行事之吉凶。</p>";
         }
-        function checkwhere() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "blue";
-            document.getElementById('where').style.color = "white";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+        function CheckWhere() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
             document.getElementById('title').innerHTML = "排灣族分佈";
             document.getElementById('contain').innerHTML = "<p>排灣族分佈於中央山脈南端及東部海岸山脈南端，以台灣南部為活動區域，北起大武山地，南達恆春，西自隘寮，東到太麻里以南海岸。<br> \
             排灣族人口集中屏東縣，以來義鄉人口最多。瑪家鄉、三地門鄉、泰武鄉、春日鄉、獅子鄉、牡丹鄉、滿州鄉及台東縣等行政區也都是排灣族分佈地。</p>"
         }
-        function checktrad() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "blue";
-            document.getElementById('trad').style.color = "white";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/3_3.jpg' %}";
+        function CheckTrad() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/3_3.jpg' %}";
             document.getElementById('title').innerHTML = "排灣族節慶";
             document.getElementById('contain').innerHTML = "<h2>五年祭</h2> \
             <div class='container'><p>五年祭是排灣族最重要的祭典，其是排灣先祖為了避荒年，將七名子女分開各自謀生，並約定每五年，長者必須手持竹竿帶領全族大小回家團聚祭祖，於是有了五年祭的雛形。<br> \
@@ -60,16 +36,8 @@
             <div class='container'><p>屬全鄉性祭典。通常於農曆八月十五日舉行，用於酬謝與祈禱感謝諸神及祖靈賜予豐收。<br>\
             舉行時常展開狩獵、魚撈或各種武藝競賽，並宴飲數日、引歌載舞。</p></div>"
         }
-        function checkgood() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "blue";
-            document.getElementById('good').style.color = "white";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/3_4.jpg' %}";
+        function CheckFeature() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/3_4.jpg' %}";
             document.getElementById('title').innerHTML = "排灣族特色";
             document.getElementById('contain').innerHTML = "<h2>琉璃珠</h2> \
             <div class='container'><p>琉璃珠又稱蜻蛉珠，和青銅刀、古陶壺合稱排灣族三寶。\
@@ -92,21 +60,17 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
-                    id="Intro" onclick="checkTro()">介紹</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="where" onclick="checkwhere()">分佈</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="trad" onclick="checktrad()">節慶</button>
-                <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                    id="good" onclick="checkgood()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckIntro()">原住民介紹</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckWhere()">原住民分佈</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckTrad()">原住民節慶</button>
+                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckFeature()">原住民特色</button>
             </div>
         </div>
 
     </div>
     <div style="border-style:groove">
         <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-            <img src="{% static 'photo/Introduction/3_1.jpg' %}" id="shy" class="img-fluid" alt="Responsive image"
+            <img src="{% static 'photo/Introduction/3_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
                 width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
         </div>
 

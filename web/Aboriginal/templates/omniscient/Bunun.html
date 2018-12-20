@@ -9,46 +9,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <script>
-        function checkTro() {
-            document.getElementById('Intro').style.backgroundColor = "blue";
-            document.getElementById('Intro').style.color = "white";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/4_1.jpg' %}";
+        function CheckIntro() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/4_1.jpg' %}";
             document.getElementById('title').innerHTML = "布農族介紹";
             document.getElementById('contain').innerHTML = "<p>布農族可分為卓社群、卡社群、丹社群、巒社群、郡社群及蘭社群等6個主要氏族，社會組織以父系大家族為主，重視其氏族內的親屬關係，與其他不同氏族亦有嚴謹的傳統規範及秩序。<br> \
                         在臺灣的原住民中，布農族是傳統祭儀最多的一族。由於對於小米收穫的重視，因而發展出一系列繁複而長時間的祭祀儀式。<br> \
                         對於農事或狩獵行事的時間，布農人依著植物的枯榮與月亮的盈缺來決定。例如李花盛開時，適合播種小米；月缺時適合驅蟲、除草；滿月時適合收割舉行收穫祭。<br> \
                         由月亮的圓滿來象徵人生的圓滿與小米的豐收，以月缺來表示怯除不好的事物，希望它快快消失。在除草祭儀結束後，布農人打起陀螺，祈望小米像陀螺快速旋轉(快速成長)。</p>";
         }
-        function checkwhere() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "blue";
-            document.getElementById('where').style.color = "white";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+        function CheckWhere() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
             document.getElementById('title').innerHTML = "布農族分佈";
             document.getElementById('contain').innerHTML = "<p>布農族分布於中央山脈海拔一千至二千公尺的山區，廣及於高雄市那瑪夏鄉、台東縣海端鄉，而以南投縣境為主。<br> \
             最早的居住地是南投縣的仁愛鄉與信義鄉，以南投縣為主，後來經過幾次的大遷移，往東至花蓮，往南至高雄及台東山區。</p>"
         }
-        function checktrad() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "blue";
-            document.getElementById('trad').style.color = "white";
-            document.getElementById('good').style.backgroundColor = "white";
-            document.getElementById('good').style.color = "gray";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/4_3.jpg' %}";
+        function CheckTrad() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/4_3.jpg' %}";
             document.getElementById('title').innerHTML = "布農族節慶";
             document.getElementById('contain').innerHTML = "<h2>射耳祭</h2> \
             <div class='container'><p>布農族人一年中相當重要的祭典，將鹿耳掛在祭場的樹枝上，男孩都必須參加射擊，年幼的男孩由大人代射。活動的意義是尊敬善獵的英雄，並教導小朋友學習射擊。<br> \
@@ -63,16 +39,8 @@
             最後，以吟唱祈禱小米豐收割做為結束，祈禱小米豐收歌是播種祭中最重要的祭歌，因為族人們認為唱的好壞與否，與當年小米是否豐收有關。<br> \
             而整個播種祭以吟唱小米豐收歌為結束，表示播種祭的所有禁忌至此結束。</p></div>"
         }
-        function checkgood() {
-            document.getElementById('Intro').style.backgroundColor = "white";
-            document.getElementById('Intro').style.color = "gray";
-            document.getElementById('where').style.backgroundColor = "white";
-            document.getElementById('where').style.color = "gray";
-            document.getElementById('trad').style.backgroundColor = "white";
-            document.getElementById('trad').style.color = "gray";
-            document.getElementById('good').style.backgroundColor = "blue";
-            document.getElementById('good').style.color = "white";
-            document.getElementById('shy').src = "{% static 'photo/Introduction/4_4.jpg' %}";
+        function CheckFeature() {
+            document.getElementById('image').src = "{% static 'photo/Introduction/4_4.jpg' %}";
             document.getElementById('title').innerHTML = "布農族特色";
             document.getElementById('contain').innerHTML = "<h2>祈禱小米豐收歌</h2> \
             <div class='container'><p>祈禱小米豐收歌是一首臺灣原住民布農族傳統祭典音樂，被人誤稱為八部合音。<br> \
@@ -86,21 +54,17 @@
         <div class="row">
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group col-lg" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: blue; color: white"
-                        id="Intro" onclick="checkTro()">介紹</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="where" onclick="checkwhere()">分佈</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="trad" onclick="checktrad()">節慶</button>
-                    <button type="button" class="btn btn-primary col-sm btn-lg" style="background-color: white; color: gray"
-                        id="good" onclick="checkgood()">特色</button>
+                    <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckIntro()">原住民介紹</button>
+                    <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckWhere()">原住民分佈</button>
+                    <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckTrad()">原住民節慶</button>
+                    <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckFeature()">原住民特色</button>
                 </div>
             </div>
 
         </div>
         <div style="border-style:groove">
             <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-                <img src="{% static 'photo/Introduction/4_1.jpg' %}" id="shy" class="img-fluid" alt="Responsive image"
+                <img src="{% static 'photo/Introduction/4_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
                     width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
             </div>
 
