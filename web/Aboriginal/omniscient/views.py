@@ -95,6 +95,16 @@ def Add_Issue(request):
 		form = IssueForm()
 	return render(request, 'omniscient/forms.html', {'form': form})
 
+@login_required
+@permission_required('omniscient.delete_issue')
+def issue_delete(request, issue_id):
+    issue = get_object_or_404(Issue, pk=issue_id)
+    if(request.user != issue.User):
+    	return redirect('index')
+    issue.delete()
+    messages.success(request, '議題已刪除')
+    return redirect('issue')
+
 
 # 洧彥的頁面
 #1
