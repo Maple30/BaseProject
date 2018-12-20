@@ -188,7 +188,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-4 col-xs-4">
-                                <img src="{% static 'photo/issue/原住民自然資源.jpg' %}" class="img-thumbnail" alt="No Image">
+                                <img src="{{ issue.Photo.url}}" class="img-thumbnail" alt="No Image">
                             </div>
                             <div class="col-sm-8 col-xs-8">
                                 <h2>{{ issue.Title }}</h2>
