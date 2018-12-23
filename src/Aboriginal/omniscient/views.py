@@ -138,21 +138,21 @@ def Yami(request):
 #10	
 def Thao(request):
  	return render(request, 'omniscient/Thao.html')
-# #11
-# def index(request):
-# 	return render(request, 'omniscient/index.html')
-# #12
-# def index(request):
-# 	return render(request, 'omniscient/index.html')
-# #13
-# def index(request):
-# 	return render(request, 'omniscient/index.html')
-# #14
-# def index(request):
-# 	return render(request, 'omniscient/index.html')
-# #15
-# def index(request):
-# 	return render(request, 'omniscient/index.html')
-# #16
-# def index(request):
-# 	return render(request, 'omniscient/index.html')
+#11
+def Kavalan(request):
+	return render(request, 'omniscient/Kavalan.html')
+#12
+def Taroko(request):
+	return render(request, 'omniscient/Taroko.html')
+#13
+def Sakizaya(request):
+	return render(request, 'omniscient/Sakizaya.html')
+#14
+def Seediq(request):
+	return render(request, 'omniscient/Seediq.html')
+#15
+def Saaroa(request):
+	return render(request, 'omniscient/Saaroa.html')
+#16
+def Kanakanavu(request):
+	return render(request, 'omniscient/Kanakanavu.html')
