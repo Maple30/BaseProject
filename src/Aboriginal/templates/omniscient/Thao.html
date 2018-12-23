@@ -2,77 +2,80 @@
 {% load bootstrap4 %}
 {% load staticfiles %}
 {% block css %}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>原住民介紹</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <script>
-        function CheckIntro() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/10_1.jpg' %}";
-            document.getElementById('title').innerHTML = "邵族介紹";
-            document.getElementById('contain').innerHTML = "<p>邵-Thao，原義是「人」，最初住在水社湖(即日月潭前身水沙連)的西岸湖畔，所以被漢人稱為「水社化番」或「水沙連化番」。化番的意思是指漢化程度介於生番和熟番之間的族群，因此邵族可說是原住民族十族中漢化最深的一族了。另外，「思麻丹社」也是邵族的統稱，直到現在，日月潭周圍各族仍然稱邵族人為「思麻丹 (Shvatan)」。<br> \
-                    邵族人深受祖靈信仰之影響，敬畏自然，但近百年來受到日治時期日本人以及漢人的移入，使原有的土地以及文化風貌受到了很大的改變。<br> \
-                    中華民國政府時期，日本政府的禁制令解除，大量漢族移入居住和做生意，人口日漸增多，政府以改善生活品質為理由，在民國72年間實施市地重劃，邵族人土地和生活範圍大幅被分割、徵收，更多商業財團進駐收購土地、建立飯店，世居於此地的邵族人，面臨漢族與財團挾帶商業優勢的競爭。<br> \
-                    日月潭孕育了可觀的原住民族人文特色，與邵族人的命運唇齒相依，同時也是知名的國際觀光勝地、台灣島的精神象徵地標，對於初次接觸台灣原住民族的觀光客來說，邵族的種種幾乎成為他們對台灣原住民族的印象了！</p>";
-        }
-        function CheckWhere() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-            document.getElementById('title').innerHTML = "邵族分佈";
-            document.getElementById('contain').innerHTML = "<p>邵族主要分佈在南投縣魚池鄉伊達邵部落和水里鄉大坪林聚落</p>"
-        }
-        function CheckTrad() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/10_3.jpg' %}";
-            document.getElementById('title').innerHTML = "邵族節慶";
-            document.getElementById('contain').innerHTML = "<h2>祖靈祭Lus'an</h2> \
-            <div class='container'><p>每年農曆七月的最後一天至八月二十日左右舉行。<br> \
-            族語Lus'an其實是新年的意思，邵族的祖靈祭，即邵族過年，是為讚頌祖先，祈求祖靈賜福，並藉此將邵族的文化傳繼下去。</p></div>"
-        }
-        function CheckFeature() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/10_4.jpg' %}";
-            document.getElementById('title').innerHTML = "邵族特色";
-            document.getElementById('contain').innerHTML = "<h2>祖靈籃</h2> \
-            <div class='container'><p>又稱公媽籃，內裝有祖先遺留之衣物與飾品，邵族宗教以「祖靈」信仰為核心，包括最高祖靈與氏族祖靈，最高祖靈住在拉魯島（Lalu）上的茄苳樹，是一位男性的神，氏族祖靈則是每一個氏族的始祖。<br> \
-            邵族人相信祖靈的存在，每家戶都有一個祖靈籃，內裝有祖先遺留之衣物與飾品。</p></div> \
-            <h2>舂石音</h2> \
-            <div class='container'><p>舂石音的「杵」長短粗細不一，最長的可以達到一個半人的高度，短的大概只有一個人高，杵的形狀兩頭粗、中間細，枝數在七或八支均可，大夥兒圍著一個埋在土裡只露出平坦面的石頭，輪流舉起長杵用力舂擊，於是「叮叮噹噹」悠揚頓挫，充滿跳躍音符的「杵音」於焉產生。<br> \
-            邵族人舂石音的時候，旁邊通常還會有兩三個人拿著短竹筒敲擊地面，發出低沉的伴奏聲，配合長杵衝擊在石頭上的聲響，鏗鏘迴盪、疏落有致，令人印象難忘。</p></div>";
-        }
-    </script>
+    
+<style>
+    body {
+        background-color: #58b3aa;
+    }
+</style>   
+<script>
+    function CheckIntro() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/10_1.jpg' %}";
+        document.getElementById('title').innerHTML = "邵族資訊";
+        document.getElementById('contain').innerHTML = "邵-Thao，原義是「人」，最初住在水社湖(即日月潭前身水沙連)的西岸湖畔，所以被漢人稱為「水社化番」或「水沙連化番」。化番的意思是指漢化程度介於生番和熟番之間的族群，因此邵族可說是原住民族十族中漢化最深的一族了。另外，「思麻丹社」也是邵族的統稱，直到現在，日月潭周圍各族仍然稱邵族人為「思麻丹 (Shvatan)」。<br> \
+                邵族人深受祖靈信仰之影響，敬畏自然，但近百年來受到日治時期日本人以及漢人的移入，使原有的土地以及文化風貌受到了很大的改變。<br> \
+                中華民國政府時期，日本政府的禁制令解除，大量漢族移入居住和做生意，人口日漸增多，政府以改善生活品質為理由，在民國72年間實施市地重劃，邵族人土地和生活範圍大幅被分割、徵收，更多商業財團進駐收購土地、建立飯店，世居於此地的邵族人，面臨漢族與財團挾帶商業優勢的競爭。<br> \
+                日月潭孕育了可觀的原住民族人文特色，與邵族人的命運唇齒相依，同時也是知名的國際觀光勝地、台灣島的精神象徵地標，對於初次接觸台灣原住民族的觀光客來說，邵族的種種幾乎成為他們對台灣原住民族的印象了！";
+    }
+    function CheckWhere() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+        document.getElementById('title').innerHTML = "邵族分佈";
+        document.getElementById('contain').innerHTML = "邵族主要分佈在南投縣魚池鄉伊達邵部落和水里鄉大坪林聚落"
+    }
+    function CheckTrad() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/10_3.jpg' %}";
+        document.getElementById('title').innerHTML = "邵族文化";
+        document.getElementById('contain').innerHTML = "<h2>祖靈祭Lus'an</h2> \
+        <div class='container'><p>每年農曆七月的最後一天至八月二十日左右舉行。<br> \
+        族語Lus'an其實是新年的意思，邵族的祖靈祭，即邵族過年，是為讚頌祖先，祈求祖靈賜福，並藉此將邵族的文化傳繼下去。</p></div>"
+    }
+    function CheckFeature() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/10_4.jpg' %}";
+        document.getElementById('title').innerHTML = "邵族特色";
+        document.getElementById('contain').innerHTML = "<h2>祖靈籃</h2> \
+        <div class='container'><p>又稱公媽籃，內裝有祖先遺留之衣物與飾品，邵族宗教以「祖靈」信仰為核心，包括最高祖靈與氏族祖靈，最高祖靈住在拉魯島（Lalu）上的茄苳樹，是一位男性的神，氏族祖靈則是每一個氏族的始祖。<br> \
+        邵族人相信祖靈的存在，每家戶都有一個祖靈籃，內裝有祖先遺留之衣物與飾品。</p></div> \
+        <h2>舂石音</h2> \
+        <div class='container'><p>舂石音的「杵」長短粗細不一，最長的可以達到一個半人的高度，短的大概只有一個人高，杵的形狀兩頭粗、中間細，枝數在七或八支均可，大夥兒圍著一個埋在土裡只露出平坦面的石頭，輪流舉起長杵用力舂擊，於是「叮叮噹噹」悠揚頓挫，充滿跳躍音符的「杵音」於焉產生。<br> \
+        邵族人舂石音的時候，旁邊通常還會有兩三個人拿著短竹筒敲擊地面，發出低沉的伴奏聲，配合長杵衝擊在石頭上的聲響，鏗鏘迴盪、疏落有致，令人印象難忘。</p></div>";
+    }
+</script>
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<br>
+<div class="container" style="background-color:white;border-radius:10px">
     <div class="row">
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckIntro()">原住民介紹</button>
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckWhere()">原住民分佈</button>
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckTrad()">原住民節慶</button>
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckFeature()">原住民特色</button>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
+            <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
             </div>
         </div>
-
     </div>
-    <div style="border-style:groove">
-        <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-            <img src="{% static 'photo/Introduction/10_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
-                width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
-        </div>
 
+    <div>
+        <div class="col-lg-12" style="height:auto;border:1px solid #FFFFFF;background-color: gainsboro">
+            <img src="{% static 'photo/Introduction/10_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
+                style=" display: block;margin-left: auto; margin-right: auto">
+        </div>
+        <br>
         <div>
-            <br>
-            <h1 id="title">
-                邵族介紹
-            </h1>
-            <div class="container" id="contain">
-                <p>
+            <div class="container">
+                <h1 id="title">
+                邵族資訊
+                </h1>
+                <div style="border:1px solid darkgray"></div>
+                <br>
+                <p id="contain">
                     邵-Thao，原義是「人」，最初住在水社湖(即日月潭前身水沙連)的西岸湖畔，所以被漢人稱為「水社化番」或「水沙連化番」。化番的意思是指漢化程度介於生番和熟番之間的族群，因此邵族可說是原住民族十族中漢化最深的一族了。另外，「思麻丹社」也是邵族的統稱，直到現在，日月潭周圍各族仍然稱邵族人為「思麻丹 (Shvatan)」。<br>
                     邵族人深受祖靈信仰之影響，敬畏自然，但近百年來受到日治時期日本人以及漢人的移入，使原有的土地以及文化風貌受到了很大的改變。<br>
                     中華民國政府時期，日本政府的禁制令解除，大量漢族移入居住和做生意，人口日漸增多，政府以改善生活品質為理由，在民國72年間實施市地重劃，邵族人土地和生活範圍大幅被分割、徵收，更多商業財團進駐收購土地、建立飯店，世居於此地的邵族人，面臨漢族與財團挾帶商業優勢的競爭。<br>
                     日月潭孕育了可觀的原住民族人文特色，與邵族人的命運唇齒相依，同時也是知名的國際觀光勝地、台灣島的精神象徵地標，對於初次接觸台灣原住民族的觀光客來說，邵族的種種幾乎成為他們對台灣原住民族的印象了！
                 </p>
+                <br>
             </div>
         </div>
     </div>

@@ -3,86 +3,89 @@
 {% load staticfiles %}
 
 {% block css %}
-<meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>原住民介紹</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <script>
-        function CheckIntro() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/7_1.jpg' %}";
-            document.getElementById('title').innerHTML = "鄒族介紹";
-            document.getElementById('contain').innerHTML = "<p>鄒族又稱曹族，鳥居龍藏之分類稱其為新高族，鄒族有「特富野」、「達邦」、「伊姆諸」與「魯富都」社。<br> \
-                        在邵族被承認以前是台灣山區原住民人口僅次於賽夏族第二少的族群，為台灣原住民族的一支，主要居住於嘉義縣阿里山鄉樂野村、特富野村、達邦村、來吉、山美等地區，亦分布於南投縣信義鄉。<br> \
-                        社會組織以嚴格的父系氏族組織及大、小社分脈聯合之政治性組織為主，部落事務及祭儀都以男子會所為中心，稱為「庫巴」，結婚前的青少年必須居住於此，同時接受訓練，非該部落者及女性皆不得進入。<br> \
-                        鄒族並沒有階級制度，卻有幾個特殊地位的人物，分別為頭目、征帥及勇士，其中頭目由其一家族固定承襲，征帥為爭戰、獵首的指揮官，有時可能是頭目，勇士為在戰場上有特殊功勳的族人。</p>";
-        }
-        function CheckWhere() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-            document.getElementById('title').innerHTML = "鄒族分佈";
-            document.getElementById('contain').innerHTML = "<p>主要分布於嘉義縣阿里山鄉及南投縣信義鄉。</p>"
-        }
-        function CheckTrad() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/7_3.jpg' %}";
-            document.getElementById('title').innerHTML = "鄒族節慶";
-            document.getElementById('contain').innerHTML = "<h2>播種祭</h2> \
-            <div class='container'><p>鄒族的生活祭儀中，排在一年之始的是播種祭，也就是說鄒族人以播種小米的祭儀來迎接一年的到來。<br> \
-            鄒族人以農獵為生，夏季農耕，冬季狩獵，而一年之初，便是農耕活動的開始，在開始耕作之前，必須先舉行播種儀式，求得栗女神與土地神的佑助。<br> \
-            祭儀當天，參加祭典者須穿著傳統服飾，先從祭屋內取出小米後，再前往耕作地播種。在播種後，為求風調雨順，須由祭司進行祈雨儀式。<br> \
-            在播種之後，祭司在田地中央挖一小洞，將代表神靈所管轄的天的姑婆芋葉片平舖在上面，並在葉片上倒入水，此時，祭司手持茅草唸誦禱詞，祇佑耕作能夠順利。</p></div> \
-            <h2>收成祭</h2> \
-            <div class='container'><p>又稱小米收穫祭，屬於家族性的祭儀。<br> \
-            在鄒族傳統生活中，小米是最重要的糧食，其收穫量代表著該氏貧富的的程度。<br> \
-            在每年的小米收割完後舉行，大約在七、八月左右。主要祭祀小米神，感謝牠對農作的照顧，並藉著祭典強化家族的凝聚力。<br> \
-            小米祭屋為主要祭祀場所，每一個家族的成員都必須回來，再藉著聯合家族之間的互訪達到聯誼的情感交流。是鄒族最重要的祭典，也是鄒族人的過年。<\p></div> \
-            <h2>凱旋祭</h2> \
-            <div class='container'><p>又稱戰祭，屬於全部落性的祭典，二大社（達邦、特富野）個別舉行，時間大約在二月或八月。主要是祭拜天神和戰神，在會所及其廣場前舉行。<br> \
-            「Mayasvi」翻譯為「戰祭」或「瑪亞士比」，是延續鄒族精神最重要的一項祭典，其時間、方式和意義完全不同於七、八月時小米收成後所舉行的收成祭。<br> \
-            在以前，戰祭舉行的時間並不固定，通常在勇士征戰榮歸，或者是男子集會所需重建或修建的情況下，由部落長老商議後才決定是否舉辦。但現在則演變為每年二月十五日舉行的固定祭典，並由達邦和特富野社輪流擔任祭典儀式。<br> \
-            這個盛大的祭典中包含了kuba的修繕、迎神祭、戰祭（凱旋祭、部落團結祭）、男嬰初登會所、男子成年禮、送神祭以及路祭等各項儀式。</p></div>"
-        }
-        function CheckFeature() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/7_4.jpg' %}";
-            document.getElementById('title').innerHTML = "鄒族特色";
-            document.getElementById('contain').innerHTML = "<h2>庫巴</h2><div class='container'><p>無壁面、茅草為頂的涼亭式建築，為鄒族舉行戰祭、團結祭和成年禮地點，也是天神降臨之地，神聖不可侵擾，具有凝聚族人情感作用，部落住宅層層環庫巴而建。</p></div> \
-            <h2>嚴密的家族制度</h2><div class='container'><p>鄒族是父系氏族的社會，部落中的男子會所「庫巴」，是族人會商大事、舉行祭典、訓練男子的場所，禁止非該部落者與女性進入。<br> \
-            不管是婚姻或是祭祀行為，都以家族制度嚴密地運作。</p></div>"
-        }
-    </script>
+
+<style>
+    body {
+        background-color: #58b3aa;
+    }
+</style>
+<script>
+    function CheckIntro() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/7_1.jpg' %}";
+        document.getElementById('title').innerHTML = "鄒族資訊";
+        document.getElementById('contain').innerHTML = "鄒族又稱曹族，鳥居龍藏之分類稱其為新高族，鄒族有「特富野」、「達邦」、「伊姆諸」與「魯富都」社。<br> \
+                    在邵族被承認以前是台灣山區原住民人口僅次於賽夏族第二少的族群，為台灣原住民族的一支，主要居住於嘉義縣阿里山鄉樂野村、特富野村、達邦村、來吉、山美等地區，亦分布於南投縣信義鄉。<br> \
+                    社會組織以嚴格的父系氏族組織及大、小社分脈聯合之政治性組織為主，部落事務及祭儀都以男子會所為中心，稱為「庫巴」，結婚前的青少年必須居住於此，同時接受訓練，非該部落者及女性皆不得進入。<br> \
+                    鄒族並沒有階級制度，卻有幾個特殊地位的人物，分別為頭目、征帥及勇士，其中頭目由其一家族固定承襲，征帥為爭戰、獵首的指揮官，有時可能是頭目，勇士為在戰場上有特殊功勳的族人。";
+    }
+    function CheckWhere() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+        document.getElementById('title').innerHTML = "鄒族分佈";
+        document.getElementById('contain').innerHTML = "主要分布於嘉義縣阿里山鄉及南投縣信義鄉。"
+    }
+    function CheckTrad() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/7_3.jpg' %}";
+        document.getElementById('title').innerHTML = "鄒族文化";
+        document.getElementById('contain').innerHTML = "<h2>播種祭</h2> \
+        <div class='container'><p>鄒族的生活祭儀中，排在一年之始的是播種祭，也就是說鄒族人以播種小米的祭儀來迎接一年的到來。<br> \
+        鄒族人以農獵為生，夏季農耕，冬季狩獵，而一年之初，便是農耕活動的開始，在開始耕作之前，必須先舉行播種儀式，求得栗女神與土地神的佑助。<br> \
+        祭儀當天，參加祭典者須穿著傳統服飾，先從祭屋內取出小米後，再前往耕作地播種。在播種後，為求風調雨順，須由祭司進行祈雨儀式。<br> \
+        在播種之後，祭司在田地中央挖一小洞，將代表神靈所管轄的天的姑婆芋葉片平舖在上面，並在葉片上倒入水，此時，祭司手持茅草唸誦禱詞，祇佑耕作能夠順利。</p></div> \
+        <h2>收成祭</h2> \
+        <div class='container'><p>又稱小米收穫祭，屬於家族性的祭儀。<br> \
+        在鄒族傳統生活中，小米是最重要的糧食，其收穫量代表著該氏貧富的的程度。<br> \
+        在每年的小米收割完後舉行，大約在七、八月左右。主要祭祀小米神，感謝牠對農作的照顧，並藉著祭典強化家族的凝聚力。<br> \
+        小米祭屋為主要祭祀場所，每一個家族的成員都必須回來，再藉著聯合家族之間的互訪達到聯誼的情感交流。是鄒族最重要的祭典，也是鄒族人的過年。<\p></div> \
+        <h2>凱旋祭</h2> \
+        <div class='container'><p>又稱戰祭，屬於全部落性的祭典，二大社（達邦、特富野）個別舉行，時間大約在二月或八月。主要是祭拜天神和戰神，在會所及其廣場前舉行。<br> \
+        「Mayasvi」翻譯為「戰祭」或「瑪亞士比」，是延續鄒族精神最重要的一項祭典，其時間、方式和意義完全不同於七、八月時小米收成後所舉行的收成祭。<br> \
+        在以前，戰祭舉行的時間並不固定，通常在勇士征戰榮歸，或者是男子集會所需重建或修建的情況下，由部落長老商議後才決定是否舉辦。但現在則演變為每年二月十五日舉行的固定祭典，並由達邦和特富野社輪流擔任祭典儀式。<br> \
+        這個盛大的祭典中包含了kuba的修繕、迎神祭、戰祭（凱旋祭、部落團結祭）、男嬰初登會所、男子成年禮、送神祭以及路祭等各項儀式。</p></div>"
+    }
+    function CheckFeature() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/7_4.jpg' %}";
+        document.getElementById('title').innerHTML = "鄒族特色";
+        document.getElementById('contain').innerHTML = "<h2>庫巴</h2><div class='container'><p>無壁面、茅草為頂的涼亭式建築，為鄒族舉行戰祭、團結祭和成年禮地點，也是天神降臨之地，神聖不可侵擾，具有凝聚族人情感作用，部落住宅層層環庫巴而建。</p></div> \
+        <h2>嚴密的家族制度</h2><div class='container'><p>鄒族是父系氏族的社會，部落中的男子會所「庫巴」，是族人會商大事、舉行祭典、訓練男子的場所，禁止非該部落者與女性進入。<br> \
+        不管是婚姻或是祭祀行為，都以家族制度嚴密地運作。</p></div>"
+    }
+</script>
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<br>
+<div class="container" style="background-color:white;border-radius:10px">
     <div class="row">
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckIntro()">原住民介紹</button>
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckWhere()">原住民分佈</button>
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckTrad()">原住民節慶</button>
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckFeature()">原住民特色</button>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
+            <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
             </div>
         </div>
-
     </div>
-    <div style="border-style:groove">
-        <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-            <img src="{% static 'photo/Introduction/7_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
-                width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
-        </div>
 
+    <div>
+        <div class="col-lg-12" style="height:auto;border:1px solid #FFFFFF;background-color: gainsboro">
+            <img src="{% static 'photo/Introduction/7_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
+                style=" display: block;margin-left: auto; margin-right: auto">
+        </div>
+        <br>
         <div>
-            <br>
-            <h1 id="title">
-                鄒族介紹
-            </h1>
-            <div class="container" id="contain">
-                <p>
+            <div class="container">
+                <h1 id="title">
+                鄒族資訊
+                </h1>
+                <div style="border:1px solid darkgray"></div>
+                <br>
+                <p id="contain">
                     鄒族又稱曹族，鳥居龍藏之分類稱其為新高族，鄒族有「特富野」、「達邦」、「伊姆諸」與「魯富都」社。<br>
                     在邵族被承認以前是台灣山區原住民人口僅次於賽夏族第二少的族群，為台灣原住民族的一支，主要居住於嘉義縣阿里山鄉樂野村、特富野村、達邦村、來吉、山美等地區，亦分布於南投縣信義鄉。<br>
                     社會組織以嚴格的父系氏族組織及大、小社分脈聯合之政治性組織為主，部落事務及祭儀都以男子會所為中心，稱為「庫巴」，結婚前的青少年必須居住於此，同時接受訓練，非該部落者及女性皆不得進入。<br>
                     鄒族並沒有階級制度，卻有幾個特殊地位的人物，分別為頭目、征帥及勇士，其中頭目由其一家族固定承襲，征帥為爭戰、獵首的指揮官，有時可能是頭目，勇士為在戰場上有特殊功勳的族人。
                 </p>
+                <br>
             </div>
         </div>
     </div>

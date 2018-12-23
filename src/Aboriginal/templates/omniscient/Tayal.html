@@ -2,88 +2,90 @@
 {% load bootstrap4 %}
 {% load staticfiles %}
 {% block css %}
-<meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>原住民介紹</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <script>
-        function CheckIntro() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/1_1.jpg' %}";
-            document.getElementById('title').innerHTML = "泰雅族介紹";
-            document.getElementById('contain').innerHTML = "<p>泰雅族以山田燒墾和狩獵採集為生，聚落以集居式的村落為主。<br> \
-                        大體而言，社會組織分成：部落組織、祭祀團體、共負罪責團體、狩獵團體，這四個團體的成員有互相重疊的特質，在不同部落，祭祀團體可能大於狩獵團體，其他的部落可能狩獵團體大於任何一個團體。各地的差異性頗大，無法一概而論。<br> \
-                        其總人口數約七萬九千餘人僅次於阿美族，為台灣原住民族的第三大族。<br> \
-                        在泰雅族的世界裡，有二個迴異於其他族群的觀念：gaga的觀念及rutux的信仰理念。<br> \
-                        gaga是一種社會規範，是泰雅人日常生活，風習俗慣的誡律，觸犯了gaga表示觸犯了禁忌，可能受到神靈的懲罰。遵守同一gaga的人共同舉行祭儀、共勞共享。<br> \
-                        rutux是一種超自然的神靈信仰。一個人觸犯了gaga可能會受到rutux的處罰;被rutux嚇到可能會生病;在戶外吃飯、喝酒時要彈一點食物在地上給rutux吃。<br> \
-                        泰雅族是一個平權的社會，由領導能力強的人出任部落領袖，狩獵、出草也由英勇的族人擔任領袖。但遇到部落有重大事情時，則由長老會議決策。<br></p>";
-        }
-        function CheckWhere() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-            document.getElementById('title').innerHTML = "泰雅族分佈";
-            document.getElementById('contain').innerHTML = "<p>泰雅族分佈在台灣北部中央山脈兩側，以及花蓮、宜蘭等山區。又分為泰雅亞族（Tayal）和賽德克亞族（Sedek）。泰雅亞族又分為Sekoleq群和 Tseole群。賽德克亞族又分為東賽德克群和西賽德克群。</p>"
-        }
-        function CheckTrad() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/1_3.jpg' %}";
-            document.getElementById('title').innerHTML = "泰雅族節慶";
-            document.getElementById('contain').innerHTML = "<h2>開墾祭（二月）</h2> \
-            <div class='container'><p>早期實施山田輪耕休墾制度下，山田種植三、五年後便視其地利已盡，需另覓新的耕地開墾。</p></div> \
-            <h2>播種祭（三月）</h2> \
-            <div class='container'><p>初春山粟花蕾綻開時，祭團首領會決定一日為播種期，並通知同gaga祭團成員準備播種，家家戶戶遵囑搗粟釀酒並點燃爐火。<br> \
-            播種期當天清早就需起床蒸祭獻用的小米糕，家中的火種不可熄滅，祭典時，以此火種點燃火把，連同小米糕、少許酒、小米重數穗及小鋤頭，由兩個祭司帶往耕作地。先到其中一名祭司的耕作地，用小鋤頭鏟方尺之地，舉行播種儀式，而後向祖靈祈求所播下的小米穗能全部發芽。<p></div> \
-            <h2>豐年祭（八月）</h2> \
-            <div class='container'><p>各家做酒準備做為豐年祭之用。豐年祭前的狩獵為了祭獵其獵期為一整月，由全gaga的人所參加，此團體稱之為Malustuan。<br>豐年祭前一個月已經是農閒時間，其流程從八月初頭目見到月亮已露眉，則通知各家做糕並準備小米，以供上山狩獵之用；其後，男子進入深山打獵至下弦月將止，再攜帶獵物回家，同時，女子也須在豐年祭前完成織布及釀製小米酒以備豐年節之用。<br> \
-            泰雅的豐年祭在停辦多年後，現有許多部落又恢復舉辦，但多以表演性質為多。</p></div> \
-            <h2>祖靈祭</h2> \
-            <div class='container'><p>傳統舉行祖靈祭的季節大約是在小米收割後。<br> \
-            泰雅族宗教信仰主要為祖靈，咸信人的一生受到祖靈的主宰。<br> \
-            祖靈的祝福可使氏族成員生命平安，並保一年的農作得以豐收。<br> \
-            祖靈祭儀式也代表了族人中心信仰，也是維繫全族的精神象徵。<br> \
-            <b>由於傳統社會組織及宗教信仰的瓦解，泰雅族目前只剩下祖靈祭還如期舉行。</p></div>"
-        }
-        function CheckFeature() {
-            document.getElementById('image').src = "{% static 'photo/Introduction/1_4.jpg' %}";
-            document.getElementById('title').innerHTML = "泰雅族特色";
-            document.getElementById('contain').innerHTML = "<h2>紋面的藝術</h2> \
-            <div class='container'><p>除了美觀、避邪、死後認祖歸宗的標誌。對於男子而言，是成年的標誌也是勇武的象徵。對於女子，則是善於織布的標記。 </p></div>\
-            <h2>精緻的織布藝術</h2> \
-            <div class='container'><p>以苧麻為原料、植物染料為主的泰雅族織布是原住民族中最善於織造藝術的族群，但因毛線材料的便利性及色彩多樣性，許多族人都樂於使用，反而使傳統的原料逐漸沒落。</p></div> \
-            <h2>浪漫的口簧琴舞</h2> \
-            <div class='container'><p>口簧琴為九族所共有，但能將它發揮得漓淋盡致並配上舞蹈表現男女情意的只有泰雅族。</p></div> \
-            <h2>貝珠衣</h2> \
-            <div class='container'><p>以白色貝類穿孔磨成細小如綠豆之貝珠，將它穿綴於整件衣服上，是泰雅族獨特的衣飾文化。貝珠衣有多種形式，最尊貴的一種是部落領袖或獵首英雄於凱旋歸來參加盛會時所穿，也是結婚時重要的聘禮，除了貝珠衣以外，珠裙、珠帽、綁腿亦以貝珠串成。珠裙常使用於訂婚或女子生產後男方送給女方家長的答謝禮。珠帽則為頭目所佩戴。</p></div>";
-        }
-    </script>
+
+<style>
+    body {
+        background-color: #58b3aa;
+    }
+</style>
+<script>
+    function CheckIntro() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/1_1.jpg' %}";
+        document.getElementById('title').innerHTML = "泰雅族資訊";
+        document.getElementById('contain').innerHTML = "泰雅族以山田燒墾和狩獵採集為生，聚落以集居式的村落為主。<br> \
+                    大體而言，社會組織分成：部落組織、祭祀團體、共負罪責團體、狩獵團體，這四個團體的成員有互相重疊的特質，在不同部落，祭祀團體可能大於狩獵團體，其他的部落可能狩獵團體大於任何一個團體。各地的差異性頗大，無法一概而論。<br> \
+                    其總人口數約七萬九千餘人僅次於阿美族，為台灣原住民族的第三大族。<br> \
+                    在泰雅族的世界裡，有二個迴異於其他族群的觀念：gaga的觀念及rutux的信仰理念。<br> \
+                    gaga是一種社會規範，是泰雅人日常生活，風習俗慣的誡律，觸犯了gaga表示觸犯了禁忌，可能受到神靈的懲罰。遵守同一gaga的人共同舉行祭儀、共勞共享。<br> \
+                    rutux是一種超自然的神靈信仰。一個人觸犯了gaga可能會受到rutux的處罰;被rutux嚇到可能會生病;在戶外吃飯、喝酒時要彈一點食物在地上給rutux吃。<br> \
+                    泰雅族是一個平權的社會，由領導能力強的人出任部落領袖，狩獵、出草也由英勇的族人擔任領袖。但遇到部落有重大事情時，則由長老會議決策。";
+    }
+    function CheckWhere() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+        document.getElementById('title').innerHTML = "泰雅族分佈";
+        document.getElementById('contain').innerHTML = "泰雅族分佈在台灣北部中央山脈兩側，以及花蓮、宜蘭等山區。"
+    }
+    function CheckTrad() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/1_3.jpg' %}";
+        document.getElementById('title').innerHTML = "泰雅族文化";
+        document.getElementById('contain').innerHTML = "<h2>開墾祭（二月）</h2> \
+        <div class='container'><p>早期實施山田輪耕休墾制度下，山田種植三、五年後便視其地利已盡，需另覓新的耕地開墾。</p></div> \
+        <h2>播種祭（三月）</h2> \
+        <div class='container'><p>初春山粟花蕾綻開時，祭團首領會決定一日為播種期，並通知同gaga祭團成員準備播種，家家戶戶遵囑搗粟釀酒並點燃爐火。<br> \
+        播種期當天清早就需起床蒸祭獻用的小米糕，家中的火種不可熄滅，祭典時，以此火種點燃火把，連同小米糕、少許酒、小米重數穗及小鋤頭，由兩個祭司帶往耕作地。先到其中一名祭司的耕作地，用小鋤頭鏟方尺之地，舉行播種儀式，而後向祖靈祈求所播下的小米穗能全部發芽。<p></div> \
+        <h2>豐年祭（八月）</h2> \
+        <div class='container'><p>各家做酒準備做為豐年祭之用。豐年祭前的狩獵為了祭獵其獵期為一整月，由全gaga的人所參加，此團體稱之為Malustuan。<br>豐年祭前一個月已經是農閒時間，其流程從八月初頭目見到月亮已露眉，則通知各家做糕並準備小米，以供上山狩獵之用；其後，男子進入深山打獵至下弦月將止，再攜帶獵物回家，同時，女子也須在豐年祭前完成織布及釀製小米酒以備豐年節之用。<br> \
+        泰雅的豐年祭在停辦多年後，現有許多部落又恢復舉辦，但多以表演性質為多。</p></div> \
+        <h2>祖靈祭</h2> \
+        <div class='container'><p>傳統舉行祖靈祭的季節大約是在小米收割後。<br> \
+        泰雅族宗教信仰主要為祖靈，咸信人的一生受到祖靈的主宰。<br> \
+        祖靈的祝福可使氏族成員生命平安，並保一年的農作得以豐收。<br> \
+        祖靈祭儀式也代表了族人中心信仰，也是維繫全族的精神象徵。<br> \
+        <b>由於傳統社會組織及宗教信仰的瓦解，泰雅族目前只剩下祖靈祭還如期舉行。</p></div>"
+    }
+    function CheckFeature() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/1_4.jpg' %}";
+        document.getElementById('title').innerHTML = "泰雅族特色";
+        document.getElementById('contain').innerHTML = "<h2>紋面的藝術</h2> \
+        <div class='container'><p>除了美觀、避邪、死後認祖歸宗的標誌。對於男子而言，是成年的標誌也是勇武的象徵。對於女子，則是善於織布的標記。 </p></div>\
+        <h2>精緻的織布藝術</h2> \
+        <div class='container'><p>以苧麻為原料、植物染料為主的泰雅族織布是原住民族中最善於織造藝術的族群，但因毛線材料的便利性及色彩多樣性，許多族人都樂於使用，反而使傳統的原料逐漸沒落。</p></div> \
+        <h2>浪漫的口簧琴舞</h2> \
+        <div class='container'><p>口簧琴為九族所共有，但能將它發揮得漓淋盡致並配上舞蹈表現男女情意的只有泰雅族。</p></div> \
+        <h2>貝珠衣</h2> \
+        <div class='container'><p>以白色貝類穿孔磨成細小如綠豆之貝珠，將它穿綴於整件衣服上，是泰雅族獨特的衣飾文化。貝珠衣有多種形式，最尊貴的一種是部落領袖或獵首英雄於凱旋歸來參加盛會時所穿，也是結婚時重要的聘禮，除了貝珠衣以外，珠裙、珠帽、綁腿亦以貝珠串成。珠裙常使用於訂婚或女子生產後男方送給女方家長的答謝禮。珠帽則為頭目所佩戴。</p></div>";
+    }
+</script>
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<br>
+<div class="container" style="background-color:white;border-radius:10px">
     <div class="row">
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckIntro()">原住民介紹</button>
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckWhere()">原住民分佈</button>
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckTrad()">原住民節慶</button>
-                <button type="button" class="btn btn-outline-info btn-lg" onclick="CheckFeature()">原住民特色</button>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
+            <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
             </div>
         </div>
-
     </div>
-    <div style="border-style:groove">
-        <div class="col-lg-12" style="border-style:outset;height:auto;background-color: white;">
-            <img src="{% static 'photo/Introduction/1_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
-                width="auto" height="450px" style="display: block;margin-left: auto; margin-right: auto;">
-        </div>
 
+    <div>
+        <div class="col-lg-12" style="height:auto;border:1px solid #FFFFFF;background-color: gainsboro">
+            <img src="{% static 'photo/Introduction/1_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
+                style=" display: block;margin-left: auto; margin-right: auto">
+        </div>
+        <br>
         <div>
-            <br>
-            <h1 id="title">
-                泰雅族介紹
-            </h1>
-            <div class="container" id="contain">
-                <p>
+            <div class="container">
+                <h1 id="title">
+                泰雅族資訊
+                </h1>
+                <div style="border:1px solid darkgray"></div>
+                <br>
+                <p id="contain">
                     泰雅族以山田燒墾和狩獵採集為生，聚落以集居式的村落為主。<br>
                     大體而言，社會組織分成：部落組織、祭祀團體、共負罪責團體、狩獵團體，這四個團體的成員有互相重疊的特質，在不同部落，祭祀團體可能大於狩獵團體，其他的部落可能狩獵團體大於任何一個團體。各地的差異性頗大，無法一概而論。<br>
                     其總人口數約七萬九千餘人僅次於阿美族，為台灣原住民族的第三大族。<br>
@@ -92,6 +94,7 @@
                     rutux是一種超自然的神靈信仰。一個人觸犯了gaga可能會受到rutux的處罰;被rutux嚇到可能會生病;在戶外吃飯、喝酒時要彈一點食物在地上給rutux吃。<br>
                     泰雅族是一個平權的社會，由領導能力強的人出任部落領袖，狩獵、出草也由英勇的族人擔任領袖。但遇到部落有重大事情時，則由長老會議決策。<br>
                 </p>
+                <br>
             </div>
         </div>
     </div>
