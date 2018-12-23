@@ -33,6 +33,6 @@ urlpatterns = [
 	url(r'^Sakizaya/$', views.Sakizaya, name = 'Sakizaya'),
 	url(r'^Seediq/$', views.Seediq, name = 'Seediq'),
 	url(r'^Saaroa/$', views.Saaroa, name = 'Saaroa'),
-	url(r'Kanakanavu^/$', views.Kanakanavu, name = 'Kanakanavu'),
+	url(r'^Kanakanavu/$', views.Kanakanavu, name = 'Kanakanavu'),
 	#url(r'^admin/', admin.site.urls),
 ]
