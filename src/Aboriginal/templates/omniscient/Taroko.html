@@ -1,0 +1,79 @@
+{% extends 'omniscient/basic.html' %}
+{% load bootstrap4 %}
+{% load staticfiles %}
+{% block css %}
+
+<style>
+    body {
+        background-color: #58b3aa;
+    }
+</style>
+<script>
+    function CheckIntro() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/12_1.jpg' %}";
+        document.getElementById('title').innerHTML = "太魯閣族資訊";
+        document.getElementById('contain').innerHTML = "太魯閣族（Kavalan）自稱為kavalan，意思是平原的人類，自認有別於居住山林地區的泰雅族。<br> \
+                    傳說噶瑪蘭族人最早由南方島嶼，途經地名為Sanasai的地方後遷入臺灣，落腳於蘭陽平原，十九世紀初開始遷居到花蓮臺東海岸。噶瑪蘭族原來在蘭陽平原共有30多個部落，十八世紀末漢人開始進入蘭陽平原；十九世紀清朝設立行政區「噶瑪蘭廳」，並以「加留餘埔」制度保障部落土地。不過，社會與生態環境的改變，仍讓不少噶瑪蘭族人從蘭陽平原，乘船南渡到達花蓮平原落腳，形成以加禮宛社為核心的大、小六個部落。清朝因執行開山撫番政策，勢力進逼花蓮平原，侵擾噶瑪蘭族人生活。<br> \
+                    光緒4 年（1878）噶瑪蘭族人與撒奇萊雅族人聯合，武力反抗清國勢力。「加禮宛戰役」後，噶瑪蘭族與撒奇萊雅族勢力銳減，部分族人流散至東海岸，或隱居於阿美族部落內。<br> \
+                    噶瑪蘭族目前以宜蘭縣壯圍鄉奇立板、貓里霧罕、五結鄉加禮宛、流流、利澤簡等社，花蓮縣新城嘉里村加禮宛、豐濱新社村新社、豐濱村立德，臺東縣長濱鄉三間村的三間厝、樟原村、大峰峰（又稱大尖石）為主要分布地。噶瑪蘭族人從民國70 年代（1980 年代）開始，就向社會表達希望政府能夠尊重噶瑪蘭族人存在的主體性，爾後於民國91 年（2002）列為政府公告的原住民族之一。";
+    }
+    function CheckWhere() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
+        document.getElementById('title').innerHTML = "太魯閣族分佈";
+        document.getElementById('contain').innerHTML = "太魯閣族主要分佈於花蓮縣的秀林、萬榮、卓溪三鄉鎮為主要居住地，以及吉安鄉慶豐、南華、福興三村。"
+    }
+    function CheckTrad() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/12_3.jpg' %}";
+        document.getElementById('title').innerHTML = "太魯閣族文化";
+        document.getElementById('contain').innerHTML = "<h2>感恩祭</h2> \
+        <div class='container'><p>年十月十五日小米收割後，是太魯閣全族人們舉行感恩祭酬謝祖靈的重要季節。年年到了這個時候，族人們都會以虔誠的心來祭拜祖靈，一方面感謝祖靈之庇佑，今歲五穀豐收；另一方面也祈求來年家庭安康美滿、五畜興旺。<br> \
+        感恩祭是由部落長老們共同來商議舉辦的時間，並通知全部落族人。祭典當日，全社各家皆須派一名男子參與，在天未亮前，由主祭者帶領著族人來到祭場祭祖，而往往是先由頭目呼喊祖先，並邀請他們的靈魂下來，再接續由各家族族人念頌祭文，在共同祭祀後，才各別祭祀各家的祖先。</p></div>"
+    }
+    function CheckFeature() {
+        document.getElementById('image').src = "{% static 'photo/Introduction/12_4.jpg' %}";
+        document.getElementById('title').innerHTML = "太魯閣族特色";
+        document.getElementById('contain').innerHTML = "<h2>織布</h2> \
+        <div class='container'><p>太魯閣族服飾布匹以麻絲為材料，經過紡線、漂白等程序後，製作成為各色交織的布匹，再以布匹當素材製作衣服、衣飾與被單，主要有綠、紅、黃、黑與白色等顏色。<br> \
+        織布對於女性有重要意義，在學會織布後才能紋面與結婚，也才能通過彩虹橋的考驗，到達祖靈的故鄉。編織除了是日常生活服飾的製作技術外，對於女性也具有成年意義、嫁娶結婚，以及族群識別的多重意涵。</p></div> \
+        <h2>紋面</h2> \
+        <div class='container'><p>紋面在傳統文化中佔有重要地位，也最具特色的身體裝飾。太魯閣族男子、女子約14、15 歲成年後，才可以紋面；女子則在織布技巧受到長老肯定後，才能在臉部刺上紋面。太魯閣族的紋面文化在日本殖民統治時期遭到禁止，中斷紋面的風俗習慣。</p></div>";
+    }
+</script>
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="container" style="background-color:white;border-radius:10px">
+    <div class="row">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
+            <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="col-lg-12" style="height:auto;border:1px solid #FFFFFF;background-color: gainsboro">
+            <img src="{% static 'photo/Introduction/12_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
+                style=" display: block;margin-left: auto; margin-right: auto">
+        </div>
+        <br>
+        <div>
+            <div class="container">
+                <h1 id="title">
+                太魯閣族資訊
+                </h1>
+                <div style="border:1px solid darkgray"></div>
+                <br>
+                <p id="contain">
+                    傳說太魯閣族（Truku）的祖先在史前時代由南洋一帶乘坐rowcing（漂流木，即船隻之意），在臺灣西南沿海一帶登陸，登陸後散居於臺中至臺南一帶的平原上，後因與平原上之平埔族不合且寡不敵眾，被驅逐追殺，因而被迫向臺灣中部高山地區遷移，先遷至埔里西方名為Ayran（愛蘭）的地方，然後漸次向東的山區遷移，經過好幾個世紀共遷居十七個地方，最後遷移到現在的南投縣仁愛鄉合作村，族人稱此地為德鹿灣（Truku Truwan）。<br>
+                    日本殖民統治時期，太魯閣族部落土地被認定為國有地，壓迫傳統生活空間與自主權，引起族人不滿與反抗；像是明治29年（1896）發生的「新城事件」、明治39 年（1906）的「威里事件」，以及大正3 年（1914）的「太魯閣事件」。大正3 年（1914）太魯閣事件後，各部落勢力逐漸被日軍所控制住，深山的族人也被迫遷徙到山腳地帶，並分散到不同的新部落，以弱化族人對部落的向心力。
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
