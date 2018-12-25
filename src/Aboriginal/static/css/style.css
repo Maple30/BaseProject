@@ -1,370 +1,397 @@
 @charset "utf-8";
-/* @import url("https://www.taiwan.net.tw/cm/css/zh-TW/style_FRA.css"); */
-/*中文版基本設定*/
+
+* {
+	font-family: Microsoft JhengHei;
+}
 
 body {
-	letter-spacing: 1px;
 	position: relative;
-	color: #000;
-	font-size: 100%;
-    line-height: 1.8em;
 	background-color: #f0ede5;
+	color: #000;
+	letter-spacing: 1px;
+	font-size: 100%;
+	line-height: 1.8em;
 }
 
 h1 {
+	padding: 25px 0;
 	font-size: 210%;
-	padding: 25px 0px 25px 0px;
 }
 
 #section {
 	background-color: #58b3aa;
-	color: #ffffff;
+	color: #fff;
 }
 
-/*觀光景點背景圖設定 */
 .nsaContent {
 	position: relative;
 	display: block;
-	width: 980px;
-	margin: 0px auto;
 	overflow: hidden;
-	padding: 130px 0px 0px 30px;
+	margin: 0 auto;
+	padding: 130px 0 0 30px;
+	width: 980px;
 }
+
 .nsaLeft {
-	box-sizing: border-box;
-	display: block;
-	width: 380px;
-	padding: 10px 25px 22px 30px;
-	height: auto;
 	float: left;
-	background-color: rgba(0,0,0,0.8);
-	font-size:16px;
+	display: block;
+	box-sizing: border-box;
+	padding: 10px 25px 22px 30px;
+	width: 380px;
+	height: auto;
+	background-color: rgba(0,0,0,.8);
+	font-size: 1pc;
 }
 
 .nsaLeft h1 {
-	color: #F60;
-	padding: 15px 0px 14px 0px;
+	padding: 15px 0 14px;
+	color: #f60;
 }
 
-/* map */
-.map{
-    right: -185px;
-	position:relative;
-	height: auto;
+.map {
+	position: relative;
+	right: -185px;
 	float: right;
 	width: 56%;
-}
-/* HS */
-.HSmap_dis{
- 	visibility: hidden;	
- 	opacity: 0;
+	height: auto;
 }
 
-.NFRA{
-	background-image: url("../photo/index/map/map0.png");    
+.HSmap_dis {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.NFRA {
+	background-image: url(../photo/index/map/map0.png);
 	background-size: 58%;
 	background-repeat: no-repeat;
 }
-.map_content .HSmap_dis1{
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 75px;
-    height: 66px;
-    top: 16px;
-    left: 198px;
-    background-image: url("../photo/index/map/1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+
+.map_content .HSmap_dis1 {
+	top: 1pc;
+	left: 198px;
+	width: 75px;
+	height: 66px;
+	background-image: url(../photo/index/map/1.png);
 }
-.map_content .HSmap_dis2{
-	display: block; 
+
+.map_content .HSmap_dis1,.map_content .HSmap_dis2 {
 	position: absolute;
-	z-index: -1; 
-    width: 82px;
-    height: 35px;
-    top: 11px;
-    left: 269px;
-  	background-image: url("../photo/index/map/2.png");
-   	background-size: contain;
-   	background-repeat: no-repeat;
-}
-.map_content .HSmap_dis3{
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 240px;
-    height: 67px;
-    top: 6px;
-    left: 162.5px;
-    background-image: url("../photo/index/map/3.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.map_content .HSmap_dis4{
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 252px;
-    height: 62px;
-    top: 17px;
-    left: 152.5px;
-    background-image: url("../photo/index/map/4.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.map_content .HSmap_dis5{
+	z-index: -1;
 	display: block;
-    position: absolute;
-    z-index: -1;
-    width: 159px;
-    height: 67px;
-    top: 27px;
-    left: 119.5px;
-    background-image: url("../photo/index/map/5.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
-.map_content .HSmap_dis6{
+
+.map_content .HSmap_dis2 {
+	top: 11px;
+	left: 269px;
+	width: 82px;
+	height: 35px;
+	background-image: url(../photo/index/map/2.png);
+}
+
+.map_content .HSmap_dis3 {
+	top: 6px;
+	left: 162.5px;
+	width: 15pc;
+	height: 67px;
+	background-image: url(../photo/index/map/3.png);
+}
+
+.map_content .HSmap_dis3,.map_content .HSmap_dis4 {
+	position: absolute;
+	z-index: -1;
 	display: block;
-    position: absolute;
-    z-index: -1;
-    width: 81px;
-    height: 32px;
-    top: 31px;
-    left: 122px;
-    background-image: url("../photo/index/map/6.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
-.map_content .HSmap_dis7{
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 164.5px;
-    height: 54px;
-    top: 47px;
-    left: 89.5px;
-    background-image: url("../photo/index/map/7.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis4 {
+	top: 17px;
+	left: 152.5px;
+	width: 252px;
+	height: 62px;
+	background-image: url(../photo/index/map/4.png);
 }
-.map_content .HSmap_dis8{
+
+.map_content .HSmap_dis5 {
+	top: 27px;
+	left: 119.5px;
+	width: 159px;
+	height: 67px;
+	background-image: url(../photo/index/map/5.png);
+}
+
+.map_content .HSmap_dis5,.map_content .HSmap_dis6 {
+	position: absolute;
+	z-index: -1;
 	display: block;
-    position: absolute;
-    z-index: -1;
-    width: 191.5px;
-    height: 58px;
-    top: 67.5px;
-    left: 75.5px;
-    background-image: url("../photo/index/map/8.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
-.map_content .HSmap_dis9{
-    display: block;
-    position: absolute;
-    z-index: -1;
-   width: 149px;
-    height: 55.5px;
-    top: 93px;
-    left: 18.5px;
-    background-image: url("../photo/index/map/9.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis6 {
+	top: 31px;
+	left: 122px;
+	width: 81px;
+	height: 2pc;
+	background-image: url(../photo/index/map/6.png);
 }
-.map_content .HSmap_dis10{
-       display: block;
-    position: absolute;
-    z-index: -1;
-      width: 140px;
-    height: 83px;
-    top: 128px;
-    left: 13.5px;
-    background-image: url("../photo/index/map/10.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis7 {
+	top: 47px;
+	left: 89.5px;
+	width: 164.5px;
+	height: 54px;
+	background-image: url(../photo/index/map/7.png);
 }
-.map_content .HSmap_dis11{
-	display: block; 
-	position: absolute; 
-    z-index: -1;
-    width: 175px;
-    height: 84px;
-    top: 112px;
-    left: 59.5px;
-    background-image: url("../photo/index/map/11.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.map_content .HSmap_dis12{
-    display: block;
-    position: absolute;
-    z-index: -2;
-    width: 167px;
-    height: 56px;
-    top: 155px;
-    left: 7px;
-    background-image: url("../photo/index/map/12.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.map_content .HSmap_dis13{
+
+.map_content .HSmap_dis7,.map_content .HSmap_dis8 {
+	position: absolute;
+	z-index: -1;
 	display: block;
-    position: absolute;
-    z-index: -1;
-    width: 153px;
-    height: 57px;
-    top: 177px;
-    left: 8px;
-    background-image: url("../photo/index/map/13.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
-.map_content .HSmap_dis14{
-	display: block; 
-	position: absolute; 
-    z-index: -1;
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 75px;
-    height: 30px;
-    top: 170.5px;
-    left: 64px;
-    background-image: url("../photo/index/map/14.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis8 {
+	top: 67.5px;
+	left: 75.5px;
+	width: 191.5px;
+	height: 58px;
+	background-image: url(../photo/index/map/8.png);
 }
-.map_content .HSmap_dis15{
+
+.map_content .HSmap_dis9 {
+	top: 93px;
+	left: 18.5px;
+	width: 149px;
+	height: 55.5px;
+	background-image: url(../photo/index/map/9.png);
+}
+
+.map_content .HSmap_dis9,.map_content .HSmap_dis10 {
+	position: absolute;
+	z-index: -1;
 	display: block;
-    position: absolute;
-    z-index: -1;
-    width: 265px;
-    height: 94.5px;
-    top: 188.5px;
-    left: -1px;
-    background-image: url("../photo/index/map/15.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
-.map_content .HSmap_dis16{
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 154px;
-    height: 114.5px;
-    top: 242.5px;
-    left: 34px;
-    background-image: url("../photo/index/map/16.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis10 {
+	top: 8pc;
+	left: 13.5px;
+	width: 140px;
+	height: 83px;
+	background-image: url(../photo/index/map/10.png);
 }
-.map_content .HSmap_dis17{
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 140px;
-    height: 71px;
-    top: 51px;
-    left: 224px;
-    background-image: url("../photo/index/map/17.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis11 {
+	top: 7pc;
+	left: 59.5px;
+	z-index: -1;
+	width: 175px;
+	height: 84px;
+	background-image: url(../photo/index/map/11.png);
 }
-.map_content .HSmap_dis18{
-	display: block; 
-	position: absolute; 
-    z-index: -1;
-    width: 165px;
-    height: 134px;
-    top: 105.5px;
-    left: 174px;
-    background-image: url("../photo/index/map/18.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis11,.map_content .HSmap_dis12 {
+	position: absolute;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
-.map_content .HSmap_dis19{
-	display: block; 
-	position: absolute; 
-    z-index: -1;
-     width: 148px;
-    height: 132px;
-    top: 206.5px;
-    left: 133.5px;
-    background-image: url("../photo/index/map/19.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis12 {
+	top: 155px;
+	left: 7px;
+	z-index: -2;
+	width: 167px;
+	height: 56px;
+	background-image: url(../photo/index/map/12.png);
 }
-.map_content .HSmap_dis20{
-    display: block; 
-    position: absolute; 
-    z-index: -1;
-    width: 138px;
-    height: 26px;
-    top: -2.5px;
-    left: 17.5px;
-    background-image: url("../photo/index/map/20.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis13 {
+	top: 177px;
+	left: 8px;
+	width: 153px;
+	height: 57px;
+	background-image: url(../photo/index/map/13.png);
 }
-.map_content .HSmap_dis21{
-    display: block; 
-    position: absolute; 
-    z-index: -1;
-    width: 76px;
-    height: 83px;
-    top: 27.5px;
-    left: -0.5px;
-    background-image: url("../photo/index/map/21.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis13,.map_content .HSmap_dis14 {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
-.map_content .HSmap_dis22{
-    display: block; 
-    position: absolute; 
-    z-index: -1;
-    width: 78px;
-    height: 87px;
-    top: 124.5px;
-    left: -39px;
-    background-image: url("../photo/index/map/22.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.map_content .HSmap_dis14 {
+	top: 170.5px;
+	left: 4pc;
+	width: 75px;
+	height: 30px;
+	background-image: url(../photo/index/map/14.png);
 }
+
+.map_content .HSmap_dis15 {
+	top: 188.5px;
+	left: -1px;
+	width: 265px;
+	height: 94.5px;
+	background-image: url(../photo/index/map/15.png);
+}
+
+.map_content .HSmap_dis15,.map_content .HSmap_dis16 {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.map_content .HSmap_dis16 {
+	top: 242.5px;
+	left: 34px;
+	width: 154px;
+	height: 114.5px;
+	background-image: url(../photo/index/map/16.png);
+}
+
+.map_content .HSmap_dis17 {
+	top: 51px;
+	left: 14pc;
+	width: 140px;
+	height: 71px;
+	background-image: url(../photo/index/map/17.png);
+}
+
+.map_content .HSmap_dis17,.map_content .HSmap_dis18 {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.map_content .HSmap_dis18 {
+	top: 105.5px;
+	left: 174px;
+	width: 165px;
+	height: 134px;
+	background-image: url(../photo/index/map/18.png);
+}
+
+.map_content .HSmap_dis19 {
+	top: 206.5px;
+	left: 133.5px;
+	width: 148px;
+	height: 99pt;
+	background-image: url(../photo/index/map/19.png);
+}
+
+.map_content .HSmap_dis19,.map_content .HSmap_dis20 {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.map_content .HSmap_dis20 {
+	top: -2.5px;
+	left: 17.5px;
+	width: 138px;
+	height: 26px;
+	background-image: url(../photo/index/map/20.png);
+}
+
+.map_content .HSmap_dis21 {
+	top: 27.5px;
+	left: -.5px;
+	width: 76px;
+	height: 83px;
+	background-image: url(../photo/index/map/21.png);
+}
+
+.map_content .HSmap_dis21,.map_content .HSmap_dis22 {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.map_content .HSmap_dis22 {
+	top: 124.5px;
+	left: -39px;
+	width: 78px;
+	height: 87px;
+	background-image: url(../photo/index/map/22.png);
+}
+
 .map_content {
-	position: relative; 
+	position: relative;
 	z-index: 1;
 }
 
-/* 偏差修正 */
-*, *:after, *:before {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+.backtotop-icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url(../photo/index/ICON/topIcon.svg);
+	background-position: center;
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+}
+
+.backtotop {
+	position: fixed;
+	right: 10px;
+	bottom: 70px;
+	z-index: 50;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: hsla(0,0%,100%,.8);
+	box-shadow: 1px 1px 15px #bdbdbd;
+	opacity: 1;
+	-webkit-transition: all .25s cubic-bezier(.68,-.55,.265,1.55);
+	transition: all .25s cubic-bezier(.68,-.55,.265,1.55);
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	color: #fff;
+}
+
+*,:after,:before {
 	box-sizing: border-box;
 }
 
-.slideshow{
-    width: 250px;
-    height:auto;
+.slideshow {
+	width: 250px;
+	height: auto;
 }
 
-/* 手機裝置修正 */
-@media screen and (max-width: 1000px) {
-    .map{
-        display:none;
-    }
-    .nsaContent {
-        position: relative;
-        display: block;
-        width: 100%;
-        padding: 47% 0px 0px 0px;
-    }
-    .nsaLeft {
-        display:none;
-        width: 100%;
-        padding: 20px 25px 0px 25px;
-        float: left;
-        background-color: rgba(88,179,170,1);
-    }
+@media screen and (max-width:1000px) {
+	.map {
+		display: none;
+	}
+
+	.nsaContent {
+		position: relative;
+		display: block;
+		padding: 47% 0 0;
+		width: 100%;
+	}
+
+	.nsaLeft {
+		float: left;
+		display: none;
+		padding: 20px 25px 0;
+		width: 100%;
+		background-color: #58b3aa;
+	}
 }
