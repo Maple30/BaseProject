@@ -4,35 +4,13 @@
     <style>
         * {
             font-family: Microsoft JhengHei;
-            font-weight: bold;
             letter-spacing: 1px;
-        }
-        .detail{
-            background-color: #ffdb4d;
-            /* margin: 50px 25px 50px 25px;
-            border-radius: 8px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 10px;
-            padding-right: 10px; */
         }
         body{
             background-color: #58b3aa;
         }
         table,tr,th{
             border: 1px solid black;
-        }
-        #image{
-            display:block;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-        #table-all{
-            margin-right: 15px;
-            width: 100%;
         }
     </style>
 {% endblock %}
@@ -46,59 +24,51 @@
 {% endblock %}
 
 {%block content%}
-<div style="background-color: #ffdb4d;border-radius:10px;margin-top: 20px;margin-bottom: 20px;margin-right: 20px;margin-left: 20px">
-    <!-- <div class=" text-center" >
-            <h1>{{ work.Title }}</h1>
-            <br>
-            <img src="{{ work.Photo.url}}" class="rounded mx-auto d-block img-fluid img-thumbnail">
-            <p>手工藝品介紹{{ work.Introduction }}</p>
-            <br>
-            <p>連絡電話:{{ work.Contact }}</p>
-            <br>
-            <p>商品刊登時間:{{ work.Add_time }}</p>
-            <br>
-            <p>商品最後編輯時間:{{ work.Edit_time }}</p>
-    </div> -->
-    <div class="row">
-        <div class="col-12">
-            <img id="image" src="{{ work.Photo.url}}" class="rounded img-fluid">
-        </div>
-        <div class="col-4"></div>
-        <div class="col-12">
-            <h2 class="display-2" style="font-weight:bold;text-align:center">{{ work.Title }}</h2>
+<div style="background-color: #ffdb4d;border-radius:10px;margin-bottom: 20px;margin-right: 20px;margin-left: 20px">
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-12" style="margin-top: 15px;margin-bottom: 20px">
+                    <img class="rounded img-fluid float-left" src="{{ work.Photo.url}}"/>
+                </div>
+                <div class="col-md-9 col-12" style="margin-top: 15px;margin-bottom: 20px">
+                    <h1 class="text-center" style="font-size:400%">
+                        {{ work.Title }}
+                    </h1>
+                    <div style="font-size:150%">
+                        聯絡電話 : {{ work.Introduction }}
+                    </div>
+                    <div style="font-size:150%">
+                        手工藝品介紹 :
+                        <br>
+                        {{ work.Introduction }}
+                    </div>
+                    <div class="navbar navbar-expand-md navbar-dark" style="background-color: #ffdb4d">
+                            <div class="navbar-brand"></div>
+                            <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+                                <div class="navbar-nav">
+                                    <div class="nav-item">
+                                       <br><br><br><br><br><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="text-right">
+                        Post time : {{ work.Add_time }} Edit time : {{ work.Edit_time }} 
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <table id="table-all">
-        <tr>
-            <th><img id="image" src="{{ work.Photo.url}}" class="rounded d-block img-fluid img-thumbnail"></th>
-        </tr>
-        <tr>
-            <th style="text-align: center"><label style="font-size:600%;">{{ work.Title }}</label></th>
-        </tr>
-        <tr>
-            <th style="text-align: left;">
-                <label style="margin-left: 10px; font-size:300%;">聯絡電話 : </label>
-                <div style="margin-left: 50px;">
-                    <p style="font-size:120%;">{{ work.Introduction }}</p>
+    <div class="navbar navbar-expand-md navbar-dark" style="background-color: #58b3aa">
+        <div class="navbar-brand"></div>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+            <div class="navbar-nav">
+                <div class="nav-item">
+                   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </div>
-            </th>
-        </tr>
-        <tr>
-            <th>
-                <h2 style="margin-left: 10px; font-size:300%;">手工藝品介紹 : </h2>
-                <div style="margin-left: 50px;">
-                    <p style="font-size:120%;">{{ work.Introduction }}</p>
-                </div>
-            </th>
-        </tr>
-        <tr>
-            <th colspan="2">Post time : {{ work.Add_time }}</th>
-        </tr>
-        <tr>
-            <th colspan="2">Edit time : {{ work.Edit_time }}</th>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
 </div>
-
 
 {%endblock%}
