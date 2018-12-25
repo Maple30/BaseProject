@@ -104,7 +104,7 @@
         {% if forloop.counter0|divisibleby:"4" %}
             <div class="row">
             {% endif %}
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-3 col-md-6 col-12">
                     <section class="box feature">
                         <a href="{% url 'hand_made_detail' work.id %}" class="image featured img-thumbnail rounded" style="cursor: pointer;">
                             <img src="{{ work.Photo.url}}"alt="" >
@@ -122,6 +122,7 @@
         
         {% elif forloop.last and not forloop.counter|divisibleby:"4" %}
     </div>
+    <br>
     {% endif %}
     {% endfor %}
 </div>

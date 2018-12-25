@@ -23,10 +23,12 @@
             border: 1px solid black;
         }
         #image{
-            width:550px;
-            height:440px;
-            padding-left: 15px;
-            padding-right: 15px;
+            display:block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
         }
         #table-all{
             margin-right: 15px;
@@ -59,11 +61,26 @@
     </div> -->
     <table id="table-all">
         <tr>
-            <th rowspan="2" id="image"> <img src="{{ work.Photo.url}}" class="rounded mx-auto d-block img-thumbnail" id="ZZZ"> </th>
-            <th><h2>TITLE : {{ work.Introduction }}</h2></th>
+            <th><img id="image" src="{{ work.Photo.url}}" class="rounded d-block img-fluid img-thumbnail"></th>
         </tr>
         <tr>
-            <th><h2>TEL : {{ work.Contact }}</h2></th>
+            <th style="text-align: center"><label style="font-size:600%;">{{ work.Title }}</label></th>
+        </tr>
+        <tr>
+            <th style="text-align: left;">
+                <label style="margin-left: 10px; font-size:300%;">聯絡電話 : </label>
+                <div style="margin-left: 50px;">
+                    <p style="font-size:120%;">{{ work.Introduction }}</p>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <h2 style="margin-left: 10px; font-size:300%;">手工藝品介紹 : </h2>
+                <div style="margin-left: 50px;">
+                    <p style="font-size:120%;">{{ work.Introduction }}</p>
+                </div>
+            </th>
         </tr>
         <tr>
             <th colspan="2">Post time : {{ work.Add_time }}</th>
