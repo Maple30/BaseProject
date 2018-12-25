@@ -198,44 +198,44 @@ $(document).ready(function () {
 		$title.stop().text('基隆市');
 		$p1.stop().text('原住民族群：阿美族');
 		$p2.stop().text('基隆位於臺灣北部，三面環山，僅北面一處有少量平原迎向大海，即為深水谷灣之基隆港，為進入北臺灣門戶。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Amis' %}'>阿美族</a></p>");
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Amis'>阿美族</a></p>");
 	});
 	$('.HS3').click(function () {
 		$title.stop().text('新北市');
 		$p1.stop().text('原住民族群：阿美族 泰雅族');
 		$p2.stop().text('新北市是臺灣最北的都市，環繞整個臺北市，總面積達二千多平方公里，幅員遼闊，新北市的東北、北部、西北部均臨海。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Amis'>阿美族</a> <a href='{% url 'Tayal' %}'>泰雅族</a></p>");		
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Amis'>阿美族</a> <a href='/Tayal'>泰雅族</a></p>");		
 	});
 	$('.HS4').click(function () {
 		$title.stop().text('桃園市');
 		$p1.stop().text('原住民族群：阿美族 泰雅族');
 		$p2.stop().text('桃園市為境內最重要的地點，國家的大門-臺灣桃園國際機場，因此也成為「國門之都」。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Amis' %}'>阿美族</a> <a href='{% url 'Tayal' %}'>泰雅族</a></p>");
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Amis'>阿美族</a> <a href='/Tayal'>泰雅族</a></p>");
 	});
 	$('.HS5').click(function () {
 		$title.stop().text('新竹縣');
 		$p1.stop().text('原住民族群：泰雅族 賽夏族');
 		$p2.stop().text('新竹地區古稱「竹塹」，遠在漢人入墾之前，即為原住民道卡斯平埔族、賽夏族、泰雅族世代聚居之地。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Tayal' %}'>泰雅族</a> <a href='{% url 'SaySiyat' %}'>賽夏族</a></p>");		
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Tayal'>泰雅族</a> <a href='/SaySiyat'>賽夏族</a></p>");		
 	});
 	$('.HS6').click(function () {
 		$title.stop().text('新竹市');
 		$p1.stop().text('原住民族群：阿美族');
 		$p2.stop().text('新竹地區古稱「竹塹」，新竹原為道卡斯族竹塹社的所在地。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Amis' %}'>阿美族</a></p>");		
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Amis'>阿美族</a></p>");		
 	});
 	$('.HS7').click(function () {
 		$title.stop().text('苗栗縣');
 		$p1.stop().text('原住民族群：泰雅族 賽夏族 平埔族');
 		$p2.stop().text('苗栗原名「貓裡」，語意為「平原」或「美麗」之意。位於中部蜂腰地帶，依山面海，群山夾峙的平原，是一個多山的縣城。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Tayal' %}'>泰雅族</a> <a href='{% url 'SaySiyat' %}'>賽夏族</a></p>");
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Tayal'>泰雅族</a> <a href='/SaySiyat'>賽夏族</a></p>");
 		// $p2.stop().append("<p class='morelink' style='color:#007bff'><a href='#'>泰雅族</a> <a href='#'>賽夏族</a> <a href='#'>平埔族</a>  </p>");
 	});
 	$('.HS8').click(function () {
 		$title.stop().text('臺中市');
 		$p1.stop().text('原住民族群：阿美族 泰雅族');
 		$p2.stop().text('臺中位於臺灣西半部的樞紐位置，四季氣候宜人，為中臺灣政治、經濟、交通、文化的重鎮。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Amis' %}'>阿美族</a> <a href='{% url 'Tayal' %}'>泰雅族</a></p>");
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Amis'>阿美族</a> <a href='/Tayal'>泰雅族</a></p>");
 	});
 	$('.HS9').click(function () {
 		$title.stop().text('彰化縣');
@@ -252,13 +252,13 @@ $(document).ready(function () {
 		$title.stop().text('南投縣');
 		$p1.stop().text('原住民族群：賽德克族 布農族 邵族 泰雅族 鄒族 平埔族');
 		$p2.stop().text('南投是臺灣唯一沒有臨海的縣。隨處皆是風景，還有九族文化村，結合台灣該九大原住民族族群的各項文化特色展示。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Seediq' %}'>賽德克族</a> <a href='{% url 'Bunun' %}'>布農族</a> <a href='{% url 'Thao' %}'>邵族</a> <a href='{% url 'Tayal' %}'>泰雅族</a> <a href='{% url 'Tsou' %}'>鄒族</a></p>");
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Seediq'>賽德克族</a> <a href='/Bunun'>布農族</a> <a href='/Thao'>邵族</a> <a href='/Tayal'>泰雅族</a> <a href='/Tsou'>鄒族</a></p>");
 	});
 	$('.HS12').click(function () {
 		$title.stop().text('嘉義縣');
 		$p1.stop().text('原住民族群：鄒族');
 		$p2.stop().text('地處嘉南平原，為重要農業產區。境內水利建設堪稱完備，土地肥沃，以農產聞名。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Tsou' %}'>鄒族</a></p>");		
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Tsou'>鄒族</a></p>");		
 	});
 	$('.HS14').click(function () {
 		$title.stop().text('嘉義市');
@@ -274,25 +274,25 @@ $(document).ready(function () {
 		$title.stop().text('高雄市');
 		$p1.stop().text('原住民族群：布農族 排灣族 魯凱族 平埔族 拉阿魯哇族');
 		$p2.stop().text('臺灣南方最繁華的國際城市─『高雄市』，因受海洋氣候調節，全年陽光普照、氣候宜人，有獨特的「海洋首都」特性。根據日本人類學家伊能嘉矩的考證，今日高雄沿海早期主要為馬卡道族所居住。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Bunun' %}'>布農族</a> <a href='{% url 'Paiwan' %}'>排灣族</a> <a href='{% url 'Rukai' %}'>魯凱族</a> <a href='{% url 'Saaroa' %}'>拉阿魯哇族</a></p>");		
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Bunun'>布農族</a> <a href='/Paiwan'>排灣族</a> <a href='/Rukai'>魯凱族</a> <a href='/Saaroa'>拉阿魯哇族</a></p>");		
 	});
 	$('.HS16').click(function () {
 		$title.stop().text('屏東縣');
 		$p1.stop().text('原住民族群：阿美族 排灣族 魯凱族 平埔族');
 		$p2.stop().text('原住民族在本縣則占有7.05%，主要是排灣族和魯凱族，截至2016年底，前後者分別占5.76%和0.72%。此外，縣內尚有待中央政府修法認定的平埔原住民，主要為馬卡道族');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Amis' %}'>阿美族</a> <a href='{% url 'Paiwan' %}'>排灣族</a> <a href='{% url 'Rukai' %}'>魯凱族</a></p>");		
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Amis'>阿美族</a> <a href='/Paiwan'>排灣族</a> <a href='/Rukai'>魯凱族</a></p>");		
 	});
 	$('.HS17').click(function () {
 		$title.stop().text('宜蘭縣 ');
 		$p1.stop().text('原住民族群：泰雅族');
 		$p2.stop().text('宜蘭市位居蘭陽平原中心的精華地帶，河川縱橫提供豐富的灌溉資源，讓居於平原中央的宜蘭市擁有肥沃土地與充裕水源，成為一個農產豐饒的稻米之鄉。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Tayal' %}'>泰雅族</a></p>");		
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Tayal'>泰雅族</a></p>");		
 	});
 	$('.HS18').click(function () {
 		$title.stop().text('花蓮縣');
 		$p1.stop().text('原住民族群：太魯閣族 撒奇萊雅族 賽德克族 布農族 阿美族 噶瑪蘭族 平埔族');
 		$p2.stop().text('縣旗以太陽的故鄉為設計理念，太陽在海面昇起的意象，象徵太平洋的曙光；每個光點代表原住民文化色彩：阿美族、太魯閣族、布農族、噶瑪蘭族、撒奇萊雅族、賽德克族與漢族。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Taroko' %}'>太魯閣族</a> <a href='{% url 'Sakizaya' %}'>撒奇萊雅族</a> <a href='{% url 'Seediq' %}'>賽德克族</a> <a href='{% url 'Bunun' %}'>布農族</a> <a href='{% url 'Amis' %}'>阿美族</a> <a href='{% url 'Kavalan' %}'>噶瑪蘭族</a></p>");		
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Taroko'>太魯閣族</a> <a href='/Sakizaya'>撒奇萊雅族</a> <a href='/Seediq'>賽德克族</a> <a href='/Bunun'>布農族</a> <a href='/Amis'>阿美族</a> <a href='/Kavalan'>噶瑪蘭族</a></p>");		
 	});
 	$('.HS20').click(function () {
 		$title.stop().text('連江縣');
@@ -303,7 +303,7 @@ $(document).ready(function () {
 		$title.stop().text('臺東縣');
 		$p1.stop().text('原住民族群：布農族 卑南族 阿美族 排灣族 達悟族 魯凱族');
 		$p2.stop().text('臺東縣為臺灣第三大縣，也因開發較晚，所以臺東保留有豐富的臺灣原住民文化，縣內的阿美族、卑南族、魯凱族、布農族、排灣族、達悟族6族佔全縣人口比例三成以上，為全臺灣最高。。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Bunun' %}'>布農族</a> <a href='{% url 'Pinuyumayan' %}'>卑南族</a> <a href='{% url 'Amis' %}'>阿美族</a> <a href='{% url 'Paiwan' %}'>排灣族</a> <a href='{% url 'Yami' %}'>達悟族</a> <a href='{% url 'Rukai' %}'>魯凱族</a></p>");		
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Bunun'>布農族</a> <a href='/Pinuyumayan'>卑南族</a> <a href='/Amis'>阿美族</a> <a href='/Paiwan'>排灣族</a> <a href='/Yami'>達悟族</a> <a href='/Rukai'>魯凱族</a></p>");		
 	});
 	$('.HS21').click(function () {
 		$title.stop().text('金門縣');
