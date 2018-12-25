@@ -12,37 +12,46 @@
     }
 </style>
 <script>
-    function CheckIntro() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/14_1.jpg' %}";
-        document.getElementById('title').innerHTML = "賽德克族資訊";
-        document.getElementById('contain').innerHTML = "賽德克族（Seediq/Sediq/Sejiq）發源於中央山脈（Pusu Qhuni/RmdaxTasil），是世代口耳相傳的起源地，今被稱之為牡丹岩。賽德克族的祖先從起源地歷經遷徙後，到達德鹿灣（Truwan；都達群稱之為Plngebung，南投縣仁愛鄉合作村內）定居、繁衍。<br> \
+    $(document).ready(function () {
+        var $img = $('#image')
+        var $title = $('#title');
+        var $contain = $('#contain');
+        
+        $('#Info').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/14_1.jpg' %}");
+            $title.html("賽德克族資訊");
+		    $contain.html("賽德克族（Seediq/Sediq/Sejiq）發源於中央山脈（Pusu Qhuni/RmdaxTasil），是世代口耳相傳的起源地，今被稱之為牡丹岩。賽德克族的祖先從起源地歷經遷徙後，到達德鹿灣（Truwan；都達群稱之為Plngebung，南投縣仁愛鄉合作村內）定居、繁衍。<br> \
                     賽德克族於十八、十九世紀，在中央山脈兩側的南投、花蓮兩地拓展出勢力範圍，在二十世紀初受到日本殖民統治的影響，賽德克族部落領域被認定為國有，加上受到日本警察的歧視，使德克達雅群系的馬赫坡社頭目莫那魯道率領族人，於昭和5年（1930）在南投霧社發動震驚國際的抗日事件，歷史上稱為「霧社事件」。霧社事件是賽德克族日治時期最後一次的武裝抗日行動，震驚了日本總督府當局與國際社會，在臺灣歷史發展上具有重要意義。<br> \
-                    賽德克族的社會體系與文化、制度以「Gaya」與「Waya」（譯作族律）為優先與最高標準。部落意識為輔之生活系統，所建構的傳統農獵社會型態，賽德克族的社會制度屬父為主、母為輔的特殊社會制度。賽德克族的家庭乃至部落社會的互動模式中，紡織工作由女性為主力、較為粗重的工作及狩獵等庶務以男性為主。";
-    }
-    function CheckWhere() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-        document.getElementById('title').innerHTML = "賽德克族分佈";
-        document.getElementById('contain').innerHTML = "賽德克族目前主要分佈於南投縣東北部與花蓮縣北部、南部。"
-    }
-    function CheckTrad() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/14_3.jpg' %}";
-        document.getElementById('title').innerHTML = "賽德克族文化";
-        document.getElementById('contain').innerHTML = "<h2>播種祭</h2> \
-        <div class='container'><p>農獵時期，賽德克族以「燒墾游耕」的傳統耕作法種植作物，小米一年僅能播種一期。小米播種祭約於每年的2～3月間舉行，舉行播種祭儀之前，由部落領導人協同長老數人齊赴主祭司的家中咨商有關播種事宜，擇定時日後同一區域所有的部落同時舉行，除病重及不良於行者之外全體族人參與。<p></div> \
-        播種祭約進行三天兩夜，在族人遵循族規（Gaya）的情境下莊嚴肅穆地進行。</p></div> \
-        <h2>祈雨祭</h2> \
-        <div class='container'><p>當遭逢久旱不雨的災情時，賽德克族人才會舉行祈雨祭，因此祈雨祭並非固定或經常性的祭儀，而是隨機舉行的祭祀活動。賽德克族人會選擇部落附近的溪流舉行祈雨祭，至於要在哪一區域的溪流段舉行則由祈雨的主祭司選定。一般而言，每個部落的祈雨主祭司都會選定2～3處的祈雨溪流段，究竟要在哪一溪流段舉行，端視Utux的啟示（有人稱之為『夢占』）而定。<br> \
-        傳統上祈雨祭是全部落族人參與的祭祀活動，後期才發展為祈雨祭團專屬的祭祀活動，祈雨祭團主要是由祈雨家系的家族成員所組成，再邀請部落領導人及部落耆老隨行。由部落領導人提供祭祀用的祭品─「雞隻」，祭品用的雞隻必需是已會鳴叫但未曾交配過的公雞，祭祀團員會為該公雞妝扮，妝扮用的飾物、珠子及扮妝皆有其一定的型式。</p></div>"
-    }
-    function CheckFeature() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/non.png' %}";
-        document.getElementById('title').innerHTML = "賽德克族特色";
-        document.getElementById('contain').innerHTML = "<h2>祭祀團體</h2> \
-        <div class='container'><p>gaya祖訓是賽德克族文化中重要的行為與社會規範準則，若是違反規則，祖先會降禍族人，所以族人小心謹慎的遵守這些規則，以免危及群體安危。<br> \
-        賽德克族的gaya，與太魯閣族的gaya、泰雅族的gaga 相同，是指祖先制訂的制度與規則，若是gaya 的成員破壞規則與禁忌，將會影響整個gaya 團體中的成員，因此其他成員會要求贖罪。</p></div> \
-        <h2>婚姻</h2> \
-        <div class='container'><p>賽德克族屬於父系社會，部落與家庭的工作分工中，除了較粗重的工作與狩獵為男性負擔外，其他部分的事務與工作，並無男、女兩性強制的分工。賽德克族的婚姻為一夫一妻制度，在gaya的婚姻規範中，禁止同居、婚外情、未婚生子等違反祖訓的行為。</p></div>";
-    }
+                    賽德克族的社會體系與文化、制度以「Gaya」與「Waya」（譯作族律）為優先與最高標準。部落意識為輔之生活系統，所建構的傳統農獵社會型態，賽德克族的社會制度屬父為主、母為輔的特殊社會制度。賽德克族的家庭乃至部落社會的互動模式中，紡織工作由女性為主力、較為粗重的工作及狩獵等庶務以男性為主。");
+        });
+        
+        $('#Where').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/1_2.jpg' %}");
+            $title.html("賽德克族分佈");
+		    $contain.html("賽德克族目前主要分佈於南投縣東北部與花蓮縣北部、南部。");
+        });
+
+        $('#Trad').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/14_3.jpg' %}");
+            $title.html("賽德克族文化");
+		    $contain.html("<h2>播種祭</h2> \
+                    <div class='container'><p>農獵時期，賽德克族以「燒墾游耕」的傳統耕作法種植作物，小米一年僅能播種一期。小米播種祭約於每年的2～3月間舉行，舉行播種祭儀之前，由部落領導人協同長老數人齊赴主祭司的家中咨商有關播種事宜，擇定時日後同一區域所有的部落同時舉行，除病重及不良於行者之外全體族人參與。<p></div> \
+                    播種祭約進行三天兩夜，在族人遵循族規（Gaya）的情境下莊嚴肅穆地進行。</p></div> \
+                    <h2>祈雨祭</h2> \
+                    <div class='container'><p>當遭逢久旱不雨的災情時，賽德克族人才會舉行祈雨祭，因此祈雨祭並非固定或經常性的祭儀，而是隨機舉行的祭祀活動。賽德克族人會選擇部落附近的溪流舉行祈雨祭，至於要在哪一區域的溪流段舉行則由祈雨的主祭司選定。一般而言，每個部落的祈雨主祭司都會選定2～3處的祈雨溪流段，究竟要在哪一溪流段舉行，端視Utux的啟示（有人稱之為『夢占』）而定。<br> \
+                    傳統上祈雨祭是全部落族人參與的祭祀活動，後期才發展為祈雨祭團專屬的祭祀活動，祈雨祭團主要是由祈雨家系的家族成員所組成，再邀請部落領導人及部落耆老隨行。由部落領導人提供祭祀用的祭品─「雞隻」，祭品用的雞隻必需是已會鳴叫但未曾交配過的公雞，祭祀團員會為該公雞妝扮，妝扮用的飾物、珠子及扮妝皆有其一定的型式。</p></div>");
+        });
+
+        $('#Feature').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/non.png' %}");
+            $title.html("賽德克族特色");
+		    $contain.html("<h2>祭祀團體</h2> \
+                    <div class='container'><p>gaya祖訓是賽德克族文化中重要的行為與社會規範準則，若是違反規則，祖先會降禍族人，所以族人小心謹慎的遵守這些規則，以免危及群體安危。<br> \
+                    賽德克族的gaya，與太魯閣族的gaya、泰雅族的gaga 相同，是指祖先制訂的制度與規則，若是gaya 的成員破壞規則與禁忌，將會影響整個gaya 團體中的成員，因此其他成員會要求贖罪。</p></div> \
+                    <h2>婚姻</h2> \
+                    <div class='container'><p>賽德克族屬於父系社會，部落與家庭的工作分工中，除了較粗重的工作與狩獵為男性負擔外，其他部分的事務與工作，並無男、女兩性強制的分工。賽德克族的婚姻為一夫一妻制度，在gaya的婚姻規範中，禁止同居、婚外情、未婚生子等違反祖訓的行為。</p></div>");
+        });
+    });
 </script>
 {% endblock %}
 
@@ -52,10 +61,10 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
             <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Info">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Where">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Trad">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Feature">特色</button>
             </div>
         </div>
     </div>

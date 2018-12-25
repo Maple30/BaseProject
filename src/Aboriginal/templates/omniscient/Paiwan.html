@@ -12,50 +12,59 @@
     }
 </style>
 <script>
-    function CheckIntro() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/3_1.jpg' %}";
-        document.getElementById('title').innerHTML = "排灣族資訊";
-        document.getElementById('contain').innerHTML = "排灣族屬於階序制度，大致上分為部落領袖、貴族、勇士、平民四個階級，但各傳統社會制度依各部落仍有些微不同地方。<br> \
+    $(document).ready(function () {
+        var $img = $('#image')
+        var $title = $('#title');
+        var $contain = $('#contain');
+        
+        $('#Info').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/3_1.jpg' %}");
+            $title.html("排灣族資訊");
+		    $contain.html("排灣族屬於階序制度，大致上分為部落領袖、貴族、勇士、平民四個階級，但各傳統社會制度依各部落仍有些微不同地方。<br> \
                     貴族階級有特殊裝飾的專利權，王族與貴族也享有裝飾上的特權，例如:酷似百步蛇紋的熊鷹（赫氏角鷹）羽毛、高貴的琉璃珠、特殊的圖案（人頭紋、百步蛇紋）。<br> \
                     藉著婚姻關係可以擴展自我的領地，因此階級低的族人希望能與比自己階級高的人結婚，藉以提升自己的階級，因而在婚生子女中會有階級升降的有趣現象。<br> \
                     部落領袖、頭目及守護神是地主階級，擁有土地、河流與獵場，是一個部落的統治者，也是精神支柱的象徵。<br> \
-                    王族及貴族其屬下的子民為其耕作，並將收穫所得納稅予部落領袖及守護神，部落領袖則主持部落重大事務如爭戰、或與外村的外交工作，但舉行各項重大事務之前，得先經過祭司占卜以辨行事之吉凶。";
-    }
-    function CheckWhere() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-        document.getElementById('title').innerHTML = "排灣族分佈";
-        document.getElementById('contain').innerHTML = "排灣族分佈於中央山脈南端及東部海岸山脈南端，以台灣南部為活動區域，北起大武山地，南達恆春，西自隘寮，東到太麻里以南海岸。<br> \
-        排灣族人口集中屏東縣，以來義鄉人口最多。瑪家鄉、三地門鄉、泰武鄉、春日鄉、獅子鄉、牡丹鄉、滿州鄉及台東縣等行政區也都是排灣族分佈地。"
-    }
-    function CheckTrad() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/3_3.jpg' %}";
-        document.getElementById('title').innerHTML = "排灣族文化";
-        document.getElementById('contain').innerHTML = "<h2>五年祭</h2> \
-        <div class='container'><p>五年祭是排灣族最重要的祭典，其是排灣先祖為了避荒年，將七名子女分開各自謀生，並約定每五年，長者必須手持竹竿帶領全族大小回家團聚祭祖，於是有了五年祭的雛形。<br> \
-        刺藤球是「五年祭」的雛形，分為兩天舉行，由部落裡面的成年男子參加，第一天是祈福，第二天則是卜算命運。傳說排灣族的仙祖到神界和女神學習祭儀以祈求五穀豐收，學習農作的種植、頭目婚禮等儀式。並與女神約定，在一段期間內燃燒小米粳為記號，請神降臨人間，接受人類的獻祭。<br> \
-        五年祭有分前祭和後祭，前祭是祖靈離開大武山南下時，族人為了迎接而祭祀的儀式；後祭是則是祖靈自最南端鵝鑾鼻，沿著原路北歸大武山時的儀式。<br> \
-        五年祭主要的儀式是「迎靈招換」、「祈福」、「刺球」、「歡樂歌舞」、「送惡靈」與第六年(次年)的送祖靈等。整個部落的人都要奉行傳統的習俗參加活動，每個家庭都要盡心盡力招待訪客，虔誠地祭祀神靈。</p></div> \
-        <h2>豐年祭</h2> \
-        <div class='container'><p>屬全鄉性祭典。<br> \
-        通常於農曆八月十五日舉行，用於酬謝與祈禱感謝諸神及祖靈賜予豐收。<br>\
-        舉行時常展開狩獵、魚撈或各種武藝競賽，並宴飲數日、引歌載舞。</p></div>"
-    }
-    function CheckFeature() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/3_4.jpg' %}";
-        document.getElementById('title').innerHTML = "排灣族特色";
-        document.getElementById('contain').innerHTML = "<h2>琉璃珠</h2> \
-        <div class='container'><p>琉璃珠又稱蜻蛉珠，和青銅刀、古陶壺合稱排灣族三寶。\
-        琉璃珠不僅色彩斑斕，且每個圖珠皆有其特別的象徵與神秘的力量，代表著排灣族人的信仰。族人相信戴琉璃珠，祖先會庇祐保護，且貴族與平民的珠子不同。\
-        據排灣族民間流傳故事，其所蘊涵的意義象徵擁有的財富。</p></div> \
-        <h2>古陶壺</h2> \
-        <div class='container'><p>古陶壺是家族祖靈寄居在人間的住所，因此排灣人將古陶壺之詮釋類比為一個人類的樣態。<br> \
-        由上往下看，正面看去壺口中間即為人面，側邊為頭飾，壺頸為頸部。<br> \
-        風格圖紋不僅影響古陶壺的輩分等級與用途等，也是識別男女重要的依據。大致上，圖紋可分五大類：太陽紋、月亮紋、人形紋、百步蛇紋與其他搭配的小圖紋。\</p></div>\
-        <h2>青銅刀</h2> \
-        <div class='container'><p>象徵族中的社會地位，在婚嫁、賠償等交換過程中是不可或缺的物件。<br> \
-        青銅刀是排灣族巫師所使用的法器，也是貴族階級的三寶之一。<br> \
-        這種刀器著重在刀柄的雕刻，鐵製的刀身並不重要，多半呈生鏽狀態。會因刀身鏽蝕得太嚴重而再重新配製刀身，所以刀身並無固定型制。";
-    }
+                    王族及貴族其屬下的子民為其耕作，並將收穫所得納稅予部落領袖及守護神，部落領袖則主持部落重大事務如爭戰、或與外村的外交工作，但舉行各項重大事務之前，得先經過祭司占卜以辨行事之吉凶。");
+        });
+        
+        $('#Where').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/1_2.jpg' %}");
+            $title.html("排灣族分佈");
+		    $contain.html("排灣族分佈於中央山脈南端及東部海岸山脈南端，以台灣南部為活動區域，北起大武山地，南達恆春，西自隘寮，東到太麻里以南海岸。<br> \
+                    排灣族人口集中屏東縣，以來義鄉人口最多。瑪家鄉、三地門鄉、泰武鄉、春日鄉、獅子鄉、牡丹鄉、滿州鄉及台東縣等行政區也都是排灣族分佈地。");
+        });
+
+        $('#Trad').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/3_3.jpg' %}");
+            $title.html("排灣族文化");
+		    $contain.html("<h2>五年祭</h2> \
+                    <div class='container'><p>五年祭是排灣族最重要的祭典，其是排灣先祖為了避荒年，將七名子女分開各自謀生，並約定每五年，長者必須手持竹竿帶領全族大小回家團聚祭祖，於是有了五年祭的雛形。<br> \
+                    刺藤球是「五年祭」的雛形，分為兩天舉行，由部落裡面的成年男子參加，第一天是祈福，第二天則是卜算命運。傳說排灣族的仙祖到神界和女神學習祭儀以祈求五穀豐收，學習農作的種植、頭目婚禮等儀式。並與女神約定，在一段期間內燃燒小米粳為記號，請神降臨人間，接受人類的獻祭。<br> \
+                    五年祭有分前祭和後祭，前祭是祖靈離開大武山南下時，族人為了迎接而祭祀的儀式；後祭是則是祖靈自最南端鵝鑾鼻，沿著原路北歸大武山時的儀式。<br> \
+                    五年祭主要的儀式是「迎靈招換」、「祈福」、「刺球」、「歡樂歌舞」、「送惡靈」與第六年(次年)的送祖靈等。整個部落的人都要奉行傳統的習俗參加活動，每個家庭都要盡心盡力招待訪客，虔誠地祭祀神靈。</p></div> \
+                    <h2>豐年祭</h2> \
+                    <div class='container'><p>屬全鄉性祭典。<br> \
+                    通常於農曆八月十五日舉行，用於酬謝與祈禱感謝諸神及祖靈賜予豐收。<br>\
+                    舉行時常展開狩獵、魚撈或各種武藝競賽，並宴飲數日、引歌載舞。</p></div>");
+        });
+
+        $('#Feature').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/3_4.jpg' %}");
+            $title.html("排灣族特色");
+		    $contain.html("<h2>琉璃珠</h2> \
+                    <div class='container'><p>琉璃珠又稱蜻蛉珠，和青銅刀、古陶壺合稱排灣族三寶。\
+                    琉璃珠不僅色彩斑斕，且每個圖珠皆有其特別的象徵與神秘的力量，代表著排灣族人的信仰。族人相信戴琉璃珠，祖先會庇祐保護，且貴族與平民的珠子不同。\
+                    據排灣族民間流傳故事，其所蘊涵的意義象徵擁有的財富。</p></div> \
+                    <h2>古陶壺</h2> \
+                    <div class='container'><p>古陶壺是家族祖靈寄居在人間的住所，因此排灣人將古陶壺之詮釋類比為一個人類的樣態。<br> \
+                    由上往下看，正面看去壺口中間即為人面，側邊為頭飾，壺頸為頸部。<br> \
+                    風格圖紋不僅影響古陶壺的輩分等級與用途等，也是識別男女重要的依據。大致上，圖紋可分五大類：太陽紋、月亮紋、人形紋、百步蛇紋與其他搭配的小圖紋。\</p></div>\
+                    <h2>青銅刀</h2> \
+                    <div class='container'><p>象徵族中的社會地位，在婚嫁、賠償等交換過程中是不可或缺的物件。<br> \
+                    青銅刀是排灣族巫師所使用的法器，也是貴族階級的三寶之一。<br> \
+                    這種刀器著重在刀柄的雕刻，鐵製的刀身並不重要，多半呈生鏽狀態。會因刀身鏽蝕得太嚴重而再重新配製刀身，所以刀身並無固定型制。</p></div>");
+        });
+    });
 </script>
 {% endblock %}
 
@@ -65,10 +74,10 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
             <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Info">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Where">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Trad">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Feature">特色</button>
             </div>
         </div>
     </div>
@@ -90,7 +99,7 @@
                     排灣族屬於階序制度，大致上分為部落領袖、貴族、勇士、平民四個階級，但各傳統社會制度依各部落仍有些微不同地方。<br>
                     貴族階級有特殊裝飾的專利權，王族與貴族也享有裝飾上的特權，例如:酷似百步蛇紋的熊鷹（赫氏角鷹）羽毛、高貴的琉璃珠、特殊的圖案（人頭紋、百步蛇紋）。<br>
                     藉著婚姻關係可以擴展自我的領地，因此階級低的族人希望能與比自己階級高的人結婚，藉以提升自己的階級，因而在婚生子女中會有階級升降的有趣現象。<br>
-                    部落領袖、頭目及守護神是地主階級，擁有土地、河流與獵場，是一個部落的統治者，也是精神支柱的象徵。
+                    部落領袖、頭目及守護神是地主階級，擁有土地、河流與獵場，是一個部落的統治者，也是精神支柱的象徵。<br>
                     王族及貴族其屬下的子民為其耕作，並將收穫所得納稅予部落領袖及守護神，部落領袖則主持部落重大事務如爭戰、或與外村的外交工作，但舉行各項重大事務之前，得先經過祭司占卜以辨行事之吉凶。
                 </p>
                 <br>

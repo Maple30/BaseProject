@@ -12,36 +12,45 @@
     }
 </style>
 <script>
-    function CheckIntro() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/11_1.jpg' %}";
-        document.getElementById('title').innerHTML = "噶瑪蘭族資訊";
-        document.getElementById('contain').innerHTML = "噶瑪蘭族（Kavalan）自稱為kavalan，意思是平原的人類，自認有別於居住山林地區的泰雅族。<br> \
+    $(document).ready(function () {
+        var $img = $('#image')
+        var $title = $('#title');
+        var $contain = $('#contain');
+        
+        $('#Info').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/11_1.jpg' %}");
+            $title.html("噶瑪蘭族資訊");
+		    $contain.html("噶瑪蘭族（Kavalan）自稱為kavalan，意思是平原的人類，自認有別於居住山林地區的泰雅族。<br> \
                     傳說噶瑪蘭族人最早由南方島嶼，途經地名為Sanasai的地方後遷入臺灣，落腳於蘭陽平原，十九世紀初開始遷居到花蓮臺東海岸。噶瑪蘭族原來在蘭陽平原共有30多個部落，十八世紀末漢人開始進入蘭陽平原；十九世紀清朝設立行政區「噶瑪蘭廳」，並以「加留餘埔」制度保障部落土地。不過，社會與生態環境的改變，仍讓不少噶瑪蘭族人從蘭陽平原，乘船南渡到達花蓮平原落腳，形成以加禮宛社為核心的大、小六個部落。清朝因執行開山撫番政策，勢力進逼花蓮平原，侵擾噶瑪蘭族人生活。<br> \
                     光緒4 年（1878）噶瑪蘭族人與撒奇萊雅族人聯合，武力反抗清國勢力。「加禮宛戰役」後，噶瑪蘭族與撒奇萊雅族勢力銳減，部分族人流散至東海岸，或隱居於阿美族部落內。<br> \
-                    噶瑪蘭族目前以宜蘭縣壯圍鄉奇立板、貓里霧罕、五結鄉加禮宛、流流、利澤簡等社，花蓮縣新城嘉里村加禮宛、豐濱新社村新社、豐濱村立德，臺東縣長濱鄉三間村的三間厝、樟原村、大峰峰（又稱大尖石）為主要分布地。噶瑪蘭族人從民國70 年代（1980 年代）開始，就向社會表達希望政府能夠尊重噶瑪蘭族人存在的主體性，爾後於民國91 年（2002）列為政府公告的原住民族之一。";
-    }
-    function CheckWhere() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-        document.getElementById('title').innerHTML = "噶瑪蘭族分佈";
-        document.getElementById('contain').innerHTML = "噶瑪蘭族主要分佈於：冬山河域、三星鄉、壯圍鄉、宜蘭縣的宜蘭市、羅東鎮的羅東、蘇澳鎮的蘇澳...等一帶，以及花蓮市附近、東海岸之豐濱鄉、臺東縣和長濱鄉等地。"
-    }
-    function CheckTrad() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/11_3.jpg' %}";
-        document.getElementById('title').innerHTML = "噶瑪蘭族文化";
-        document.getElementById('contain').innerHTML = "<h2>海祭</h2> \
-        <div class='container'><p>海祭是噶瑪蘭族最大的祭典，時間約在春夏季節四月中，當刺桐花開時，表示捕魚的季節到了。<br> \
-        海祭有許多規定，只有男性可以參加，女性不得參加是自古傳下的風俗。在飛魚潮開始之前，這時部落男性族人將開會決定海祭的時間。<br> \
-        海祭舉行當天，在鄰近的小湖海灘上，族人們聚集在一起，趁著漲潮的時候，長者面向著海洋，將祭品一塊一塊地拋入海中，讓海浪捲走祭品送給海神。 進行時必須在一面唸禱詞邊倒酒於地，祈求保佑捕魚的人豐收平安，行過祭拜祖靈及海神儀式後，迎接長者上岸，然後就地烹煮鮮魚和野菜、煮食，分享給所有參加的族人。</p></div> \
-        <h2>祭祖儀式</h2> \
-        <div class='container'><p>噶瑪蘭族人的神靈觀念中，祖靈具有很重要的地位，palilin是新年前夕全家團圓祭拜祖先的儀式，旨在祈求來年順利。祭祖儀式上分為Kavalan 人跟Dopuwan 人的儀式，在使用的祭品與儀式開放性上各有不同之處。<br> \
-        Dopuwan palilin 的祭祖儀式則相對具有私密性，屬於家族內部的儀式，在農曆12月底前舉行。儀式由女性長者在當天上午進行，先將家庭對外的大門關起，儀式過程的祭品除了紅酒、白酒、糯米飯外，還有公雞內臟。祭祖過程是由長者帶領家人輪流招請祖靈，將祭品公雞內臟─胃、肝、心，一件一件放於香蕉葉上進行祭祀，儀式完成後，就將祭品移動至廳門樑柱上。上述兩個族群雖然在時間的洪流中逐漸融合為噶瑪蘭族，但每當除夕前進行祭祖，兩個族群所舉辦的儀式在在顯示出噶瑪蘭族人內部通婚混血的情形，至今日，族人仍可靠著儀式痕跡辨識出族群的來源。</p></div>"
-    }
-    function CheckFeature() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/11_4.jpg' %}";
-        document.getElementById('title').innerHTML = "噶瑪蘭族特色";
-        document.getElementById('contain').innerHTML = "<h2>衣飾文化</h2> \
-        <div class='container'><p>噶瑪蘭人用植物纖維織布，然後再製成如肩甲狀的ziqap。這種ziqap特別是在工作時穿，用來遮陽擋雨，還有用香蕉織布縫製成長袖滾黑邊方衣，男人在Qataban（夏天豐年祭）或演出傳統歌舞時穿，這布料和衣服的樣式是其祖先居住在宜蘭時就流傳下來的</p></div>";
-    }
+                    噶瑪蘭族目前以宜蘭縣壯圍鄉奇立板、貓里霧罕、五結鄉加禮宛、流流、利澤簡等社，花蓮縣新城嘉里村加禮宛、豐濱新社村新社、豐濱村立德，臺東縣長濱鄉三間村的三間厝、樟原村、大峰峰（又稱大尖石）為主要分布地。噶瑪蘭族人從民國70 年代（1980 年代）開始，就向社會表達希望政府能夠尊重噶瑪蘭族人存在的主體性，爾後於民國91 年（2002）列為政府公告的原住民族之一。");
+        });
+        
+        $('#Where').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/1_2.jpg' %}");
+            $title.html("噶瑪蘭族分佈");
+		    $contain.html("噶瑪蘭族主要分佈於：冬山河域、三星鄉、壯圍鄉、宜蘭縣的宜蘭市、羅東鎮的羅東、蘇澳鎮的蘇澳...等一帶，以及花蓮市附近、東海岸之豐濱鄉、臺東縣和長濱鄉等地。");
+        });
+
+        $('#Trad').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/11_3.jpg' %}");
+            $title.html("噶瑪蘭族文化");
+		    $contain.html("<h2>海祭</h2> \
+                    <div class='container'><p>海祭是噶瑪蘭族最大的祭典，時間約在春夏季節四月中，當刺桐花開時，表示捕魚的季節到了。<br> \
+                    海祭有許多規定，只有男性可以參加，女性不得參加是自古傳下的風俗。在飛魚潮開始之前，這時部落男性族人將開會決定海祭的時間。<br> \
+                    海祭舉行當天，在鄰近的小湖海灘上，族人們聚集在一起，趁著漲潮的時候，長者面向著海洋，將祭品一塊一塊地拋入海中，讓海浪捲走祭品送給海神。 進行時必須在一面唸禱詞邊倒酒於地，祈求保佑捕魚的人豐收平安，行過祭拜祖靈及海神儀式後，迎接長者上岸，然後就地烹煮鮮魚和野菜、煮食，分享給所有參加的族人。</p></div> \
+                    <h2>祭祖儀式</h2> \
+                    <div class='container'><p>噶瑪蘭族人的神靈觀念中，祖靈具有很重要的地位，palilin是新年前夕全家團圓祭拜祖先的儀式，旨在祈求來年順利。祭祖儀式上分為Kavalan 人跟Dopuwan 人的儀式，在使用的祭品與儀式開放性上各有不同之處。<br> \
+                    Dopuwan palilin 的祭祖儀式則相對具有私密性，屬於家族內部的儀式，在農曆12月底前舉行。儀式由女性長者在當天上午進行，先將家庭對外的大門關起，儀式過程的祭品除了紅酒、白酒、糯米飯外，還有公雞內臟。祭祖過程是由長者帶領家人輪流招請祖靈，將祭品公雞內臟─胃、肝、心，一件一件放於香蕉葉上進行祭祀，儀式完成後，就將祭品移動至廳門樑柱上。上述兩個族群雖然在時間的洪流中逐漸融合為噶瑪蘭族，但每當除夕前進行祭祖，兩個族群所舉辦的儀式在在顯示出噶瑪蘭族人內部通婚混血的情形，至今日，族人仍可靠著儀式痕跡辨識出族群的來源。</p></div>");
+        });
+
+        $('#Feature').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/11_4.jpg' %}");
+            $title.html("噶瑪蘭族特色");
+		    $contain.html("<h2>衣飾文化</h2> \
+                    <div class='container'><p>噶瑪蘭人用植物纖維織布，然後再製成如肩甲狀的ziqap。這種ziqap特別是在工作時穿，用來遮陽擋雨，還有用香蕉織布縫製成長袖滾黑邊方衣，男人在Qataban（夏天豐年祭）或演出傳統歌舞時穿，這布料和衣服的樣式是其祖先居住在宜蘭時就流傳下來的。</p></div>");
+        });
+    });
 </script>
 {% endblock %}
 
@@ -51,10 +60,10 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
             <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Info">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Where">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Trad">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Feature">特色</button>
             </div>
         </div>
     </div>

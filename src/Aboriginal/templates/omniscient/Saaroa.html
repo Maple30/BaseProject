@@ -12,30 +12,39 @@
     }
 </style>
 <script>
-    function CheckIntro() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/15_1.jpg' %}";
-        document.getElementById('title').innerHTML = "拉阿魯哇族資訊";
-        document.getElementById('contain').innerHTML = "舊稱沙阿魯阿族，拉阿魯哇族（Hla’alua）由排剪（Paiciana）、美壠（Vilanganʉ）、塔蠟（Talicia）、雁爾（Hlihlara）四個社組成，主要聚居在高雄市桃源區高中里、桃源里以及那瑪夏區瑪雅里。拉阿魯哇為自稱，其意不可考。<br> \
-        相傳族人原居地在東方Hlasʉnga，曾與矮人共同生活；矮人視「聖貝（takiarʉ）」為太祖（貝神）居住之所，每年舉行大祭以求境內平安、農獵豐收、族人興盛。族人離開原居地時，矮人贈以一甕聖貝，族人亦如矮人般舉行「聖貝祭（miatungusu）」。祭儀最重要的部分是「聖貝薦酒」儀式：將聖貝浸在酒裡，察其顏色變化，如果變成紅色則表示太祖酩酊之狀，意味祭典圓滿成功。";
-    }
-    function CheckWhere() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-        document.getElementById('title').innerHTML = "拉阿魯哇族分佈";
-        document.getElementById('contain').innerHTML = "拉阿魯哇族主要分佈於高雄市桃源區、部分居住於那瑪夏區。"
-    }
-    function CheckTrad() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/15_3.jpg' %}";
-        document.getElementById('title').innerHTML = "拉阿魯哇族文化";
-        document.getElementById('contain').innerHTML = "<h2>貝神祭(聖貝祭)</h2> \
-        <div class='container'><p>miatungusu 是農作（ 小米、稻米） 收穫過後之二年或三年間，所舉行的一次大祭。祭拜takiarʉ（貝殼、貝神）內含於期間儀式舉行，古傳是屬於美壠社特有之祭儀。日本殖民統治以來，僅在民國40 年（1951）間舉辦過一次，直到民國82 年（1993）後才又恢復，但已有所改變。本祭典固定由世襲、擁有主祭家世背景者來主持。家祭由該家的首長所主持，可由本人進行，也可由家人代行。<br> \
-        miatungusu 的重頭戲在於「聖貝薦酒」，即將聖貝浸在酒裡，看顏色變化，如果變紅色就是太祖酩酊之狀。其由來乃依據口碑，述說拉阿魯哇人與kavurua（小矮人）都同住在Hlasʉnga 這個地方，而takiarʉ 貝殼是kavurua 的寶物。有一天，拉阿魯哇的祖先要離開Hlasʉnga，kavurua 的人很難過，當拉阿魯哇人要離開時，就把他們最珍貴的寶物takiarʉ 贈送給他們，並交代拉阿魯哇人，要把貝殼奉為自己的神來祭拜，於是takiarʉ 從此就成為拉阿魯哇族的神，也是目前的圖騰表徵。</p></div>"
-    }
-    function CheckFeature() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/non.png' %}";
-        document.getElementById('title').innerHTML = "拉阿魯哇族特色";
-        document.getElementById('contain').innerHTML = "<h2>工藝</h2> \
-        <div class='container'><p>拉阿魯哇族擅長狩獵，精於揉皮技術，因此發展出皮製工藝和製品，皮衣、皮帽是男性的主要裝扮。男子盛裝的打扮為紅色的長袖上衣、胸兜與黑色短裙加上山羊皮帽。女性以頭巾纏髮、插上公雞毛頭飾，黑裙搭配藍色或白色長袖上衣為主，並且以十字繡勾勒精美圖案作為服裝胸前的裝飾。</p></div>";
-    }
+    $(document).ready(function () {
+        var $img = $('#image')
+        var $title = $('#title');
+        var $contain = $('#contain');
+        
+        $('#Info').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/15_1.jpg' %}");
+            $title.html("拉阿魯哇族資訊");
+		    $contain.html("舊稱沙阿魯阿族，拉阿魯哇族（Hla’alua）由排剪（Paiciana）、美壠（Vilanganʉ）、塔蠟（Talicia）、雁爾（Hlihlara）四個社組成，主要聚居在高雄市桃源區高中里、桃源里以及那瑪夏區瑪雅里。拉阿魯哇為自稱，其意不可考。<br> \
+                    相傳族人原居地在東方Hlasʉnga，曾與矮人共同生活；矮人視「聖貝（takiarʉ）」為太祖（貝神）居住之所，每年舉行大祭以求境內平安、農獵豐收、族人興盛。族人離開原居地時，矮人贈以一甕聖貝，族人亦如矮人般舉行「聖貝祭（miatungusu）」。祭儀最重要的部分是「聖貝薦酒」儀式：將聖貝浸在酒裡，察其顏色變化，如果變成紅色則表示太祖酩酊之狀，意味祭典圓滿成功。");
+        });
+        
+        $('#Where').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/1_2.jpg' %}");
+            $title.html("拉阿魯哇族分佈");
+		    $contain.html("拉阿魯哇族主要分佈於高雄市桃源區、部分居住於那瑪夏區。");
+        });
+
+        $('#Trad').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/15_3.jpg' %}");
+            $title.html("拉阿魯哇族文化");
+		    $contain.html("<h2>貝神祭(聖貝祭)</h2> \
+                    <div class='container'><p>miatungusu 是農作（ 小米、稻米） 收穫過後之二年或三年間，所舉行的一次大祭。祭拜takiarʉ（貝殼、貝神）內含於期間儀式舉行，古傳是屬於美壠社特有之祭儀。日本殖民統治以來，僅在民國40 年（1951）間舉辦過一次，直到民國82 年（1993）後才又恢復，但已有所改變。本祭典固定由世襲、擁有主祭家世背景者來主持。家祭由該家的首長所主持，可由本人進行，也可由家人代行。<br> \
+                    miatungusu 的重頭戲在於「聖貝薦酒」，即將聖貝浸在酒裡，看顏色變化，如果變紅色就是太祖酩酊之狀。其由來乃依據口碑，述說拉阿魯哇人與kavurua（小矮人）都同住在Hlasʉnga 這個地方，而takiarʉ 貝殼是kavurua 的寶物。有一天，拉阿魯哇的祖先要離開Hlasʉnga，kavurua 的人很難過，當拉阿魯哇人要離開時，就把他們最珍貴的寶物takiarʉ 贈送給他們，並交代拉阿魯哇人，要把貝殼奉為自己的神來祭拜，於是takiarʉ 從此就成為拉阿魯哇族的神，也是目前的圖騰表徵。</p></div>");
+        });
+
+        $('#Feature').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/non.png' %}");
+            $title.html("拉阿魯哇族特色");
+		    $contain.html("<h2>工藝</h2> \
+                    <div class='container'><p>拉阿魯哇族擅長狩獵，精於揉皮技術，因此發展出皮製工藝和製品，皮衣、皮帽是男性的主要裝扮。男子盛裝的打扮為紅色的長袖上衣、胸兜與黑色短裙加上山羊皮帽。女性以頭巾纏髮、插上公雞毛頭飾，黑裙搭配藍色或白色長袖上衣為主，並且以十字繡勾勒精美圖案作為服裝胸前的裝飾。</p></div>");
+        });
+    });
 </script>
 {% endblock %}
 
@@ -45,10 +54,10 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
             <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Info">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Where">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Trad">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Feature">特色</button>
             </div>
         </div>
     </div>

@@ -13,42 +13,51 @@
     }
 </style>
 <script>
-    function CheckIntro() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/5_1.jpg' %}";
-        document.getElementById('title').innerHTML = "卑南族資訊";
-        document.getElementById('contain').innerHTML = "卑南族的社會有兩個領導人物，分別為男祭師及領袖，男祭司負責主持部落性的重要祭儀，領袖由村子裡領導能力強的人來擔任，負責部落裡重大事情的協調者，亦是人獵祭、爭戰的領導人物。<br> \
+    $(document).ready(function () {
+        var $img = $('#image')
+        var $title = $('#title');
+        var $contain = $('#contain');
+        
+        $('#Info').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/5_1.jpg' %}");
+            $title.html("卑南族資訊");
+		    $contain.html("卑南族的社會有兩個領導人物，分別為男祭師及領袖，男祭司負責主持部落性的重要祭儀，領袖由村子裡領導能力強的人來擔任，負責部落裡重大事情的協調者，亦是人獵祭、爭戰的領導人物。<br> \
                     男子會所為政治中心及教育場所，未婚男性必須居住在會所接受軍事訓練以防衛部落，並依照年齡分為數個年齡階級。<br> \
                     各部落間因起源傳說的不同，可分為由「竹子而生」起源的卑南群和由「石頭而生」起源的知本群。<br> \
                     目前人口約有14,118人(107年2月數據)，全族分居八個部落，有「八社番」之名。<br> \
-                    傳統社會組織以長女承家以及男性年齡階段組織為主，屬於母系社會。";
-    }
-    function CheckWhere() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-        document.getElementById('title').innerHTML = "卑南族分佈";
-        document.getElementById('contain').innerHTML = "卑南族主要分布於台東縱谷南部，全族分居八個部落有「八社番」之名。"
-    }
-    function CheckTrad() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/5_3.jpg' %}";
-        document.getElementById('title').innerHTML = "卑南族文化";
-        document.getElementById('contain').innerHTML = "<h2>卑南族年祭</h2> \
-        <div class='container'><p>「年祭」是卑南八社從十二月二十四日起至隔年元月二日為止，舉行之「猴祭」、「大獵祭」、「聯合年祭」等一系列活動的總稱。<br> \
-        年祭代表著一年的終結，族人藉著年祭，把不吉祥、不乾淨的事物通通都拋棄掉。</p></div> \
-        <h2>卑南族猴祭</h2> \
-        <div class='container'><p>猴祭是卑南族少年晉升為青年的重要階段，是專屬少年們的祭典活動。<br> \
-        從功能來看，這是卑南族少年進入成年之前的養成訓練，也是卑南族男子社會的重要機制。<br> \
-        猴祭是通過殺猴(現在則以草編的草猴代替)與葬猴(棄猴)兩個儀式，為少年驅邪消災，培養勇敢精神的祭典，另一個重要的義意就是訓練服從與懂得施捨，培養尊卑有序的觀念。<br> \
-        因此祭儀中有一項青年的「杖臀訓戒」(打屁股)，未經過訓誡的少年，父母會認為是朽木，沒有出息，屁股如果被打得黑青，父母則會覺得儒子可教。<\p></div> \
-        <h2>卑南族大獵祭</h2> \
-        <div class='container'><p>「大獵祭」是卑南族年度最重要的祭儀，參加者是接近成年的所有青年。<br> \
-        「大獵祭」最初是為「復仇」而舉行的獵首活動，自從獵首習俗消失，就改為狩獵；「大獵祭」的活動不只是打獵，它還伴隨著其他重要的儀式，諸如除喪(慰問喪家)與成年禮儀式。</p></div>"
-    }
-    function CheckFeature() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/5_4.jpg' %}";
-        document.getElementById('title').innerHTML = "卑南族特色";
-        document.getElementById('contain').innerHTML = "<h2>戴花環的普遍性</h2><div class='container'><p>雖然不是只有卑南族才戴花環，但形制的一致性及花環所代表的男子成年意義是其他族群所沒有的。</p></div> \
-        <h2>精湛的刺繡手藝</h2><div class='container'><p>以十字繡法最普遍，人形舞蹈紋是卑南族特有的圖案。</p></div> \
-        <h2>巫術的盛行</h2><div class='container'><p>早期卑南族的巫術十分盛行，其他族群的人都懼怕三分。巫術又分為白巫與黑巫，白巫替人治病，黑巫施咒害人。</p></div>"
-    }
+                    傳統社會組織以長女承家以及男性年齡階段組織為主，屬於母系社會。");
+        });
+        
+        $('#Where').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/1_2.jpg' %}");
+            $title.html("卑南族分佈");
+		    $contain.html("卑南族主要分布於台東縱谷南部，全族分居八個部落有「八社番」之名。");
+        });
+
+        $('#Trad').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/5_3.jpg' %}");
+            $title.html("卑南族文化");
+		    $contain.html("<h2>年祭</h2> \
+                    <div class='container'><p>「年祭」是卑南八社從十二月二十四日起至隔年元月二日為止，舉行之「猴祭」、「大獵祭」、「聯合年祭」等一系列活動的總稱。<br> \
+                    年祭代表著一年的終結，族人藉著年祭，把不吉祥、不乾淨的事物通通都拋棄掉。</p></div> \
+                    <h2>猴祭</h2> \
+                    <div class='container'><p>猴祭是卑南族少年晉升為青年的重要階段，是專屬少年們的祭典活動。<br> \
+                    從功能來看，這是卑南族少年進入成年之前的養成訓練，也是卑南族男子社會的重要機制。<br> \
+                    猴祭是通過殺猴(現在則以草編的草猴代替)與葬猴(棄猴)兩個儀式，為少年驅邪消災，培養勇敢精神的祭典，另一個重要的義意就是訓練服從與懂得施捨，培養尊卑有序的觀念。<br> \
+                    因此祭儀中有一項青年的「杖臀訓戒」(打屁股)，未經過訓誡的少年，父母會認為是朽木，沒有出息，屁股如果被打得黑青，父母則會覺得儒子可教。<\p></div> \
+                    <h2>大獵祭</h2> \
+                    <div class='container'><p>大獵祭是卑南族年度最重要的祭儀，參加者是接近成年的所有青年。<br> \
+                    大獵祭最初是為「復仇」而舉行的獵首活動，自從獵首習俗消失，就改為狩獵；「大獵祭」的活動不只是打獵，它還伴隨著其他重要的儀式，諸如除喪(慰問喪家)與成年禮儀式。</p></div>");
+        });
+
+        $('#Feature').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/5_4.jpg' %}");
+            $title.html("卑南族特色");
+		    $contain.html("<h2>戴花環的普遍性</h2><div class='container'><p>雖然不是只有卑南族才戴花環，但形制的一致性及花環所代表的男子成年意義是其他族群所沒有的。</p></div> \
+                    <h2>精湛的刺繡手藝</h2><div class='container'><p>以十字繡法最普遍，人形舞蹈紋是卑南族特有的圖案。</p></div> \
+                    <h2>巫術的盛行</h2><div class='container'><p>早期卑南族的巫術十分盛行，其他族群的人都懼怕三分。巫術又分為白巫與黑巫，白巫替人治病，黑巫施咒害人。</p></div>");
+        });
+    });
 </script>
 {% endblock %}
 
@@ -58,10 +67,10 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
             <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Info">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Where">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Trad">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Feature">特色</button>
             </div>
         </div>
     </div>

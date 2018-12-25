@@ -12,33 +12,43 @@
     }
 </style>
 <script>
-    function CheckIntro() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/15_1.jpg' %}";
-        document.getElementById('title').innerHTML = "卡那卡那富族資訊";
-        document.getElementById('contain').innerHTML = "舊稱沙阿魯阿族，拉阿魯哇族（Hla’alua）由排剪（Paiciana）、美壠（Vilanganʉ）、塔蠟（Talicia）、雁爾（Hlihlara）四個社組成，主要聚居在高雄市桃源區高中里、桃源里以及那瑪夏區瑪雅里。拉阿魯哇為自稱，其意不可考。<br> \
-        相傳族人原居地在東方Hlasʉnga，曾與矮人共同生活；矮人視「聖貝（takiarʉ）」為太祖（貝神）居住之所，每年舉行大祭以求境內平安、農獵豐收、族人興盛。族人離開原居地時，矮人贈以一甕聖貝，族人亦如矮人般舉行「聖貝祭（miatungusu）」。祭儀最重要的部分是「聖貝薦酒」儀式：將聖貝浸在酒裡，察其顏色變化，如果變成紅色則表示太祖酩酊之狀，意味祭典圓滿成功。";
-    }
-    function CheckWhere() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-        document.getElementById('title').innerHTML = "卡那卡那富族分佈";
-        document.getElementById('contain').innerHTML = "卡那卡那富族主要分佈於高雄市那瑪夏區。"
-    }
-    function CheckTrad() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/15_3.jpg' %}";
-        document.getElementById('title').innerHTML = "卡那卡那富族文化";
-        document.getElementById('contain').innerHTML = "<h2>米貢祭</h2> \
-        <div class='container'><p>傳統卡那卡那富族曆的年底小米收成時舉行，米貢在卡那卡那富族語的意思是小米，因此可算是一年的結束祭，主要祭祀的對象為támu ‘ənái（地神）。可說是慶祝小米豐收的祭典，由全族共同舉行。<br> \
-        各家族首先進行家族的家祭，黏糕和魚、酒是必備的貢品，每個家族之間都要分享與交換這些食物。當家祭完畢之後，每個家族就會帶做好的年糕、烤好的肉和魚，以及釀好的酒，前往公共會所（cakərə）輪流奉獻。之後長老會唸祭詞，希望támu na’úrang（祖靈神）和támu ‘ənái（地神）繼續庇祐族人，讓族人世世代代都能夠準備豐盛的食物，邀請támu na’úrang（祖靈神）和támu ‘ənái（地神）前來享用。<br> \
-        奉獻祭品以及祭拜儀式之後，男性族人會聚集到公共會所上，拿起一小塊年糕，搓捏之後再黏於公共會所的柱子上，並祈禱támu na’úrang（祖靈神）和támu ‘ənái（地神）能保佑全族人健康平安，之後全族不分男女老幼一同歡唱祈福歌。然後，各家族也會準備酒食，互相招待，並盡情的飲宴歌舞。</p></div>"
-    }
-    function CheckFeature() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/non.png' %}";
-        document.getElementById('title').innerHTML = "卡那卡那富族特色";
-        document.getElementById('contain').innerHTML = "<h2>宗教信仰</h2> \
-        <div class='container'><p>卡那卡那富族傳統的信仰裡有「tinaravai 靈界」之說，在右肩者為「’incu善靈」，在左肩者為「’ucu 惡靈」。此靈界與人類生活於不同的世界，人類生活於mamane，指眼睛可看得見，手腳可觸碰的地方；而靈界只能用心靈去感覺。tinaravai 中的ravai 及vai，是用來稱呼兄弟姊妹的配偶及親兄弟。所以從詞彙意涵看，卡那卡那富族人視靈界為平行的關係，而非排斥的對立關係。</p></div> \
-        <h2>建築</h2> \
-        <div class='container'><p>最具代表性的建築物為「Cakʉrʉ 聚會所」，主要做為族內進行祭祀、政治、軍事、教育、社交等族群議題討論的場所，嚴禁女子進入。</p></div>";
-    }
+    $(document).ready(function () {
+        var $img = $('#image')
+        var $title = $('#title');
+        var $contain = $('#contain');
+        
+        $('#Info').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/16_1.jpg' %}");
+            $title.html("卡那卡那富族資訊");
+		    $contain.html("卡那卡那富族稱「人」為「cau」，但自稱為Kanakanavu，此名稱的由來為何之前未曾留下任何紀錄或口傳。但就詞彙意義來解讀，其詞根「-navu」與卡族人稱呼「麻竹」的詞根幾乎相同，而前綴ka-又有「住或屬」的意涵，所以就有族人推論，當卡族人逐漸形成一個聚落時，很可能是住在麻竹林區的地方，為了區辨我群與他群，就自稱Kanavu，即「住或屬於麻竹林區的人」，Kanavu 是單數表述，Kanakanau 是重疊詞，也是複數表述。<br> \
+                    關於卡族人的發祥根源，有一則傳說紀錄：「有一名為Niun 的母親，與其子Parumaci 相依為命，日子過得艱苦又孤單，其母因而常在兒子面前長吁短嘆，哀嘆人世間的滄桑！ Parumaci 安慰母親未來必讓其有安樂的生活。話未說完就突然站起，一腳踢向長滿紅葉的karu sʉrʉ（枷檀樹）樹幹，樹葉盡落，紛紛相疊，瞬間疊成了一棟棟的房子。再度一踢，落葉悉數成了人，其數不知幾百。Parumaci 成了他們的首領，自此形成了一個聚落的社」。此一紀錄是唯一與卡族發祥有關的傳說。<br> \
+                    民國98年「莫拉克88風災」，由於水量太大，楠梓仙溪重創，下游的小林村因而滅村。卡族人也有數戶受災，被安遷至杉林區的「大愛園區」。");
+        });
+        
+        $('#Where').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/1_2.jpg' %}");
+            $title.html("卡那卡那富族分佈");
+		    $contain.html("卡那卡那富族主要分佈於高雄市那瑪夏區。");
+        });
+
+        $('#Trad').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/16_3.jpg' %}");
+            $title.html("卡那卡那富族文化");ㄋ
+		    $contain.html("<h2>米貢祭</h2> \
+                    <div class='container'><p>傳統卡那卡那富族曆的年底小米收成時舉行，米貢在卡那卡那富族語的意思是小米，因此可算是一年的結束祭，主要祭祀的對象為támu ‘ənái(地神)，可說是慶祝小米豐收的祭典，由全族共同舉行。<br> \
+                    各家族首先進行家族的家祭，黏糕和魚、酒是必備的貢品，每個家族之間都要分享與交換這些食物。當家祭完畢之後，每個家族就會帶做好的年糕、烤好的肉和魚，以及釀好的酒，前往公共會所（cakərə）輪流奉獻。之後長老會唸祭詞，希望támu na’úrang（祖靈神）和támu ‘ənái（地神）繼續庇祐族人，讓族人世世代代都能夠準備豐盛的食物，邀請támu na’úrang（祖靈神）和támu ‘ənái（地神）前來享用。<br> \
+                    奉獻祭品以及祭拜儀式之後，男性族人會聚集到公共會所上，拿起一小塊年糕，搓捏之後再黏於公共會所的柱子上，並祈禱támu na’úrang（祖靈神）和támu ‘ənái（地神）能保佑全族人健康平安，之後全族不分男女老幼一同歡唱祈福歌。然後，各家族也會準備酒食，互相招待，並盡情的飲宴歌舞。</p></div>");
+        });
+
+        $('#Feature').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/non.png' %}");
+            $title.html("卡那卡那富族特色");
+		    $contain.html("<h2>宗教信仰</h2> \
+                    <div class='container'><p>卡那卡那富族傳統的信仰裡有「tinaravai 靈界」之說，在右肩者為「’incu善靈」，在左肩者為「’ucu 惡靈」。此靈界與人類生活於不同的世界，人類生活於mamane，指眼睛可看得見，手腳可觸碰的地方；而靈界只能用心靈去感覺。tinaravai 中的ravai 及vai，是用來稱呼兄弟姊妹的配偶及親兄弟。所以從詞彙意涵看，卡那卡那富族人視靈界為平行的關係，而非排斥的對立關係。</p></div> \
+                    <h2>建築</h2> \
+                    <div class='container'><p>最具代表性的建築物為「Cakʉrʉ 聚會所」，主要做為族內進行祭祀、政治、軍事、教育、社交等族群議題討論的場所，嚴禁女子進入。</p></div>");
+        });
+    });
 </script>
 {% endblock %}
 
@@ -48,17 +58,17 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
             <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Info">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Where">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Trad">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Feature">特色</button>
             </div>
         </div>
     </div>
 
     <div>
         <div class="col-lg-12" style="height:auto;border:1px solid #FFFFFF;background-color: gainsboro">
-            <img src="{% static 'photo/Introduction/15_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
+            <img src="{% static 'photo/Introduction/16_1.jpg' %}" id="image" class="img-fluid" alt="Responsive image"
                 style=" display: block;margin-left: auto; margin-right: auto">
         </div>
         <br>

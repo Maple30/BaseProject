@@ -11,41 +11,50 @@
     }
 </style>
 <script>
-    function CheckIntro() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/non.png' %}";
-        document.getElementById('title').innerHTML = "賽夏族資訊";
-        document.getElementById('contain').innerHTML = "賽夏族夾雜於泰雅族與客家人之間，所以賽夏人大部份會講泰雅語與客語，甚至以此兩種語言為日常用語。<br> \
+    $(document).ready(function () {
+        var $img = $('#image')
+        var $title = $('#title');
+        var $contain = $('#contain');
+        
+        $('#Info').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/8_1.jpg' %}");
+            $title.html("賽夏族資訊");
+		    $contain.html("賽夏族夾雜於泰雅族與客家人之間，所以賽夏人大部份會講泰雅語與客語，甚至以此兩種語言為日常用語。<br> \
                     提到賽夏族，大家會聯想到充滿神秘色彩，難以理解的矮靈祭，相傳過去賽夏族和矮人taai毗鄰而居，矮人傳授賽夏人農耕、醫術、及祭祀歌舞，賽夏人將其視為恩人，每當舉行祭典節慶時，都會請矮人前來飲酒作樂。但是矮人常常調戲賽夏族婦女，賽夏族隱忍許久後決定報復，設計殺害了許多矮人，存活下來的矮人詛咒賽夏人將會招逢連年災害、穀物歉收果然應驗成真。因此賽夏族人年年舉辦「矮靈祭」，祈求矮靈不再降禍於賽夏族人。賽夏族矮靈祭便在賽夏族人恩怨情仇的複雜心理下延續至今。不僅如此，日常生活中也多嚴格遵守許多與矮靈祭相關的禁忌和避諱。<br> \
                     賽夏族早期游耕、山地燒墾及山區狩獵，後來受到周圍強勢民族的壓迫，土地利用範圍逐漸狹窄，而轉變為定耕農業和林業的型態。<br> \
                     面對強勢的外在文化，老一輩的賽夏人對於傳統祭典就更加珍惜，排除了許多外力使賽夏族的祭典完整地保留下來，是台灣少數能保有祭典原味的族群。<br> \
                     賽夏族的社會以氏族為基礎，賽夏族屬於父系社會，以地域和圖騰氏族為社會組織的基本構成單位，各姓氏從清領時代開始就有不同漢姓，並遵守社會與婚姻規範。<br> \
-                    賽夏族的住家多位在山腹坡地或小台地上，因為居住在樹木和竹林盛產地，因此建築材料多為竹、木為主樹藤為輔。";
-    }
-    function CheckWhere() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-        document.getElementById('title').innerHTML = "賽夏族分佈";
-        document.getElementById('contain').innerHTML = "賽夏族主要分佈在新竹縣和苗栗縣交界的山區，居住於海拔高度約五百公尺至一千五百公尺間。"
-    }
-    function CheckTrad() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/8_3.jpeg' %}";
-        document.getElementById('title').innerHTML = "賽夏族文化";
-        document.getElementById('contain').innerHTML = "<h2>矮靈祭</h2> \
-        <div class='container'><p>又稱巴斯達隘，傳說賽夏族與達隘族（矮人）相鄰而居，向達隘學習農耕、醫學、歌舞、祭祀等文化，因此每當舉行豐收慶典時都會邀請達隘共同參與，以感謝達隘的恩惠，達隘卻常調戲賽夏婦女，觸怒賽夏族人，於是設計報復殺害達隘。<br> \
-        賽夏族人受到存活下來的達隘人詛咒，因此年年舉辦祭典，弔念、安撫達隘靈魂，並祈求矮靈不再降禍給族人。<br> \
-        賽夏族人對於矮靈傳說與觀念相當重視，不但在祭典中遵守矮靈禁忌，生活中也遵守許多避諱的風俗。</p></div> \
-        <h2>祖靈祭</h2> \
-        <div class='container'><p>祖靈祭分為春季與秋季兩次，春季在農曆6 月間稻米播種後、秋季在農曆11 月作物收成時，目的是祭祀氏族中過世的祖先。<br> \
-        日本殖民統治時期之後，祖靈祭典與祖靈籃祭祀遭到政策禁止，因此祭祀方式也有所改變。<br> \
-        目前祖靈祭改為用酒、肉當祭品祭祀祖靈，由長老代表向東方獻給祖先，家族成員中午時會餐，餐間菜餚以豬肉、炸魚、米糕等傳統食物為主，並以傳統手抓食物方式進餐。<br> \
-        雖然祖靈祭在形式上雖由沾水祈福儀式改為祭祀與會餐，但沒有改變的是族人緬懷祖先的心意。<\p></div>"
-    }
-    function CheckFeature() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/non.png' %}";
-        document.getElementById('title').innerHTML = "賽夏族特色";
-        document.getElementById('contain').innerHTML = "<h2>編織</h2><div class='container'><p>賽夏族的編織以白、黑、紅三色為主，由於是父系社會，男性的紋路較為華麗，女性服飾則是較素雅的平織。<br> \
+                    賽夏族的住家多位在山腹坡地或小台地上，因為居住在樹木和竹林盛產地，因此建築材料多為竹、木為主樹藤為輔。");
+        });
+        
+        $('#Where').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/1_2.jpg' %}");
+            $title.html("賽夏族分佈");
+		    $contain.html("賽夏族主要分佈在新竹縣和苗栗縣交界的山區，居住於海拔高度約五百公尺至一千五百公尺間。");
+        });
+
+        $('#Trad').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/8_3.jpeg' %}");
+            $title.html("賽夏族文化");
+		    $contain.html("<h2>矮靈祭</h2> \
+                    <div class='container'><p>又稱巴斯達隘，傳說賽夏族與達隘族（矮人）相鄰而居，向達隘學習農耕、醫學、歌舞、祭祀等文化，因此每當舉行豐收慶典時都會邀請達隘共同參與，以感謝達隘的恩惠，達隘卻常調戲賽夏婦女，觸怒賽夏族人，於是設計報復殺害達隘。<br> \
+                    賽夏族人受到存活下來的達隘人詛咒，因此年年舉辦祭典，弔念、安撫達隘靈魂，並祈求矮靈不再降禍給族人。<br> \
+                    賽夏族人對於矮靈傳說與觀念相當重視，不但在祭典中遵守矮靈禁忌，生活中也遵守許多避諱的風俗。</p></div> \
+                    <h2>祖靈祭</h2> \
+                    <div class='container'><p>祖靈祭分為春季與秋季兩次，春季在農曆6 月間稻米播種後、秋季在農曆11 月作物收成時，目的是祭祀氏族中過世的祖先。<br> \
+                    日本殖民統治時期之後，祖靈祭典與祖靈籃祭祀遭到政策禁止，因此祭祀方式也有所改變。<br> \
+                    目前祖靈祭改為用酒、肉當祭品祭祀祖靈，由長老代表向東方獻給祖先，家族成員中午時會餐，餐間菜餚以豬肉、炸魚、米糕等傳統食物為主，並以傳統手抓食物方式進餐。<br> \
+                    雖然祖靈祭在形式上雖由沾水祈福儀式改為祭祀與會餐，但沒有改變的是族人緬懷祖先的心意。</p></div>");
+        });
+
+        $('#Feature').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/non.png' %}");
+            $title.html("賽夏族特色");
+		    $contain.html("<h2>編織</h2><div class='container'><p>賽夏族的編織以白、黑、紅三色為主，由於是父系社會，男性的紋路較為華麗，女性服飾則是較素雅的平織。<br> \
         男性服飾長不過膝，紋路多在胸部以下，而且重點在背部，因為祭典時族人都是圍圈，而矮靈在後方看賽夏族人跳舞，包括臀鈴的鏡子也縫在矮靈看得到的高度。</p></div> \
-        <h2>聚落特性</h2><div class='container'><p>賽夏族為分散的部落，此種部落形式是，部落入口分散在若干個小聚落，集合這些小聚落構成一個部落。同時每一個小聚落維持著平等地位，很少有一個中心聚落存在的情形。</p></div>"
-    }
+        <h2>聚落特性</h2><div class='container'><p>賽夏族為分散的部落，此種部落形式是，部落入口分散在若干個小聚落，集合這些小聚落構成一個部落。同時每一個小聚落維持著平等地位，很少有一個中心聚落存在的情形。</p></div>");
+        });
+    });
 </script>
 {% endblock %}
 
@@ -55,10 +64,10 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
             <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Info">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Where">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Trad">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Feature">特色</button>
             </div>
         </div>
     </div>

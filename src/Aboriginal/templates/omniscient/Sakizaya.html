@@ -12,35 +12,44 @@
     }
 </style>
 <script>
-    function CheckIntro() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/13_1.jpg' %}";
-        document.getElementById('title').innerHTML = "撒奇萊雅族資訊";
-        document.getElementById('contain').innerHTML = "撒奇萊雅族（Sakizaya）的傳說中，祖先由海外遷入東部後落腳花蓮平原，在十七世紀荷蘭、西班牙的紀錄中，就曾經出現過。十九世紀末期，清朝開始積極經營東部與山區，進駐花蓮平原後，因為官兵態度蠻橫、處事不公，侵擾各原住民族的生活，導致撒奇萊雅與噶瑪蘭族聯合抵禦，在清光緒4 年（1878）發生了稱為「達固部灣事件」（加禮宛事件）的抗清戰爭。本次戰爭造成撒奇萊雅族人傷亡、部落遷居、語言與文化隱匿一世紀之久，深刻衝擊撒奇萊雅族人的傳統文化。撒奇萊雅人受到加禮宛事件的影響後，族人流散、遷徙並沉寂隱匿一世紀，期間因為多居住在阿美族部落中，與阿美族互動密切，逐漸模糊原有的主體文化。<br> \
-        二十世紀部落邁入日本殖民統治時期，人類學者將撒奇萊雅族的社會文化特質，視為阿美族文化的一部分。二十世紀末期，撒奇萊雅人由歷史脈絡中理出文化特質，除了表現在民族服裝與火神祭典當中，並推動民族自覺的文化運動。民國96年（2007）成為官方公告承認的原住民族。撒奇萊雅族人以花蓮平原為主要分布地點，之後因「達固部灣事件」政權轉移而使社會環境急遽改變，除在花蓮平原中移動外，也在花東縱谷、海岸等地建立部落。";
-    }
-    function CheckWhere() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/1_2.jpg' %}";
-        document.getElementById('title').innerHTML = "撒奇萊雅族分佈";
-        document.getElementById('contain').innerHTML = "撒奇萊雅族世居於花蓮奇萊平原（即花蓮平原）。<br> \
-        太魯閣族目前主要分佈於在花蓮，分別是位在花蓮市國福里及德安里、新城鄉北埔部落、瑞穗鄉馬力雲社以及豐濱鄉磯崎部落。"
-    }
-    function CheckTrad() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/13_3.jpg' %}";
-        document.getElementById('title').innerHTML = "撒奇萊雅族文化";
-        document.getElementById('contain').innerHTML = "<h2>火神祭</h2> \
-        <div class='container'><p>火神祭以光緒4 年（1878）加禮宛事件為祭典核心概念，屬於跨部落的全族紀念性活動。<br> \
-        加禮宛事件發生時，達固部灣部落（Takubuan）是當時最大的部落，部落外圍種有刺竹防禦。清兵因刺竹隔離而無法接近部落，最後引火射箭攻擊，造成部落茅草屋燒毀、族人傷亡。之後，族人因分散各地而無法祭祀事件中傷亡先祖。撒奇萊雅族因遭歷史事件的祝融吞噬，而致民族文化發展受挫。歷經一世紀後，族人以火神祭典弔唁祭祀頭目夫婦以及在加禮宛事件中犧牲的族人。火神祭典除了紀念歷史事件外，更具有凝聚民族認同的意義。</p></div> \
-        <h2>豐年祭</h2> \
-        <div class='container'><p>豐收祭典於小米收成後進行。小米在收割的時候，就要編織山棕葉來綁小米穗，並準備糯米年糕、酒、檳榔放在門口，由神職人員Mapalaway 分配給家中有成員傷亡的家庭，稱為patongi’。patongi’ 之後，才開始舉行malaliki’，族人著正式服裝由頭目帶領進行祭祀，感謝創造之神Malataw 護佑農作收成。祭典最後以慶祝餐會paklang 作為結束，也就是前往捕魚後，將魚獲搭配糯米飯進行的會餐。</p></div>"
-    }
-    function CheckFeature() {
-        document.getElementById('image').src = "{% static 'photo/Introduction/non.png' %}";
-        document.getElementById('title').innerHTML = "撒奇萊雅族特色";
-        document.getElementById('contain').innerHTML = "<h2>服飾</h2> \
-        <div class='container'><p>撒奇萊雅族人的服裝是在民國96 年（2007）文化復振運動之後，為了與阿美族區隔而由本身歷史事件與傳說所創作生產的服裝，特別具有歷史文化的意義。<br> \
-            奇萊雅族的服裝在形制上有帽飾、上衣、背心、綁腿、檳榔袋等，男子年齡階級服裝分為背心與綁腿褲兩件，服裝色彩使用暗紅色與土金色系為底色，象徵不同的歷史與文化意義，土金色代表土地有心、土地有金，且重回故土、暗紅色代表祖先犧牲生命具有追悼先祖的意涵、藏青色代表百年來與阿美族的生活情誼、 \
-            墨綠色代表年齡階級與民族精神、沉黑色代表部落與祖靈、山棕色勉勵族人不畏艱難及珠白色代表眼淚，象徵百年來民族隱匿之委屈。</p></div>";
-    }
+    $(document).ready(function () {
+        var $img = $('#image')
+        var $title = $('#title');
+        var $contain = $('#contain');
+        
+        $('#Info').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/13_1.jpg' %}");
+            $title.html("撒奇萊雅族資訊");
+		    $contain.html("撒奇萊雅族（Sakizaya）的傳說中，祖先由海外遷入東部後落腳花蓮平原，在十七世紀荷蘭、西班牙的紀錄中，就曾經出現過。十九世紀末期，清朝開始積極經營東部與山區，進駐花蓮平原後，因為官兵態度蠻橫、處事不公，侵擾各原住民族的生活，導致撒奇萊雅與噶瑪蘭族聯合抵禦，在清光緒4 年（1878）發生了稱為「達固部灣事件」（加禮宛事件）的抗清戰爭。本次戰爭造成撒奇萊雅族人傷亡、部落遷居、語言與文化隱匿一世紀之久，深刻衝擊撒奇萊雅族人的傳統文化。撒奇萊雅人受到加禮宛事件的影響後，族人流散、遷徙並沉寂隱匿一世紀，期間因為多居住在阿美族部落中，與阿美族互動密切，逐漸模糊原有的主體文化。<br> \
+                    二十世紀部落邁入日本殖民統治時期，人類學者將撒奇萊雅族的社會文化特質，視為阿美族文化的一部分。二十世紀末期，撒奇萊雅人由歷史脈絡中理出文化特質，除了表現在民族服裝與火神祭典當中，並推動民族自覺的文化運動。民國96年（2007）成為官方公告承認的原住民族。撒奇萊雅族人以花蓮平原為主要分布地點，之後因「達固部灣事件」政權轉移而使社會環境急遽改變，除在花蓮平原中移動外，也在花東縱谷、海岸等地建立部落。");
+        });
+        
+        $('#Where').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/1_2.jpg' %}");
+            $title.html("撒奇萊雅族分佈");
+		    $contain.html("撒奇萊雅族世居於花蓮奇萊平原（即花蓮平原）。<br> \
+                    太魯閣族目前主要分佈於在花蓮，分別是位在花蓮市國福里及德安里、新城鄉北埔部落、瑞穗鄉馬力雲社以及豐濱鄉磯崎部落。");
+        });
+
+        $('#Trad').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/13_3.jpg' %}");
+            $title.html("撒奇萊雅族文化");
+		    $contain.html("<h2>火神祭</h2> \
+                    <div class='container'><p>火神祭以光緒4 年（1878）加禮宛事件為祭典核心概念，屬於跨部落的全族紀念性活動。<br> \
+                    加禮宛事件發生時，達固部灣部落（Takubuan）是當時最大的部落，部落外圍種有刺竹防禦。清兵因刺竹隔離而無法接近部落，最後引火射箭攻擊，造成部落茅草屋燒毀、族人傷亡。之後，族人因分散各地而無法祭祀事件中傷亡先祖。撒奇萊雅族因遭歷史事件的祝融吞噬，而致民族文化發展受挫。歷經一世紀後，族人以火神祭典弔唁祭祀頭目夫婦以及在加禮宛事件中犧牲的族人。火神祭典除了紀念歷史事件外，更具有凝聚民族認同的意義。</p></div> \
+                    <h2>豐年祭</h2> \
+                    <div class='container'><p>豐收祭典於小米收成後進行。小米在收割的時候，就要編織山棕葉來綁小米穗，並準備糯米年糕、酒、檳榔放在門口，由神職人員Mapalaway 分配給家中有成員傷亡的家庭，稱為patongi’。patongi’ 之後，才開始舉行malaliki’，族人著正式服裝由頭目帶領進行祭祀，感謝創造之神Malataw 護佑農作收成。祭典最後以慶祝餐會paklang 作為結束，也就是前往捕魚後，將魚獲搭配糯米飯進行的會餐。</p></div>");
+        });
+
+        $('#Feature').click(function () {
+            $img.attr("src", "{% static 'photo/Introduction/non.png' %}");
+            $title.html("撒奇萊雅族特色");
+		    $contain.html("<h2>服飾</h2> \
+                    <div class='container'><p>撒奇萊雅族人的服裝是在民國96 年（2007）文化復振運動之後，為了與阿美族區隔而由本身歷史事件與傳說所創作生產的服裝，特別具有歷史文化的意義。<br> \
+                    奇萊雅族的服裝在形制上有帽飾、上衣、背心、綁腿、檳榔袋等，男子年齡階級服裝分為背心與綁腿褲兩件，服裝色彩使用暗紅色與土金色系為底色，象徵不同的歷史與文化意義，土金色代表土地有心、土地有金，且重回故土、暗紅色代表祖先犧牲生命具有追悼先祖的意涵、藏青色代表百年來與阿美族的生活情誼、 \
+                    墨綠色代表年齡階級與民族精神、沉黑色代表部落與祖靈、山棕色勉勵族人不畏艱難及珠白色代表眼淚，象徵百年來民族隱匿之委屈。</p></div>");
+        });
+    });
 </script>
 {% endblock %}
 
@@ -50,10 +59,10 @@
     <div class="row">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-top: 20px">
             <div class="btn-group btn-group-lg col-lg" role="group" aria-label="First group">
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckIntro()">資訊</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckWhere()">分佈</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckTrad()">文化</button>
-                <button type="button" class="btn btn-outline-info btn-sm-3" onclick="CheckFeature()">特色</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Info">資訊</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Where">分佈</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Trad">文化</button>
+                <button type="button" class="btn btn-outline-info btn-sm-3" id="Feature">特色</button>
             </div>
         </div>
     </div>
