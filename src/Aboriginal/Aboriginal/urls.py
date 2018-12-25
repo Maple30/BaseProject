@@ -18,11 +18,13 @@ from omniscient import views
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
+from django.views.generic.base import RedirectView
 
 
 urlpatterns = [
     url('^', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^', include('omniscient.urls')),
+    url(r'^favicon\.ico$', RedirectView.as_view(url='/static/photo/icon/favicon.ico')),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL,
                                                                            document_root=settings.MEDIA_ROOT)
