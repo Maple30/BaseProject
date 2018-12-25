@@ -204,7 +204,7 @@ $(document).ready(function () {
 		$title.stop().text('新北市');
 		$p1.stop().text('原住民族群：阿美族 泰雅族');
 		$p2.stop().text('新北市是臺灣最北的都市，環繞整個臺北市，總面積達二千多平方公里，幅員遼闊，新北市的東北、北部、西北部均臨海。');
-		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='{% url 'Amis' %}'>阿美族</a> <a href='{% url 'Tayal' %}'>泰雅族</a> 相關介紹</p>");		
+		$p2.stop().append("<p class='morelink' style='color:#007bff'><a href='/Amis'>阿美族</a> <a href='{% url 'Tayal' %}'>泰雅族</a> 相關介紹</p>");		
 	});
 	$('.HS4').click(function () {
 		$title.stop().text('桃園市');
