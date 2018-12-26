@@ -186,9 +186,9 @@
                     {{ issue.Title }}
                     </a>    
                     {% if user == issue.User %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'issue_delete' issue.id %}">刪除</a>
-                        </li>
+                        
+                        <a class="nav-link" href="{% url 'issue_delete' issue.id %}">刪除</a>
+                        
                     {% endif %}
                 </div>
                 <div id="collapse{{ forloop.counter }}" class="collapse">
