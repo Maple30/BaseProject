@@ -40,6 +40,11 @@ def Add_Account(request):
 		form = UserForm(request.POST)
 		if form.is_valid():
 			user = form.save(commit=False)
+			for num'''計數器''', i'''是list裡面的東西''' in enumerate(user.username):
+				if (i >= '\u0041' and i <= '\u005a') or (i >= '\u0061' and i <= '\u007a'):
+						return redirect('index')
+				else:
+						return redirect('hand_made_add')
 			user.set_password(user.password)
 			user.save()
 			per_add_issue = Permission.objects.get(codename='add_issue')
