@@ -41,7 +41,7 @@ def Add_Account(request):
 		if form.is_valid():
 			user = form.save(commit=False)
 			for num, i in enumerate(user.username):
-				if not (is_number(i) or is_alphabet(i)):
+				if (is_number(i) or is_alphabet(i)):
 						print('Continue')
 				else:
 						print('It is a wrong answer')	
