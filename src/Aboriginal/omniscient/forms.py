@@ -11,7 +11,7 @@ class WorksForm(forms.ModelForm):
 
 class UserForm(forms.ModelForm):
     class Meta:
-        password = forms.CharField(widget=forms.PasswordInput, onkeyup="value=value.replace(/[^\w\.\/]/ig,'')")
+        password = forms.CharField(widget=forms.PasswordInput)
         model = User
         widgets = {
             'password': forms.PasswordInput(),
