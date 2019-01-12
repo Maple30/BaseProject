@@ -41,12 +41,11 @@ def Add_Account(request):
 		if form.is_valid():
 			user = form.save(commit=False)
 			for num, i in enumerate(user.username):
-				if (i >= '\u0041' and i <= '\u005a') or (i >= '\u0061' and i <= '\u007a'):
-                                    print('zzz')		
-                                    return redirect('index')
+				if not (is_number(i) or is_alphabet(i)):
+						print('Continue')
 				else:
-                                    print('i am here')
-                                    return redirect('hand_made_add')
+						print('It is a wrong answer')	
+						return redirect('index')
 			user.set_password(user.password)
 			user.save()
 			per_add_issue = Permission.objects.get(codename='add_issue')
@@ -163,3 +162,17 @@ def Saaroa(request):
 #16
 def Kanakanavu(request):
 	return render(request, 'omniscient/Kanakanavu.html')
+
+
+
+def is_alphabet(char):
+        if (char >= '\u0041' and char <= '\u005a') or (char >= '\u0061' and char <= '\u007a'):
+                return True
+        else:
+                return False
+
+def is_number(char):
+        if char >= '\u0030' and char <= '\u0039':
+                return True
+        else:
+                return False
