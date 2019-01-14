@@ -11,7 +11,7 @@ class WorksForm(forms.ModelForm):
 
 class UserForm(forms.ModelForm):
     class Meta:
-        password = forms.CharField(widget=forms.PasswordInput)
+        password = forms.CharField(widget=forms.PasswordInput,error_messages="帳號或密碼包含不可使用之字元")
         model = User
         widgets = {
             'password': forms.PasswordInput(),
