@@ -11,12 +11,13 @@ class WorksForm(forms.ModelForm):
 
 class UserForm(forms.ModelForm):
     class Meta:
-        password = forms.CharField(widget=forms.PasswordInput,help_text="帳號或密碼包含不可使用之字元")
+        password = forms.CharField(widget=forms.PasswordInput)
         model = User
         widgets = {
             'password': forms.PasswordInput(),
         }
         fields = ('username', 'password')
+
 
 class IssueForm(forms.ModelForm):
     class Meta:

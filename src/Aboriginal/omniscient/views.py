@@ -8,6 +8,7 @@ from .forms import WorksForm, UserForm, IssueForm
 # from django.contrib.messages import constants as messages
 from django.contrib import messages
 from django.contrib.auth.models import Permission
+from django.contrib.auth.forms import UserCreationForm
 
 # View(views.py)
 
@@ -37,15 +38,17 @@ def hand_made_detail(request, work_id):
 
 def Add_Account(request):
 	if request.method == "POST":
-		form = UserForm(request.POST)
+		#form = UserForm(request.POST)
+		form = UserCreationForm(request.POST)
 		if form.is_valid():
 			user = form.save(commit=False)
 			for num, i in enumerate(user.username):
 				if (is_number(i) or is_alphabet(i)):
 						print('Continue')
 				else:
-						print('It is a wrong answer')	
-						return redirect('index')
+						print('It is a wrong answer')
+						messages.error(request, '錯ㄌ')	
+						return redirect('Add_Account')
 			user.set_password(user.password)
 			user.save()
 			per_add_issue = Permission.objects.get(codename='add_issue')
@@ -55,9 +58,10 @@ def Add_Account(request):
 			user.user_permissions.add(per_add_issue,per_del_issue,per_add_works,per_del_works)
 			user.save()
 			messages.success(request, '帳戶已新增')
-			return redirect('index')
+			return redirect('hand_made')
 	else:
-		form = UserForm()
+		#form = UserForm()
+		form = UserCreationForm()
 	return render(request, 'omniscient/forms.html', {'form': form})
 
 
