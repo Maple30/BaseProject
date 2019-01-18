@@ -47,7 +47,7 @@ def Add_Account(request):
 						print('Continue')
 				else:
 						print('It is a wrong answer')
-						messages.error(request, '錯ㄌ')	
+						messages.error(request, '帳號或包含非法')
 						return redirect('Add_Account')
 			user.set_password(user.password)
 			user.save()
@@ -58,7 +58,7 @@ def Add_Account(request):
 			user.user_permissions.add(per_add_issue,per_del_issue,per_add_works,per_del_works)
 			user.save()
 			messages.success(request, '帳戶已新增')
-			return redirect('hand_made')
+			return redirect('index')
 	else:
 		#form = UserForm()
 		form = UserCreationForm()

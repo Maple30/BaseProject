@@ -1,6 +1,6 @@
 {% extends 'omniscient/basic.html' %}
 {% load staticfiles%}
-
+{% load bootstrap4 %}
 {% block css %}
 
 <title>首頁</title>
@@ -17,6 +17,7 @@
 {% endblock %}
 
 {% block content %}
+{% bootstrap_messages %}
 <div>
     <div id="section" style="font-size: 100%;">
         <div class="hs_bg" style="background: url(/static/photo/index/index.jpg) center center / cover;">
